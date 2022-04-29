@@ -1,0 +1,345 @@
+PowerApps As screen:
+    Fill: =RGBA(116, 39, 115, 1)
+    OnVisible: |-
+        =ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "In Development" in categories And "PowerApps" in categories), "updatedOn", Descending))
+
+    "Gallery1_8 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
+        BorderColor: =RGBA(109, 49, 162, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =814
+        Items: =Search(FeedCollection, TextInput3_4.Text, "title")
+        Layout: =Layout.Vertical
+        ShowNavigation: =true
+        ShowScrollbar: =false
+        TemplatePadding: =0
+        TemplateSize: =249
+        WrapCount: =0
+        Y: =321
+        ZIndex: =1
+
+        Title2_8 As label:
+            DisplayMode: =DisplayMode.View
+            Font: =Font.'Segoe UI'
+            Height: =112
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =22
+            Text: =ThisItem.title
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 104
+            X: =32
+            Y: =17
+            ZIndex: =1
+
+        Separator2_8 As rectangle:
+            Fill: =RGBA(116, 39, 115, 1)
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =3
+
+        Button1_8 As button:
+            Fill: =RGBA(116, 39, 115, 1)
+            Font: =Font.'Segoe UI'
+            Height: =51
+            OnSelect: =Set(Summary, ThisItem.summary); Set(Title, ThisItem.title); Set(PrimaryLink, ThisItem.primaryLink);Navigate(Details)
+            Size: =16
+            Text: ="Details"
+            Width: =91
+            X: =524
+            Y: =175
+            ZIndex: =4
+
+        Label1_6 As label:
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Lighter
+            Height: =53
+            OnSelect: =Select(Parent)
+            Size: =18
+            Text: =Left(ThisItem.updatedOn, 10)
+            Width: =171
+            X: =385
+            Y: =173
+            ZIndex: =5
+
+        Label3_6 As label:
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Lighter
+            Height: =55
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: =If ("Launched" in Concat(ThisItem.categories,Value,", "), "Launched", "In Development" in Concat(ThisItem.categories,Value,", "), "In Development", "Rolling out" in Concat(ThisItem.categories,Value,", "), "Rolling Out" )
+            Width: =233
+            X: =32
+            Y: =173
+            ZIndex: =6
+
+        Label1_12 As label:
+            Color: =RGBA(149, 149, 149, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Lighter
+            Height: =53
+            OnSelect: =Select(Parent)
+            Size: =18
+            Text: |-
+                ="Updated:"
+            Width: =171
+            X: =281
+            Y: =173
+            ZIndex: =7
+
+    Button7_20 As button:
+        Fill: |-
+            =If(
+               ThreeClicked, MidnightBlue, RGBA(102, 113, 166, 1)
+            )
+        Font: =Font.'Segoe UI'
+        Height: =49
+        OnSelect: |+
+            =ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Launched" in categories And "PowerApps" in categories), "updatedOn", Descending));
+            
+            UpdateContext(
+               {
+                  OneClicked: false, 
+                  TwoClicked: false,
+                  ThreeClicked: true,
+                  FourClicked: false
+               }
+            );
+            
+        RadiusBottomLeft: =12
+        RadiusBottomRight: =12
+        RadiusTopLeft: =12
+        RadiusTopRight: =12
+        Size: =16
+        Text: ="Launched"
+        Width: =115
+        X: =354
+        Y: =235
+        ZIndex: =4
+
+    Button7_9 As button:
+        Fill: |-
+            =If(
+               OneClicked, MidnightBlue, RGBA(102, 113, 166, 1)
+            )
+        Font: =Font.'Segoe UI'
+        Height: =51
+        OnSelect: |+
+            =ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "In Development" in categories And "PowerApps" in categories), "updatedOn", Descending));
+            
+            UpdateContext(
+               {
+                  OneClicked: true, 
+                  TwoClicked: false,
+                  ThreeClicked: false,
+                  FourClicked: false
+               }
+            );
+            
+        RadiusBottomLeft: =12
+        RadiusBottomRight: =12
+        RadiusTopLeft: =12
+        RadiusTopRight: =12
+        Size: =16
+        Text: ="In development"
+        Width: =165
+        X: =25
+        Y: =233
+        ZIndex: =5
+
+    Label6_9 As label:
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =70
+        Size: =32
+        Text: ="Power Apps"
+        Width: =245
+        X: =176
+        Y: =23
+        ZIndex: =6
+
+    Image6_6 As image:
+        Height: =74
+        Image: ='Microsoft logo'
+        OnSelect: =Navigate('Roadmap startpage')
+        Width: =133
+        X: =507
+        Y: =19
+        ZIndex: =7
+
+    Icon2_5 As icon.ChevronLeft:
+        Height: =35
+        Icon: =Icon.ChevronLeft
+        OnSelect: =Back()
+        Width: =42
+        X: =25
+        Y: =38
+        ZIndex: =8
+
+    Button7_19 As button:
+        Fill: |-
+            =If(
+               TwoClicked, MidnightBlue, RGBA(102, 113, 166, 1)
+            )
+        Font: =Font.'Segoe UI'
+        Height: =49
+        OnSelect: |+
+            =ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Rolling out" in categories And "PowerApps" in categories), "updatedOn", Descending));
+            
+            UpdateContext(
+               {
+                  OneClicked: false, 
+                  TwoClicked: true,
+                  ThreeClicked: false,
+                  FourClicked: false
+               }
+            );
+            
+        RadiusBottomLeft: =12
+        RadiusBottomRight: =12
+        RadiusTopLeft: =12
+        RadiusTopRight: =12
+        Size: =16
+        Text: ="Rolling out"
+        Width: =120
+        X: =212
+        Y: =235
+        ZIndex: =9
+
+    TextInput3_4 As text:
+        BorderColor: =RGBA(116, 39, 115, 1)
+        Clear: =true
+        Default: =""
+        Font: =Font.'Segoe UI'
+        Height: =70
+        HintText: ="Search"
+        OnSelect: =Filter(FeedCollection,TextInput3_4.Text = title)
+        RadiusBottomLeft: =12
+        RadiusBottomRight: =12
+        RadiusTopLeft: =12
+        RadiusTopRight: =12
+        Size: =21
+        Width: =458
+        X: =25
+        Y: =126
+        ZIndex: =10
+
+    Icon1_4 As icon.Search:
+        Color: =RGBA(116, 39, 115, 1)
+        Height: =37
+        Icon: =Icon.Search
+        Width: =37
+        X: =432
+        Y: =143
+        ZIndex: =11
+
+    Label6_10 As label:
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =35
+        Size: =12
+        Text: ="Roadmap"
+        Width: =84
+        X: =531
+        Y: =73
+        ZIndex: =12
+
+    Label5_2 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =54
+        OnSelect: =Navigate(PowerApps_blogs)
+        Size: =22
+        Text: ="Blog"
+        Width: =89
+        X: =526
+        Y: =134
+        ZIndex: =13
+
+    Label10_6 As label:
+        Align: =Align.Center
+        FontWeight: =FontWeight.Bold
+        Height: =132
+        Size: =24
+        Text: |-
+            ="Please choose a status to see 
+            relevant roadmap items
+            "
+        Visible: |-
+            =If (
+              CountRows(Gallery1_8.AllItems) = 0,
+              true
+            )
+        Width: =502
+        X: =67
+        Y: =591
+        ZIndex: =15
+
+    Button3 As button:
+        Fill: =RGBA(116, 39, 115, 1)
+        Height: =90
+        Size: =20
+        Text: ="Share your roadmap idea"
+        Visible: |-
+            =If (
+              CountRows(Gallery1_8.AllItems) = 0,
+              true
+            )
+        Width: =472
+        X: =82
+        Y: =831
+        ZIndex: =16
+
+    Label10_7 As label:
+        Align: =Align.Center
+        Color: =RGBA(184, 0, 0, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =132
+        Size: =24
+        Text: ="No result?"
+        Visible: |-
+            =If (
+              CountRows(Gallery1_8.AllItems) = 0,
+              true
+            )
+        Width: =502
+        X: =69
+        Y: =699
+        ZIndex: =17
+
+    Button7_31 As button:
+        Fill: |-
+            =If(
+               FourClicked, MidnightBlue, RGBA(102, 113, 166, 1)
+            )
+        Font: =Font.'Segoe UI'
+        Height: =49
+        OnSelect: |+
+            =ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Preview" in categories And "PowerApps" in categories), "updatedOn", Descending));
+            
+            UpdateContext(
+               {
+                  OneClicked: false, 
+                  TwoClicked: false,
+                  ThreeClicked: false,
+                  FourClicked: true
+               }
+            );
+            
+        RadiusBottomLeft: =12
+        RadiusBottomRight: =12
+        RadiusTopLeft: =12
+        RadiusTopRight: =12
+        Size: =16
+        Text: ="Previews"
+        Width: =107
+        X: =496
+        Y: =235
+        ZIndex: =18
+

@@ -1,0 +1,9 @@
+[
+  {
+    "AddinConnectorId": "9c1f7d2d-5f9c-4b48-b49a-f0bf4f932424",
+    "AddinId": "6d1f157d-95bf-406d-b65d-cfd3240f724e",
+    "Name": "PowerApp->Whenafeeditemispublished,Applytoeach,Postadapti...",
+    "ServiceKind": "AddinWadl",
+    "Type": "ServiceInfo"
+  }
+]
