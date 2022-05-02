@@ -99,11 +99,7 @@
     "UserLocale": "en-US"
   },
   "ScreenOrder": [
-    "Screen1",
     "Details",
-    "Screen3",
-    "Screen1_1",
-    "EXPERIMENT",
     "Roadmap startpage",
     "Teams",
     "Sharepoint_p",
@@ -114,7 +110,6 @@
     "Viva_blogs",
     "PowerApps_blogs",
     "Yammer_blogs",
-    "Sharepoint_blogs",
-    "EXPERIMENT (WITH VARIABLES)"
+    "Sharepoint_blogs"
   ]
 }
