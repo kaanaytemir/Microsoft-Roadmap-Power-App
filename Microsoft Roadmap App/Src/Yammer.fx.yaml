@@ -297,6 +297,8 @@ Yammer As screen:
     Button3_2 As button:
         Fill: =RGBA(2, 121, 212, 1)
         Height: =90
+        OnSelect: |-
+            =Launch("https://feedbackportal.microsoft.com/feedback/forum/bd6e5ec2-3f1c-ec11-b6e7-0022481f8472")
         Size: =20
         Text: ="Share your roadmap idea"
         Visible: |-

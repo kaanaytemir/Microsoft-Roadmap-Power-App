@@ -305,6 +305,8 @@ Teams As screen:
     Button3_4 As button:
         Fill: =RGBA(70, 78, 184, 1)
         Height: =90
+        OnSelect: |-
+            =Launch("https://feedbackportal.microsoft.com/feedback/forum/ad198462-1c1c-ec11-b6e7-0022481f8472")
         Size: =20
         Text: ="Share your roadmap idea"
         Visible: |-

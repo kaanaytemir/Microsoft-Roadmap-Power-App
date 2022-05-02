@@ -313,6 +313,8 @@ Sharepoint_p As screen:
     Button3_3 As button:
         Fill: =RGBA(2, 131, 135, 1)
         Height: =90
+        OnSelect: |-
+            =Launch("https://feedbackportal.microsoft.com/feedback/forum/06735c62-321c-ec11-b6e7-0022481f8472")
         Size: =20
         Text: ="Share your roadmap idea"
         Visible: |-
