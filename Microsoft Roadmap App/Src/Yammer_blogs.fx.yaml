@@ -118,6 +118,7 @@ Yammer_blogs As screen:
         Color: =RGBA(2, 121, 212, 1)
         Height: =37
         Icon: =Icon.Search
+        Visible: =IsBlank(TextInput3_7.Text)
         Width: =37
         X: =469
         Y: =137

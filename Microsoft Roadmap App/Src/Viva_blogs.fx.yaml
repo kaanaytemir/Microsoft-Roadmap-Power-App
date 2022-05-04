@@ -120,6 +120,7 @@ Viva_blogs As screen:
         Color: =RGBA(130, 95, 193, 1)
         Height: =37
         Icon: =Icon.Search
+        Visible: =IsBlank(TextInput3_3.Text)
         Width: =37
         X: =469
         Y: =137

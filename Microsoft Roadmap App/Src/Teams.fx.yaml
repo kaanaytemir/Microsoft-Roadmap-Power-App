@@ -227,6 +227,7 @@ Teams As screen:
     Icon1 As icon.Search:
         Height: =37
         Icon: =Icon.Search
+        Visible: =IsBlank(TextInput3.Text)
         Width: =37
         X: =432
         Y: =143

@@ -129,6 +129,7 @@ Teams_blogs As screen:
     Icon1_1 As icon.Search:
         Height: =37
         Icon: =Icon.Search
+        Visible: =IsBlank(TextInput3_1.Text)
         Width: =37
         X: =469
         Y: =137

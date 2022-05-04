@@ -119,6 +119,7 @@ Sharepoint_blogs As screen:
         Color: =RGBA(2, 131, 135, 1)
         Height: =37
         Icon: =Icon.Search
+        Visible: =IsBlank(TextInput3_9.Text)
         Width: =37
         X: =469
         Y: =137
