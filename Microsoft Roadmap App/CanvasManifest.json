@@ -36,7 +36,7 @@
       "enablepcfmoderndatasets": true,
       "enablepowerautomatepane": false,
       "enablerowscopeonetonexpand": false,
-      "enablerpawarecomponentdependency": false,
+      "enablerpawarecomponentdependency": true,
       "enablerulespanel": false,
       "enablesaveloadcleardataonweb": false,
       "enhanceddelegation": true,
@@ -99,7 +99,6 @@
     "UserLocale": "en-US"
   },
   "ScreenOrder": [
-    "Details",
     "Roadmap startpage",
     "Teams",
     "Sharepoint_p",
@@ -110,6 +109,7 @@
     "Viva_blogs",
     "PowerApps_blogs",
     "Yammer_blogs",
-    "Sharepoint_blogs"
+    "Sharepoint_blogs",
+    "Details"
   ]
 }
