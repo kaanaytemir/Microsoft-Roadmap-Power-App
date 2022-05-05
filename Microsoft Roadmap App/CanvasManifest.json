@@ -7,7 +7,7 @@
   },
   "Properties": {
     "AppCreationSource": "AppFromScratch",
-    "AppDescription": "Check the latest M365 roadmap items and blogs",
+    "AppDescription": "Stay updated with the latest M365 roadmap items and blogs",
     "AppPreviewFlagsMap": {
       "aibuilderserviceenrollment": true,
       "allowmultiplescreensincanvaspages": false,
@@ -84,11 +84,11 @@
     "Id": "8dda9b02-b20f-48b3-a604-37ff700acff7",
     "InstrumentationKey": "",
     "LocalDatabaseReferences": "{}",
-    "Name": "Microsoft+Roadmap+app.msapp",
+    "Name": "Microsoft M365 Roadmap & Blogs app",
     "OriginatingVersion": "1.321"
   },
   "PublishInfo": {
-    "AppName": "Microsoft Roadmap app",
+    "AppName": "Microsoft M365 Roadmap & Blogs app",
     "BackgroundColor": "rgba(253, 222, 207, 1)",
     "IconColor": "RGBA(255,255,255,1)",
     "IconName": "",
