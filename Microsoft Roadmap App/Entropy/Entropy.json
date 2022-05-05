@@ -218,7 +218,7 @@
     "Yammer_blogs": 181
   },
   "FunctionParamsInvariantScripts": {},
-  "HeaderLastSavedDateTimeUTC": "05/05/2022 10:01:48",
+  "HeaderLastSavedDateTimeUTC": "05/05/2022 10:04:50",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "07950eb7-bc24-451d-80ca-37ba057c9720": "\"/providers/microsoft.powerapps/apis/shared_teams/connections/shared-teams-063389be-aa6e-4a33-8f66-a1e5-36fd524d\"",
@@ -255,7 +255,7 @@
     "Whiteboard_RGB": "https://docserverpwafrwus.blob.core.windows.net/3cf3fb1a-b961-4096-aecc-78d7c4f39125-1/resource/Assets0Images0193fc5c6-f253-489a-a9e9-1a4c6817b1cb.png?sv=2017-04-17&sr=b&sig=1FG20%2FUBm6jqWu6V7%2Bt6KKuBMnMJJAmQ52JyUHp6o6M%3D&spr=https&se=2022-05-06T10%3A14%3A26Z&sp=r",
     "Yammer logo": "https://docserverpwafrwus.blob.core.windows.net/3cf3fb1a-b961-4096-aecc-78d7c4f39125-1/resource/Assets0Images095da93a9-b92e-4154-9c65-fccf5f00230c.png?sv=2017-04-17&sr=b&sig=3I2OU4qJ0FzcGrzcQX%2BMKELnxmX7RqdRat9%2F3SR7tiI%3D&spr=https&se=2022-05-06T10%3A14%3A26Z&sp=r"
   },
-  "OldLogoFileName": "11osl1jf.jpg",
+  "OldLogoFileName": "q0rhgrlp.jpg",
   "OrderComponentMetadata": {},
   "OrderComponentTemplate": {},
   "OrderDataSource": {
