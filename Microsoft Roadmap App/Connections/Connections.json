@@ -56,9 +56,7 @@
       "RSS"
     ],
     "dependencies": {},
-    "dependents": [
-      "db8abeb1-a0be-42be-a627-e5f272fac89c"
-    ],
+    "dependents": [],
     "id": "f13792b9-d4a0-4866-a39b-88a09ea0b279"
   }
 }
