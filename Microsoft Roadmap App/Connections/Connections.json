@@ -1,24 +1,4 @@
 {
-  "07950eb7-bc24-451d-80ca-37ba057c9720": {
-    "connectionParameters": {
-      "sku": "Enterprise"
-    },
-    "connectionRef": {
-      "apiTier": "Standard",
-      "displayName": "Microsoft Teams",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1567/1.0.1567.2748/teams/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_teams",
-      "parameterHints": {},
-      "parameterHintsV2": {}
-    },
-    "datasets": {},
-    "dataSources": [],
-    "dependencies": {},
-    "dependents": [
-      "db8abeb1-a0be-42be-a627-e5f272fac89c"
-    ],
-    "id": "07950eb7-bc24-451d-80ca-37ba057c9720"
-  },
   "2412fa8a-62fc-4d29-bf19-9c5fce13dff8": {
     "connectionParameters": {
       "sku": "Enterprise"
@@ -39,26 +19,6 @@
     "dependents": [],
     "id": "2412fa8a-62fc-4d29-bf19-9c5fce13dff8"
   },
-  "45037c29-7c21-47ea-b24b-d958d7c019d9": {
-    "connectionParameters": {
-      "sku": "Enterprise"
-    },
-    "connectionRef": {
-      "apiTier": "Standard",
-      "displayName": "Power Automate for Admins",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1551/1.0.1551.2693/microsoftflowforadmins/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_microsoftflowforadmins",
-      "parameterHints": {},
-      "parameterHintsV2": {}
-    },
-    "datasets": {},
-    "dataSources": [
-      "PowerAutomateforAdmins"
-    ],
-    "dependencies": {},
-    "dependents": [],
-    "id": "45037c29-7c21-47ea-b24b-d958d7c019d9"
-  },
   "5a29f62a-d8d4-4476-b475-911dd39f67c5": {
     "connectionParameters": {
       "sku": "Enterprise"
@@ -78,49 +38,6 @@
     "dependencies": {},
     "dependents": [],
     "id": "5a29f62a-d8d4-4476-b475-911dd39f67c5"
-  },
-  "db8abeb1-a0be-42be-a627-e5f272fac89c": {
-    "connectionParameters": {},
-    "connectionRef": {
-      "apiTier": "Standard",
-      "displayName": "Logic flows",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1534/1.0.1534.2605/logicflows/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
-      "parameterHints": {
-        "07950eb7-bc24-451d-80ca-37ba057c9720": {
-          "value": "shared_teams"
-        },
-        "f13792b9-d4a0-4866-a39b-88a09ea0b279": {
-          "value": "shared_rss"
-        },
-        "workflowEntityId": {},
-        "workflowName": {
-          "value": "9c1f7d2d-5f9c-4b48-b49a-f0bf4f932424"
-        }
-      },
-      "parameterHintsV2": {
-        "shared_rss": {
-          "value": "f13792b9-d4a0-4866-a39b-88a09ea0b279"
-        },
-        "shared_teams": {
-          "value": "07950eb7-bc24-451d-80ca-37ba057c9720"
-        },
-        "workflowEntityId": {},
-        "workflowName": {
-          "value": "9c1f7d2d-5f9c-4b48-b49a-f0bf4f932424"
-        }
-      }
-    },
-    "datasets": {},
-    "dataSources": [
-      "PowerApp->Whenafeeditemispublished,Applytoeach,Postadapti..."
-    ],
-    "dependencies": {
-      "shared_rss": "f13792b9-d4a0-4866-a39b-88a09ea0b279",
-      "shared_teams": "07950eb7-bc24-451d-80ca-37ba057c9720"
-    },
-    "dependents": [],
-    "id": "db8abeb1-a0be-42be-a627-e5f272fac89c"
   },
   "f13792b9-d4a0-4866-a39b-88a09ea0b279": {
     "connectionParameters": {
