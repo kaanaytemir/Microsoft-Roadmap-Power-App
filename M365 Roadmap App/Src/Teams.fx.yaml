@@ -359,13 +359,13 @@ Teams As screen:
         ZIndex: =21
 
     Timer1 As timer:
-        AutoPause: =false
         AutoStart: =true
         Duration: =10000
         Height: =70
         OnTimerEnd: |-
             =ClearCollect(CollectionFacts,{Test: First(Shuffle('M365 Roadmap & Blogs - Facts')).Title})
         Repeat: =true
+        Start: =true
         Visible: =false
         Width: =280
         X: =40
