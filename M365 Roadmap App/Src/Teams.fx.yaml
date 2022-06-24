@@ -352,20 +352,11 @@ Teams As screen:
         Fill: =White
         Height: =147
         Size: =21
-        Text: ="Loading..."
+        Text: =First(Shuffle(CollectionFacts)).Test
         Visible: =ShowLoader
         Width: =640
         Y: =988
         ZIndex: =21
-
-    Label9 As label:
-        Height: =70
-        Size: =21
-        Text: =First(Shuffle(CollectionFacts)).Test
-        Width: =560
-        X: =50
-        Y: =928
-        ZIndex: =22
 
     Timer1 As timer:
         AutoPause: =false
