@@ -1,0 +1,215 @@
+"'Roadmap startpage' As screen":
+    Fill: =
+    OnVisible: |-
+        =UpdateContext( { ctxWaffle1open: false} )
+
+    Rectangle2 As rectangle:
+        BorderColor: =RGBA(56, 96, 178, 1)
+        Fill: =RGBA(0, 134, 208, 1)
+        Height: =104
+        Width: =640
+        ZIndex: =1
+
+    Button7_3 As button:
+        Fill: =RGBA(70, 78, 184, 1)
+        Font: =Font.'Segoe UI'
+        Height: =85
+        OnSelect: =Navigate(Teams)
+        Size: =24
+        Text: ="Teams"
+        Width: =264
+        X: =202
+        Y: =281
+        ZIndex: =2
+
+    Image6_1 As image:
+        Height: =74
+        Image: ='Microsoft logo'
+        Width: =133
+        X: =507
+        Y: =19
+        ZIndex: =3
+
+    Label6_1 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =70
+        Size: =32
+        Text: ="Roadmap"
+        Width: =206
+        X: =222
+        Y: =19
+        ZIndex: =4
+
+    Label7 As label:
+        Height: =70
+        Size: =21
+        Text: ="Choose a product"
+        Width: =245
+        X: =202
+        Y: =126
+        ZIndex: =5
+
+    Button7_4 As button:
+        Fill: =RGBA(130, 95, 193, 1)
+        Font: =Font.'Segoe UI'
+        Height: =85
+        OnSelect: =Navigate(Viva)
+        Size: =24
+        Text: ="Microsoft Viva"
+        Width: =269
+        X: =201
+        Y: =397
+        ZIndex: =6
+
+    Button7_7 As button:
+        Fill: =RGBA(2, 131, 135, 1)
+        Font: =Font.'Segoe UI'
+        Height: =85
+        OnSelect: =Navigate(Sharepoint_p)
+        Size: =24
+        Text: ="Sharepoint"
+        Width: =269
+        X: =201
+        Y: =747
+        ZIndex: =7
+
+    Button7_8 As button:
+        Fill: =RGBA(116, 39, 115, 1)
+        Font: =Font.'Segoe UI'
+        Height: =85
+        OnSelect: =Navigate(PowerApps)
+        Size: =24
+        Text: ="Power Apps"
+        Width: =269
+        X: =201
+        Y: =513
+        ZIndex: =8
+
+    Button7_10 As button:
+        Fill: =RGBA(2, 121, 212, 1)
+        Font: =Font.'Segoe UI'
+        Height: =85
+        OnSelect: =Navigate(Yammer)
+        Size: =24
+        Text: ="Yammer"
+        Width: =269
+        X: =202
+        Y: =630
+        ZIndex: =10
+
+    Image1 As image:
+        Height: =70
+        Image: ='Teams logo'
+        Width: =66
+        X: =98
+        Y: =289
+        ZIndex: =11
+
+    Image1_1 As image:
+        Height: =70
+        Image: ='Microsoft Viva'
+        Width: =66
+        X: =98
+        Y: =403
+        ZIndex: =12
+
+    Image1_2 As image:
+        Height: =70
+        Image: ='Yammer logo'
+        Width: =66
+        X: =98
+        Y: =637
+        ZIndex: =13
+
+    Image1_5 As image:
+        Height: =70
+        Image: =Sharepoint
+        Width: =66
+        X: =98
+        Y: =755
+        ZIndex: =15
+
+    Image1_4 As image:
+        Height: =87
+        Image: ='Power Apps'
+        Width: =88
+        X: =87
+        Y: =513
+        ZIndex: =17
+
+    Icon4 As icon.Hamburger:
+        Height: =55
+        Icon: =Icon.Hamburger
+        OnSelect: |-
+            =UpdateContext( { ctxWaffle1open: !ctxWaffle1open } )
+        Width: =53
+        X: =34
+        Y: =28
+        ZIndex: =18
+
+    Container1 As groupContainer.verticalAutoLayoutContainer:
+        BorderColor: =RGBA(0, 18, 107, 1)
+        BorderThickness: =2
+        Fill: =RGBA(0, 134, 208, 1)
+        Height: =58
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Visible: =ctxWaffle1open
+        Width: =640
+        Y: =104
+        ZIndex: =19
+
+        Button6_7 As button:
+            AlignInContainer: =AlignInContainer.Center
+            BorderThickness: =0
+            Fill: =RGBA(0, 18, 107, 1)
+            Font: =Font.'Segoe UI'
+            Height: =60
+            LayoutMinHeight: =70
+            LayoutMinWidth: =280
+            OnSelect: =Navigate(About)
+            PaddingBottom: =10
+            PaddingLeft: =10
+            PaddingRight: =10
+            PaddingTop: =10
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =22
+            Text: ="About"
+            Width: =700
+            ZIndex: =8
+
+    Button7_18 As button:
+        Fill: =RGBA(221, 79, 14, 1)
+        Font: =Font.'Segoe UI'
+        Height: =85
+        OnSelect: |-
+            =Launch("https://www.microsoft.com/nl-nl/microsoft-365/roadmap")
+        Size: =24
+        Text: ="Other products"
+        Width: =269
+        X: =201
+        Y: =866
+        ZIndex: =20
+
+    Image6_5 As image:
+        Height: =130
+        Image: ='Microsoft logo'
+        Width: =238
+        X: =12
+        Y: =843
+        ZIndex: =21
+
+    HtmlText1 As htmlViewer:
+        Height: =102
+        HtmlText: ="<i>The Microsoft 365 roadmap provides estimated release dates and descriptions for commercial features. All information is subject to change.</i>"
+        Size: =14
+        Width: =548
+        X: =62
+        Y: =1012
+        ZIndex: =22
+
