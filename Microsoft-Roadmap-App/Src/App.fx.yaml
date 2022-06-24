@@ -1,5 +1,0 @@
-App As appinfo:
-    BackEnabled: =true
-    OnStart: =
-    StartScreen: ='Roadmap startpage'
-
