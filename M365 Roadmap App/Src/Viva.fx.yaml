@@ -347,22 +347,36 @@ Viva As screen:
         ZIndex: =18
 
     Image2_9 As image:
-        Height: =1066
+        Height: =1067
         Image: =microsoft
         ImagePosition: =ImagePosition.Fill
         Visible: =ShowLoader
         Width: =640
-        Y: =1
         ZIndex: =19
 
-    Label3_9 As label:
-        Align: =Align.Center
-        Fill: =White
+    Timer1_4 As timer:
+        AutoStart: =true
+        Duration: =10000
+        Height: =70
+        OnTimerEnd: =
+        OnTimerStart: |-
+            =ClearCollect(CollectionFacts,{Test: First(Shuffle('M365 Roadmap & Blogs - Facts')).Title})
+        Repeat: =true
+        Start: =
+        Visible: =false
+        Width: =280
+        X: =40
+        Y: =41
+        ZIndex: =20
+
+    HtmlText3_4 As htmlViewer:
+        Fill: =RGBA(255, 255, 255, 1)
         Height: =147
-        Size: =21
-        Text: ="Loading..."
+        HtmlText: |-
+            =Concatenate("<center><b>Did you know:</b> " & Text(First(Shuffle(CollectionFacts)).Test) & "</center>")
+        Size: =18
         Visible: =ShowLoader
         Width: =640
         Y: =989
-        ZIndex: =20
+        ZIndex: =21
 
