@@ -191,7 +191,7 @@
             Height: =60
             LayoutMinHeight: =70
             LayoutMinWidth: =280
-            OnSelect: =Navigate(About)
+            OnSelect: =Navigate(Share)
             PaddingBottom: =10
             PaddingLeft: =10
             PaddingRight: =10

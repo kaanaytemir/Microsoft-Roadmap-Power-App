@@ -78,9 +78,23 @@ Share As screen:
     TextInput1 As text:
         Default: ="Email address"
         Height: =78
+        HintText: ="Email address"
         Size: =21
         Width: =400
         X: =107
         Y: =667
         ZIndex: =9
+
+    Icon5 As icon.Send:
+        Color: =If(SuccessColor,Green)
+        Height: =52
+        Icon: =Icon.Send
+        OnSelect: |-
+            =Collect('M365 users list', {Title: TextInput1.Text});
+            Notify( "Invitation sent!", NotificationType.Success, 0);
+            Set(SuccessColor, true);
+        Width: =58
+        X: =530
+        Y: =681
+        ZIndex: =10
 
