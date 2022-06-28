@@ -74,7 +74,7 @@ Teams As screen:
             Height: =55
             OnSelect: =Select(Parent)
             Size: =21
-            Text: =If ("Launched" in Concat(ThisItem.categories,Value", "), "Launched", "In Development" in Concat(ThisItem.categories,Value,", "), "In Development", "Rolling out" in Concat(ThisItem.categories,Value,", "), "Rolling Out", "Preview" in Concat(ThisItem.categories,Value,", "), "Preview" )
+            Text: =If ("Launched" in Concat(ThisItem.categories,Value,", "), "Launched", "In Development" in Concat(ThisItem.categories,Value,", "), "In Development", "Rolling out" in Concat(ThisItem.categories,Value,", "), "Rolling Out", "Preview" in Concat(ThisItem.categories,Value,", "), "Preview" )
             Width: =233
             X: =32
             Y: =173
