@@ -68,18 +68,6 @@ Teams As screen:
             Y: =175
             ZIndex: =5
 
-        Label3_4 As label:
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Lighter
-            Height: =55
-            OnSelect: =Select(Parent)
-            Size: =21
-            Text: =If ("Launched" in Concat(ThisItem.categories,Value,", "), "Launched", "In Development" in Concat(ThisItem.categories,Value,", "), "In Development", "Rolling out" in Concat(ThisItem.categories,Value,", "), "Rolling Out", "Preview" in Concat(ThisItem.categories,Value,", "), "Preview" )
-            Width: =233
-            X: =32
-            Y: =173
-            ZIndex: =6
-
         Label1_11 As label:
             Color: =RGBA(149, 149, 149, 1)
             Font: =Font.'Segoe UI'
@@ -94,19 +82,17 @@ Teams As screen:
             Y: =175
             ZIndex: =7
 
-        Label3_9 As label:
-            Fill: =RGBA(255, 191, 0, 1)
+        HtmlText4 As htmlViewer:
             Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            Height: =43
+            Height: =46
+            HtmlText: |-
+                =If ("Launched" in Concat(ThisItem.categories,Value,", "), "<font color=#4fe5ff>Launched</font>", "In Development" in Concat(ThisItem.categories,Value,", "), "<font color=#24395e>In Development</font>", "Rolling out" in Concat(ThisItem.categories,Value,", "), "<font color=#0278d4>Rolling Out</font>", "Preview" in Concat(ThisItem.categories,Value,", "), "<font color=#b49c00>Preview</font>")
             OnSelect: =Select(Parent)
-            Size: =20
-            Text: =If ("Preview" in Concat(ThisItem.categories,Value,", "), "Preview" )
-            Visible: =If ("Preview" in Concat(ThisItem.categories,Value,", "), true)
-            Width: =108
-            X: =36
-            Y: =129
-            ZIndex: =8
+            Size: =21
+            Width: =212
+            X: =32
+            Y: =175
+            ZIndex: =9
 
     Button7_5 As button:
         Fill: |-
