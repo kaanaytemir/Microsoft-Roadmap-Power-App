@@ -74,7 +74,7 @@ Teams As screen:
             Height: =55
             OnSelect: =Select(Parent)
             Size: =21
-            Text: =If ("Launched" in Concat(ThisItem.categories,Value,", "), "Launched", "In Development" in Concat(ThisItem.categories,Value,", "), "In Development", "Rolling out" in Concat(ThisItem.categories,Value,", "), "Rolling Out" )
+            Text: =If ("Launched" in Concat(ThisItem.categories,Value", "), "Launched", "In Development" in Concat(ThisItem.categories,Value,", "), "In Development", "Rolling out" in Concat(ThisItem.categories,Value,", "), "Rolling Out", "Preview" in Concat(ThisItem.categories,Value,", "), "Preview" )
             Width: =233
             X: =32
             Y: =173
@@ -93,6 +93,20 @@ Teams As screen:
             X: =284
             Y: =175
             ZIndex: =7
+
+        Label3_9 As label:
+            Fill: =RGBA(255, 191, 0, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =43
+            OnSelect: =Select(Parent)
+            Size: =20
+            Text: =If ("Preview" in Concat(ThisItem.categories,Value,", "), "Preview" )
+            Visible: =If ("Preview" in Concat(ThisItem.categories,Value,", "), true)
+            Width: =108
+            X: =36
+            Y: =129
+            ZIndex: =8
 
     Button7_5 As button:
         Fill: |-
