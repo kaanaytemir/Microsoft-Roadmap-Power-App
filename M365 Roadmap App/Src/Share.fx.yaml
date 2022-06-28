@@ -1,13 +1,13 @@
-About As screen:
+Share As screen:
 
-    Rectangle2_1 As rectangle:
+    Rectangle2_2 As rectangle:
         BorderColor: =RGBA(56, 96, 178, 1)
         Fill: =RGBA(0, 134, 208, 1)
         Height: =104
         Width: =640
         ZIndex: =1
 
-    Image6_12 As image:
+    Image6_14 As image:
         Height: =74
         Image: ='Microsoft logo'
         Width: =133
@@ -15,33 +15,32 @@ About As screen:
         Y: =19
         ZIndex: =2
 
-    Label6_21 As label:
+    Label6_22 As label:
         Align: =Align.Right
         Color: =RGBA(255, 255, 255, 1)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
         Height: =58
         Size: =32
-        Text: ="About"
+        Text: ="Share"
         Width: =140
-        X: =248
+        X: =236
         Y: =19
         ZIndex: =3
 
-    Label4 As label:
-        Height: =394
-        Size: =22
+    Label4_1 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =206
+        Size: =24
         Text: |-
-            ="This Power App is built by Celâl Kaan Aytemir to bundle the roadmap and blogs for M365 products in one app and make it easy to access in Microsoft Teams.
-            
-            
-            In case you have any questions and/or remarks, please reach out to Kaan."
-        Width: =523
-        X: =58
-        Y: =412
+            ="Want to share this app with your colleague? 
+            "
+        Width: =421
+        X: =109
+        Y: =366
         ZIndex: =4
 
-    HtmlText1_1 As htmlViewer:
+    HtmlText1_2 As htmlViewer:
         Height: =102
         HtmlText: ="<i>The Microsoft 365 roadmap provides estimated release dates and descriptions for commercial features. All information is subject to change.</i>"
         Size: =14
@@ -50,30 +49,38 @@ About As screen:
         Y: =1012
         ZIndex: =5
 
-    Image6_13 As image:
-        Height: =258
+    Image6_15 As image:
+        Height: =270
         Image: ='Microsoft logo'
-        Width: =523
-        X: =58
-        Y: =123
+        Width: =509
+        X: =62
+        Y: =131
         ZIndex: =6
 
-    Icon2_12 As icon.ChevronLeft:
+    Icon2_13 As icon.ChevronLeft:
         Height: =35
         Icon: =Icon.ChevronLeft
-        OnSelect: =Back()
+        OnSelect: =Navigate('Roadmap startpage')
         Width: =42
         X: =25
         Y: =38
         ZIndex: =7
 
-    Button1 As button:
-        Height: =55
-        OnSelect: =Navigate(Share)
-        Size: =20
-        Text: ="Share app"
-        Width: =190
-        X: =198
-        Y: =887
-        ZIndex: =10
+    Label4_2 As label:
+        Height: =126
+        Size: =21
+        Text: ="Provide their email address below!"
+        Width: =421
+        X: =106
+        Y: =515
+        ZIndex: =8
+
+    TextInput1 As text:
+        Default: ="Email address"
+        Height: =78
+        Size: =21
+        Width: =400
+        X: =107
+        Y: =667
+        ZIndex: =9
 
