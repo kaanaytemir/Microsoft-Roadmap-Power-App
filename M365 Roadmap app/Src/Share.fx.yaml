@@ -80,7 +80,7 @@ Share As screen:
         ZIndex: =8
 
     TextInput1 As text:
-        Default: ="Email address"
+        Default: =""
         Height: =78
         HintText: ="Email address"
         Size: =21
