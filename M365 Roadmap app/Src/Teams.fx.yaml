@@ -1,0 +1,378 @@
+Teams As screen:
+    Fill: =RGBA(70, 78, 184, 1)
+    OnHidden: =
+    OnVisible: |-
+        =Set(ShowLoader, true);
+        ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "In Development" in categories And "Microsoft Teams" in categories), "updatedOn", Descending));
+        Set(ShowLoader, false);
+
+    "Gallery1_4 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
+        BorderColor: =RGBA(109, 49, 162, 1)
+        Fill: =If(DarkMode, Black, White)
+        Height: =814
+        Items: =Search(FeedCollection, TextInput3.Text, "title")
+        Layout: =Layout.Vertical
+        ShowNavigation: =true
+        ShowScrollbar: =false
+        TemplatePadding: =0
+        TemplateSize: =249
+        WrapCount: =0
+        Y: =321
+        ZIndex: =1
+
+        Title2_4 As label:
+            Color: =If(DarkMode, White, Black)
+            DisplayMode: =DisplayMode.View
+            Font: =Font.'Segoe UI'
+            Height: =112
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =22
+            Text: =ThisItem.title
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 104
+            X: =32
+            Y: =17
+            ZIndex: =1
+
+        Separator2_4 As rectangle:
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =3
+
+        Button1_4 As button:
+            Fill: =RGBA(70, 78, 184, 1)
+            Font: =Font.'Segoe UI'
+            Height: =51
+            OnSelect: =Set(Summary, ThisItem.summary); Set(Title, ThisItem.title); Set(PrimaryLink, ThisItem.primaryLink);Navigate(Details)
+            Size: =16
+            Text: ="Details"
+            Width: =91
+            X: =524
+            Y: =175
+            ZIndex: =4
+
+        Label1_4 As label:
+            Color: =If(DarkMode, White, Black)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Lighter
+            Height: =53
+            OnSelect: =Select(Parent)
+            Size: =18
+            Text: =Left(ThisItem.updatedOn, 10)
+            Width: =171
+            X: =383
+            Y: =175
+            ZIndex: =5
+
+        Label1_11 As label:
+            Color: =RGBA(149, 149, 149, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Lighter
+            Height: =53
+            OnSelect: =Select(Parent)
+            Size: =18
+            Text: |-
+                ="Updated:"
+            Width: =171
+            X: =284
+            Y: =175
+            ZIndex: =7
+
+        HtmlText4 As htmlViewer:
+            Font: =Font.'Segoe UI'
+            Height: =53
+            HtmlText: |-
+                =If ("Launched" in Concat(ThisItem.categories,Value,", "), "<font color=#4fe5ff>Launched</font>", "In Development" in Concat(ThisItem.categories,Value,", "), "<font color=#24395e>In Development</font>", "Rolling out" in Concat(ThisItem.categories,Value,", "), "<font color=#0278d4>Rolling Out</font>", "Preview" in Concat(ThisItem.categories,Value,", "), "<font color=#b49c00>Preview</font>")
+            OnSelect: =Select(Parent)
+            Size: =21
+            Width: =240
+            X: =32
+            Y: =175
+            ZIndex: =9
+
+    Button7_5 As button:
+        Fill: |-
+            =If(
+               TwoClicked, MidnightBlue, RGBA(102, 113, 166, 1)
+            )
+        Font: =Font.'Segoe UI'
+        Height: =49
+        OnSelect: |-
+            =ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Launched" in categories And "Microsoft Teams" in categories), "updatedOn", Descending));
+            
+            UpdateContext(
+               {
+                  OneClicked:false, 
+                  TwoClicked: true,
+                  ThreeClicked: false,
+                  FourClicked: false
+               }
+            );
+        RadiusBottomLeft: =12
+        RadiusBottomRight: =12
+        RadiusTopLeft: =12
+        RadiusTopRight: =12
+        Size: =16
+        Text: ="Launched"
+        Width: =113
+        X: =364
+        Y: =232
+        ZIndex: =4
+
+    Button7_6 As button:
+        Fill: |-
+            =If(
+               FourClicked, MidnightBlue, RGBA(102, 113, 166, 1)
+            )
+        Font: =Font.'Segoe UI'
+        Height: =51
+        OnSelect: |-
+            =ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "In Development" in categories And "Microsoft Teams" in categories), "updatedOn", Descending));
+            
+            UpdateContext(
+               {
+                  OneClicked:false, 
+                  TwoClicked: false,
+                  ThreeClicked: false,
+                  FourClicked: true
+               }
+            );
+        RadiusBottomLeft: =12
+        RadiusBottomRight: =12
+        RadiusTopLeft: =12
+        RadiusTopRight: =12
+        Size: =16
+        Text: ="In development"
+        Width: =171
+        X: =25
+        Y: =230
+        ZIndex: =5
+
+    Label6 As label:
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =70
+        Size: =32
+        Text: ="Microsoft Teams"
+        Width: =339
+        X: =146
+        Y: =23
+        ZIndex: =6
+
+    Image6 As image:
+        Height: =74
+        Image: ='Microsoft logo'
+        OnSelect: =Navigate('Roadmap startpage')
+        Width: =133
+        X: =507
+        Y: =19
+        ZIndex: =7
+
+    Icon2_1 As icon.ChevronLeft:
+        Height: =35
+        Icon: =Icon.ChevronLeft
+        OnSelect: =Back()
+        Width: =42
+        X: =25
+        Y: =38
+        ZIndex: =8
+
+    Button7_11 As button:
+        Fill: |-
+            =If(
+               ThreeClicked, MidnightBlue, RGBA(102, 113, 166, 1)
+            )
+        Font: =Font.'Segoe UI'
+        Height: =49
+        OnSelect: |-
+            =ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Rolling out" in categories And "Microsoft Teams" in categories), "updatedOn", Descending));
+            
+            UpdateContext(
+               {
+                  OneClicked:false, 
+                  TwoClicked: false,
+                  ThreeClicked: true,
+                  FourClicked: false
+               }
+            );
+        RadiusBottomLeft: =12
+        RadiusBottomRight: =12
+        RadiusTopLeft: =12
+        RadiusTopRight: =12
+        Size: =16
+        Text: ="Rolling out"
+        Width: =119
+        X: =220
+        Y: =232
+        ZIndex: =9
+
+    TextInput3 As text:
+        Clear: =true
+        Default: =""
+        Font: =Font.'Segoe UI'
+        Height: =70
+        HintText: ="Search"
+        OnSelect: =Filter(FeedCollection,TextInput3.Text = title)
+        RadiusBottomLeft: =12
+        RadiusBottomRight: =12
+        RadiusTopLeft: =12
+        RadiusTopRight: =12
+        Size: =21
+        Width: =460
+        X: =25
+        Y: =126
+        ZIndex: =10
+
+    Icon1 As icon.Search:
+        Height: =37
+        Icon: =Icon.Search
+        Visible: =IsBlank(TextInput3.Text)
+        Width: =37
+        X: =432
+        Y: =143
+        ZIndex: =11
+
+    Label6_4 As label:
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =35
+        Size: =12
+        Text: ="Roadmap"
+        Width: =84
+        X: =531
+        Y: =73
+        ZIndex: =12
+
+    Label5 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =54
+        OnSelect: =Navigate(Teams_blogs)
+        Size: =22
+        Text: ="Blog"
+        Width: =89
+        X: =526
+        Y: =134
+        ZIndex: =13
+
+    Button7_32 As button:
+        Fill: =If(OneClicked, MidnightBlue, RGBA(102, 113, 166, 1))
+        Font: =Font.'Segoe UI'
+        Height: =49
+        OnSelect: |-
+            =ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Preview" in categories And "Microsoft Teams" in categories), "updatedOn", Descending));
+            
+            UpdateContext(
+               {
+                  OneClicked:true, 
+                  TwoClicked: false,
+                  ThreeClicked: false,
+                  FourClicked: false
+               }
+            );
+        PressedFill: =
+        RadiusBottomLeft: =12
+        RadiusBottomRight: =12
+        RadiusTopLeft: =12
+        RadiusTopRight: =12
+        Size: =16
+        Text: ="Previews"
+        Width: =113
+        X: =502
+        Y: =232
+        ZIndex: =16
+
+    Label10_14 As label:
+        Align: =Align.Center
+        FontWeight: =FontWeight.Bold
+        Height: =132
+        Size: =24
+        Text: |-
+            ="Please choose a status to see 
+            relevant roadmap items
+            "
+        Visible: |-
+            =If (
+              CountRows(Gallery1_4.AllItems) = 0,
+              true
+            )
+        Width: =502
+        X: =67
+        Y: =591
+        ZIndex: =17
+
+    Button3_4 As button:
+        Fill: =RGBA(70, 78, 184, 1)
+        Height: =90
+        OnSelect: |-
+            =Launch("https://feedbackportal.microsoft.com/feedback/forum/ad198462-1c1c-ec11-b6e7-0022481f8472")
+        Size: =20
+        Text: ="Share your roadmap idea"
+        Visible: |-
+            =If (
+              CountRows(Gallery1_4.AllItems) = 0,
+              true
+            )
+        Width: =472
+        X: =82
+        Y: =831
+        ZIndex: =18
+
+    Label10_15 As label:
+        Align: =Align.Center
+        Color: =RGBA(184, 0, 0, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =132
+        Size: =24
+        Text: ="No result?"
+        Visible: |-
+            =If (
+              CountRows(Gallery1_4.AllItems) = 0,
+              true
+            )
+        Width: =502
+        X: =69
+        Y: =699
+        ZIndex: =19
+
+    Image2_5 As image:
+        Height: =1066
+        Image: =microsoft
+        ImagePosition: =ImagePosition.Fill
+        Visible: =ShowLoader
+        Width: =640
+        ZIndex: =20
+
+    Timer1 As timer:
+        AutoStart: =true
+        Duration: =10000
+        Height: =70
+        OnTimerEnd: =
+        OnTimerStart: |-
+            =ClearCollect(CollectionFacts,{Test: First(Shuffle('M365 Roadmap & Blogs - Facts')).Title})
+        Repeat: =true
+        Start: =
+        Visible: =false
+        Width: =280
+        X: =40
+        Y: =40
+        ZIndex: =23
+
+    HtmlText3 As htmlViewer:
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =147
+        HtmlText: |-
+            =Concatenate("<center><b>Did you know:</b> " & Text(First(Shuffle(CollectionFacts)).Test) & "</center>")
+        Size: =18
+        Visible: =ShowLoader
+        Width: =640
+        Y: =988
+        ZIndex: =24
+

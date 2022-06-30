@@ -1,0 +1,5 @@
+App As appinfo:
+    BackEnabled: =true
+    OnStart: =Set(DarkMode, false)
+    StartScreen: ='Roadmap startpage'
+
