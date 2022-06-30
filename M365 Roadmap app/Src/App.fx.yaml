@@ -1,5 +1,7 @@
 App As appinfo:
     BackEnabled: =true
-    OnStart: =Set(DarkMode, false)
+    OnStart: |-
+        =Set(DarkMode, false);
+        ClearCollect(FeedCollection, "https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/");
     StartScreen: ='Roadmap startpage'
 
