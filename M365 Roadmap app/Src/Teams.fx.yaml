@@ -8,6 +8,7 @@ Teams As screen:
 
     "Gallery1_4 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
         BorderColor: =RGBA(109, 49, 162, 1)
+        DelayItemLoading: =true
         Fill: =If(DarkMode, Black, White)
         Height: =814
         Items: =Search(FeedCollection, TextInput3.Text, "title")
