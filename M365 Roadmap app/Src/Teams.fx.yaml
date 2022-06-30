@@ -14,7 +14,6 @@ Teams As screen:
         Items: =Search(FeedCollection, TextInput3.Text, "title")
         Layout: =Layout.Vertical
         ShowNavigation: =true
-        ShowScrollbar: =false
         TemplatePadding: =0
         TemplateSize: =249
         WrapCount: =0

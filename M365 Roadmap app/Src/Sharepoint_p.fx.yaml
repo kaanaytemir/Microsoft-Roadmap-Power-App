@@ -13,7 +13,6 @@ Sharepoint_p As screen:
         Items: =Search(FeedCollection, TextInput3_8.Text, "title")
         Layout: =Layout.Vertical
         ShowNavigation: =true
-        ShowScrollbar: =false
         TemplatePadding: =0
         TemplateSize: =249
         WrapCount: =0
