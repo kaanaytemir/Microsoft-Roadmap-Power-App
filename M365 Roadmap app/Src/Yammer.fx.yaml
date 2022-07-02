@@ -88,7 +88,7 @@ Yammer As screen:
             Font: =Font.'Segoe UI'
             Height: =51
             HtmlText: |-
-                =If ("Launched" in Concat(ThisItem.categories,Value,", "), "<font color=#4fe5ff>Launched</font>", "In Development" in Concat(ThisItem.categories,Value,", "), "<font color=#24395e>In Development</font>", "Rolling out" in Concat(ThisItem.categories,Value,", "), "<font color=#0278d4>Rolling Out</font>", "Preview" in Concat(ThisItem.categories,Value,", "), "<font color=#b49c00>Preview</font>")
+                =If ("Launched" in Concat(ThisItem.categories,Value,", "), "<font color=#24395e>Launched</font>", "In Development" in Concat(ThisItem.categories,Value,", "), "<font color=#24395e>In Development</font>", "Rolling out" in Concat(ThisItem.categories,Value,", "), "<font color=#24395e>Rolling Out</font>", "Preview" in Concat(ThisItem.categories,Value,", "), "<font color=#24395e>Preview</font>")
             OnSelect: =Select(Parent)
             Size: =21
             Width: =250
