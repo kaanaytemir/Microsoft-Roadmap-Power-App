@@ -29,8 +29,11 @@
       "Created": "Created",
       "Editor": "Modified By",
       "Editor#Claims": "Modified By Claims",
+      "Feedback": "Feedback",
       "ID": "ID",
       "Modified": "Modified",
+      "Rating": "Rating",
+      "RatingOfApp": "RatingOfApp",
       "Title": "Title"
     },
     "DatasetName": "https://microsofteur.sharepoint.com/teams/M365RoadmapBlogsapp/",
