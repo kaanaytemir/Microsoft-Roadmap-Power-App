@@ -256,9 +256,11 @@ Yammer As screen:
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Bold
         Height: =54
+        HoverColor: =Black
         OnSelect: =Navigate(Yammer_blogs)
         Size: =22
-        Text: ="Blog"
+        Text: ="Blogs"
+        Underline: =true
         Width: =89
         X: =526
         Y: =134
