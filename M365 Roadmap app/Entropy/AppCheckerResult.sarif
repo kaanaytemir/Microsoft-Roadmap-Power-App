@@ -23,10 +23,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 33,
+                  "charLength": 36,
                   "charOffset": 29,
                   "snippet": {
-                    "text": "{FeedbackMe: ServiceQuality.Text}"
+                    "text": "{TitleFeedback: ServiceQuality.Text}"
                   }
                 }
               },
@@ -39,7 +39,7 @@
           ],
           "message": {
             "arguments": [
-              "FeedbackMe",
+              "TitleFeedback",
               "Feedback"
             ],
             "id": "issue"
