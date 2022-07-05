@@ -35,7 +35,7 @@ Share As screen:
         Height: =206
         Size: =24
         Text: |-
-            ="Want to share this app with your colleague? 
+            ="Want to share this app with your colleague(s)? 
             "
         Width: =421
         X: =109
@@ -80,6 +80,7 @@ Share As screen:
         ZIndex: =8
 
     TextInput1 As text:
+        BorderColor: =RGBA(0, 134, 208, 1)
         Default: =""
         Height: =78
         HintText: ="Email address"
