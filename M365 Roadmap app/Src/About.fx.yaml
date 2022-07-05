@@ -71,12 +71,12 @@ About As screen:
         ZIndex: =7
 
     Button1 As button:
-        Height: =55
+        Height: =77
         OnSelect: =Navigate(Share)
         Size: =20
         Text: ="Share app"
-        Width: =190
-        X: =198
-        Y: =887
+        Width: =276
+        X: =182
+        Y: =858
         ZIndex: =10
 
