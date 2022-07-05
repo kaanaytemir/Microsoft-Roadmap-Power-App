@@ -65,7 +65,7 @@ Rating As screen:
         Height: =68
         OnSelect: |-
             =Collect('App feedback list', {Title: ServiceQuality.Text});
-            Collect('App feedback list', {Tester: ServiceRating.Value});
+            Collect('App feedback list', {RatingOfApp: ServiceRating.Value});
             Notify( "Invitation sent!", NotificationType.Success, 0);
             Set(SuccessColor, true);
         Size: =24
