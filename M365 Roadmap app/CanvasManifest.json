@@ -86,7 +86,6 @@
     "FileID": "54b254c2-0120-4cdc-970a-c25ccbbf8666",
     "Id": "141e3da3-1f7c-4c87-aa2d-b01e9698eb06",
     "InstrumentationKey": "",
-    "LocalDatabaseReferences": "{}",
     "Name": "Microsoft M365 Roadmap & Blogs app",
     "OriginatingVersion": "1.321"
   },
@@ -115,6 +114,7 @@
     "Sharepoint_blogs",
     "Details",
     "About",
+    "Rating",
     "Share",
     "Settings"
   ]

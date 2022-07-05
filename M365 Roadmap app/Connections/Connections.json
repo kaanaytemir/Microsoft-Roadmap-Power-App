@@ -19,6 +19,13 @@
           }
         }
       },
+      "https://microsofteur.sharepoint.com/teams/M365RoadmapBlogsapp/": {
+        "dataSources": {
+          "App feedback list": {
+            "tableName": "4f0dcb36-2a28-46dc-8fb0-98d365e2c17a"
+          }
+        }
+      },
       "https://microsofteur-my.sharepoint.com/personal/caytemir_microsoft_com": {
         "dataSources": {
           "M365 Roadmap & Blogs - Facts": {
@@ -29,7 +36,8 @@
     },
     "dataSources": [
       "M365 Roadmap & Blogs - Facts",
-      "M365 users list"
+      "M365 users list",
+      "App feedback list"
     ],
     "dependencies": {},
     "dependents": [],

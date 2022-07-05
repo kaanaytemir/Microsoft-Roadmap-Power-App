@@ -1,0 +1,97 @@
+Rating As screen:
+    Fill: =If(DarkMode, Black, White)
+
+    Rectangle2_4 As rectangle:
+        BorderColor: =RGBA(56, 96, 178, 1)
+        Fill: =RGBA(0, 134, 208, 1)
+        Height: =104
+        Width: =640
+        ZIndex: =1
+
+    Image6_18 As image:
+        Height: =74
+        Image: ='Microsoft logo'
+        Width: =133
+        X: =507
+        Y: =19
+        ZIndex: =2
+
+    Label6_24 As label:
+        Align: =Align.Right
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =66
+        Size: =32
+        Text: ="Feedback"
+        Width: =220
+        X: =193
+        Y: =19
+        ZIndex: =3
+
+    Image6_19 As image:
+        Height: =258
+        Image: ='Microsoft logo'
+        Width: =523
+        X: =58
+        Y: =123
+        ZIndex: =6
+
+    Icon2_15 As icon.ChevronLeft:
+        Height: =35
+        Icon: =Icon.ChevronLeft
+        OnSelect: =Back()
+        Width: =42
+        X: =25
+        Y: =38
+        ZIndex: =7
+
+    ServiceRating As rating:
+        Default: =5
+        DisabledFill: =Self.Fill
+        DisplayMode: =DisplayMode.Edit
+        FocusedBorderColor: =Self.BorderColor
+        Height: =77
+        HoverFill: =Self.Fill
+        PressedFill: =Self.Fill
+        RatingFill: =RGBA(0, 134, 208, 1)
+        Width: =350
+        X: =144
+        Y: =536
+        ZIndex: =8
+
+    Button4 As button:
+        Fill: =RGBA(0, 134, 208, 1)
+        Height: =68
+        OnSelect: |-
+            =Collect('App feedback list', {Feedback: ServiceQuality.Text});
+            Collect('App feedback list', {Rating: ServiceRating.Default});
+            Notify( "Invitation sent!", NotificationType.Success, 0);
+            Set(SuccessColor, true);
+        Size: =24
+        Text: ="Send feedback"
+        Width: =254
+        X: =193
+        Y: =948
+        ZIndex: =9
+
+    Label9 As label:
+        Height: =133
+        Size: =21
+        Text: ="Rate this app and provide your feedback to help us improve it"
+        Width: =463
+        X: =118
+        Y: =381
+        ZIndex: =10
+
+    ServiceQuality As text:
+        BorderColor: =RGBA(0, 134, 208, 1)
+        Default: =""
+        Height: =208
+        HintText: =If(ServiceRating.Value < 5, "What can we improve?", "  Add your feedback here")
+        Size: =21
+        Width: =400
+        X: =135
+        Y: =665
+        ZIndex: =11
+

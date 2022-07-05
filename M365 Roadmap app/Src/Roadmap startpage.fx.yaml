@@ -259,3 +259,12 @@
         Y: =998
         ZIndex: =22
 
+    Icon7 As icon.Information:
+        Height: =38
+        Icon: =Icon.Information
+        Tooltip: ="Share feedback"
+        Width: =31
+        X: =578
+        Y: =1086
+        ZIndex: =23
+
