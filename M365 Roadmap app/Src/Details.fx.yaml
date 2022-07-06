@@ -49,6 +49,7 @@
 
         Label8 As label:
             Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
             FontWeight: =FontWeight.Bold
             Height: =184
             Size: =22
