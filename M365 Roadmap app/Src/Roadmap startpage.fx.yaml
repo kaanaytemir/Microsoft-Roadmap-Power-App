@@ -285,11 +285,11 @@
         BorderColor: =RGBA(0, 134, 208, 1)
         Color: =RGBA(0, 134, 208, 1)
         Fill: =RGBA(255, 255, 255, 1)
-        Height: =58
+        Height: =40
         Icon: =Icon.Help
         OnSelect: =Navigate(About)
-        Width: =42
-        X: =579
-        Y: =1065
+        Width: =34
+        X: =588
+        Y: =1083
         ZIndex: =23
 
