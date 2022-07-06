@@ -50,11 +50,12 @@
         Label8 As label:
             Align: =Align.Center
             FontWeight: =FontWeight.Bold
-            Height: =266
+            Height: =184
             Size: =22
             Text: =Title
-            Width: =574
-            X: =45
+            Width: =526
+            X: =63
+            Y: =39
             ZIndex: =1
 
     Icon2_11 As icon.ChevronLeft:

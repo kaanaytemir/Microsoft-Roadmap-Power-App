@@ -154,7 +154,7 @@
         BorderColor: =RGBA(0, 18, 107, 1)
         BorderThickness: =2
         Fill: =RGBA(0, 134, 208, 1)
-        Height: =177
+        Height: =237
         LayoutDirection: =LayoutDirection.Vertical
         LayoutMode: =LayoutMode.Auto
         Visible: =ctxWaffle1open
@@ -214,6 +214,28 @@
             Height: =60
             LayoutMinHeight: =70
             LayoutMinWidth: =280
+            OnSelect: =Navigate(Rating)
+            PaddingBottom: =10
+            PaddingLeft: =10
+            PaddingRight: =10
+            PaddingTop: =10
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =22
+            Text: ="Feedback"
+            Width: =700
+            ZIndex: =10
+
+        Button6_10 As button:
+            AlignInContainer: =AlignInContainer.Center
+            BorderThickness: =0
+            Fill: =RGBA(0, 18, 107, 1)
+            Font: =Font.'Segoe UI'
+            Height: =60
+            LayoutMinHeight: =70
+            LayoutMinWidth: =280
             OnSelect: =Navigate(About)
             PaddingBottom: =10
             PaddingLeft: =10
@@ -226,7 +248,7 @@
             Size: =22
             Text: ="About"
             Width: =700
-            ZIndex: =10
+            ZIndex: =11
 
     Button7_18 As button:
         Fill: =RGBA(221, 79, 14, 1)
@@ -259,12 +281,15 @@
         Y: =998
         ZIndex: =22
 
-    Icon7 As icon.Information:
-        Height: =38
-        Icon: =Icon.Information
-        Tooltip: ="Share feedback"
-        Width: =31
-        X: =578
-        Y: =1086
+    Icon2 As icon.Help:
+        BorderColor: =RGBA(0, 134, 208, 1)
+        Color: =RGBA(0, 134, 208, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =58
+        Icon: =Icon.Help
+        OnSelect: =Navigate(About)
+        Width: =42
+        X: =579
+        Y: =1065
         ZIndex: =23
 

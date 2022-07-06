@@ -71,12 +71,24 @@ About As screen:
         ZIndex: =7
 
     Button1 As button:
+        Fill: =RGBA(0, 134, 208, 1)
         Height: =77
         OnSelect: =Navigate(Share)
         Size: =20
         Text: ="Share app"
-        Width: =276
-        X: =182
-        Y: =858
+        Width: =210
+        X: =67
+        Y: =854
         ZIndex: =10
+
+    Button1_1 As button:
+        Fill: =RGBA(0, 134, 208, 1)
+        Height: =77
+        OnSelect: =Navigate(Rating)
+        Size: =20
+        Text: ="Rate app"
+        Width: =217
+        X: =342
+        Y: =854
+        ZIndex: =11
 
