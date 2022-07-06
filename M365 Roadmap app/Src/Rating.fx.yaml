@@ -64,7 +64,7 @@ Rating As screen:
         Fill: =RGBA(0, 134, 208, 1)
         Height: =68
         OnSelect: |-
-            =Patch('App feedback list', Defaults('App feedback list'), {Title: ServiceQuality.Text}, {RatingOfApp: ServiceRating.Value}, {Name: User().Email});
+            =Patch('App feedback list', Defaults('App feedback list'), {Title: ServiceQuality.Text}, {RatingOfApp: ServiceRating.Value};
             Notify( "Feedback sent!", NotificationType.Success, 0);
             Set(SuccessColor, true);
         Size: =24
