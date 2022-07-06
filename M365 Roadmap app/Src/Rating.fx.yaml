@@ -64,8 +64,7 @@ Rating As screen:
         Fill: =RGBA(0, 134, 208, 1)
         Height: =68
         OnSelect: |-
-            =Collect('App feedback list', {Title: ServiceQuality.Text});
-            Patch('App feedback list', Defaults('App feedback list'), {RatingOfApp: ServiceRating.Value});
+            =Patch('App feedback list', Defaults('App feedback list'), {Title: ServiceQuality.Text}, {RatingOfApp: ServiceRating.Value});
             Notify( "Invitation sent!", NotificationType.Success, 0);
             Set(SuccessColor, true);
         Size: =24
