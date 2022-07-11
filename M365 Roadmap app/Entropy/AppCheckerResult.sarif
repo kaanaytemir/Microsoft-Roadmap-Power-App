@@ -2894,6 +2894,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "App.Power Apps"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.Power Apps",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Power Apps",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedMediaResources",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.Whiteboard_RGB"
                 }
               ],

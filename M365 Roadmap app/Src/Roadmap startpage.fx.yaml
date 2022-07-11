@@ -132,14 +132,6 @@
         Y: =755
         ZIndex: =15
 
-    Image1_4 As image:
-        Height: =87
-        Image: ='Power Apps'
-        Width: =88
-        X: =87
-        Y: =513
-        ZIndex: =17
-
     Icon4 As icon.Hamburger:
         Height: =55
         Icon: =Icon.Hamburger
@@ -292,4 +284,12 @@
         X: =588
         Y: =1083
         ZIndex: =23
+
+    Image3 As image:
+        Height: =142
+        Image: ='power-apps-logo-800-600'
+        Width: =148
+        X: =61
+        Y: =488
+        ZIndex: =24
 
