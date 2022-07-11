@@ -47,12 +47,12 @@ Sharepoint_blogs As screen:
         Button1_13 As button:
             Fill: =RGBA(70, 78, 184, 1)
             Font: =Font.'Segoe UI'
-            Height: =51
+            Height: =49
             OnSelect: =Launch(ThisItem.primaryLink)
             Size: =16
-            Text: ="Details"
-            Width: =91
-            X: =518
+            Text: ="Read blog"
+            Width: =111
+            X: =498
             Y: =146
             ZIndex: =5
 
@@ -77,7 +77,7 @@ Sharepoint_blogs As screen:
         Height: =70
         Size: =32
         Text: |-
-            ="Sharepoint
+            ="SharePoint
             "
         Width: =230
         X: =205

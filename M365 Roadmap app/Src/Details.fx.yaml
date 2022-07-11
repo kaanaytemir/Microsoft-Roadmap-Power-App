@@ -52,19 +52,20 @@
             Color: =RGBA(255, 255, 255, 1)
             FontWeight: =FontWeight.Bold
             Height: =184
-            Size: =22
+            Size: =20
             Text: =Title
             Width: =526
-            X: =63
-            Y: =39
+            X: =69
+            Y: =33
             ZIndex: =1
 
     Icon2_11 As icon.ChevronLeft:
+        Color: =RGBA(255, 255, 255, 1)
         Height: =35
         Icon: =Icon.ChevronLeft
         OnSelect: =Back()
         Width: =42
-        X: =25
-        Y: =38
+        X: =22
+        Y: =86
         ZIndex: =6
 

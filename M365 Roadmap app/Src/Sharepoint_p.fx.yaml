@@ -12,6 +12,7 @@ Sharepoint_p As screen:
         Height: =814
         Items: =Search(FeedCollection, TextInput3_8.Text, "title")
         Layout: =Layout.Vertical
+        OnSelect: =Set(Summary, ThisItem.summary); Set(Title, ThisItem.title); Set(PrimaryLink, ThisItem.primaryLink);Navigate(Details)
         ShowNavigation: =true
         TemplatePadding: =0
         TemplateSize: =249
@@ -160,7 +161,7 @@ Sharepoint_p As screen:
         FontWeight: =FontWeight.Semibold
         Height: =70
         Size: =32
-        Text: ="Sharepoint"
+        Text: ="SharePoint"
         Width: =235
         X: =181
         Y: =23

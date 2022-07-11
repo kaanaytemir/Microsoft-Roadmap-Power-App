@@ -49,9 +49,9 @@ Teams_blogs As screen:
             Height: =51
             OnSelect: =Launch(ThisItem.primaryLink)
             Size: =16
-            Text: ="Details"
-            Width: =91
-            X: =518
+            Text: ="Read blog"
+            Width: =111
+            X: =498
             Y: =146
             ZIndex: =5
 

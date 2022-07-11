@@ -12,6 +12,7 @@ Yammer As screen:
         Height: =814
         Items: =Search(FeedCollection, TextInput3_6.Text, "title")
         Layout: =Layout.Vertical
+        OnSelect: =Set(Summary, ThisItem.summary); Set(Title, ThisItem.title); Set(PrimaryLink, ThisItem.primaryLink);Navigate(Details)
         ShowNavigation: =true
         TemplatePadding: =0
         TemplateSize: =249

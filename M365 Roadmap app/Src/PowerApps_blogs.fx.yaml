@@ -20,6 +20,7 @@ PowerApps_blogs As screen:
         ZIndex: =1
 
         Title2_9 As label:
+            Color: =RGBA(255, 255, 255, 1)
             DisplayMode: =DisplayMode.View
             Font: =Font.'Segoe UI'
             Height: =112
@@ -50,9 +51,9 @@ PowerApps_blogs As screen:
             Height: =51
             OnSelect: =Launch(ThisItem.primaryLink)
             Size: =16
-            Text: ="Details"
-            Width: =91
-            X: =518
+            Text: ="Read blog"
+            Width: =113
+            X: =495
             Y: =146
             ZIndex: =5
 

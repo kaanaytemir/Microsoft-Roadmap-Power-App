@@ -70,7 +70,7 @@
         Height: =85
         OnSelect: =Navigate(Sharepoint_p)
         Size: =24
-        Text: ="Sharepoint"
+        Text: ="SharePoint"
         Width: =269
         X: =201
         Y: =747
