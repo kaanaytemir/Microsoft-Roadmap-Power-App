@@ -1,6 +1,8 @@
 "Details As screen.'phoneLayout_Tutorial_ver3.0'":
+    Fill: =If(DarkMode, Black, White)
 
     HtmlText2 As htmlViewer:
+        Color: =If(DarkMode, White, Black)
         ContentLanguage: =
         DisplayMode: =DisplayMode.View
         Font: =Font.'Segoe UI'
@@ -31,6 +33,7 @@
         ZIndex: =2
 
     Label2 As label:
+        Color: =If(DarkMode, White, Black)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Bold
         Height: =70
@@ -68,4 +71,15 @@
         X: =22
         Y: =86
         ZIndex: =6
+
+    Label3 As label:
+        Color: =RGBA(166, 166, 166, 1)
+        Height: =42
+        Size: =12
+        Text: |-
+            ="Note: timelines are tentative and subject to change"
+        Width: =424
+        X: =120
+        Y: =1094
+        ZIndex: =7
 

@@ -284,7 +284,7 @@
     Icon2 As icon.Help:
         BorderColor: =RGBA(0, 134, 208, 1)
         Color: =RGBA(0, 134, 208, 1)
-        Fill: =RGBA(255, 255, 255, 1)
+        Fill: =If(DarkMode, Black, White)
         Height: =40
         Icon: =Icon.Help
         OnSelect: =Navigate(About)
