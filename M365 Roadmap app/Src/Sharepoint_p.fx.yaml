@@ -89,7 +89,7 @@ Sharepoint_p As screen:
             Font: =Font.'Segoe UI'
             Height: =49
             HtmlText: |-
-                =If ("Launched" in Concat(ThisItem.categories,Value,", "), "<font color=#24395e>Launched</font>", "In Development" in Concat(ThisItem.categories,Value,", "), "<font color=#24395e>In Development</font>", "Rolling out" in Concat(ThisItem.categories,Value,", "), "<font color=#24395e>Rolling Out</font>", "Preview" in Concat(ThisItem.categories,Value,", "), "<font color=#24395e>Preview</font>")
+                =If ("Launched" in Concat(ThisItem.categories,Value,", "), "<font color=#0278d4>Launched</font>", "In Development" in Concat(ThisItem.categories,Value,", "), "<font color=#0278d4>In Development</font>", "Rolling out" in Concat(ThisItem.categories,Value,", "), "<font color=#0278d4>Rolling Out</font>", "Preview" in Concat(ThisItem.categories,Value,", "), "<font color=#24395e>Preview</font>")
             OnSelect: =Select(Parent)
             Size: =21
             Width: =226
@@ -300,6 +300,7 @@ Sharepoint_p As screen:
 
     Label10_12 As label:
         Align: =Align.Center
+        Color: =If(DarkMode, White, Black)
         FontWeight: =FontWeight.Bold
         Height: =132
         Size: =24
