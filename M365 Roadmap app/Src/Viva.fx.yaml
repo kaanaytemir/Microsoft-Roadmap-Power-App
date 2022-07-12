@@ -3,6 +3,7 @@ Viva As screen:
         =RGBA(130,95,193, 1)
     OnVisible: |-
         =Set(ShowLoader, true);
+        Set(VarShowField, false);
         ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "In Development" in categories And "Microsoft Viva" in categories), "updatedOn", Descending));
         Set(ShowLoader, false);
 
