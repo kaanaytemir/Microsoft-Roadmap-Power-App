@@ -381,8 +381,7 @@ PowerApps As screen:
     HtmlText3_3 As htmlViewer:
         Fill: =RGBA(255, 255, 255, 1)
         Height: =147
-        HtmlText: |-
-            =Concatenate("<center><b>Did you know:</b> " & Text(First(Shuffle(CollectionFacts)).Test) & "</center>")
+        HtmlText: =Concatenate("<center>" & Text(First(Shuffle(CollectionFacts)).Test) & "</center>")
         Size: =18
         Visible: =ShowLoader
         Width: =640
