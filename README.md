@@ -19,12 +19,12 @@ The **M365 Roadmap & Blogs app**, brings Microsoft's product roadmap and blogs i
 ## Installing
 
 ### Method 1
-1. Download the .zip file from the release
-2. Upload the .zip file in Teams by clicking on Store > Manage Your Apps > Upload an App
+1. Go to **aka.ms/GetRoadmapApp**
+2. Click on 'Launch it now'
 
 ### Method 2
-1. Go to aka.ms/GetRoadmapApp
-2. Click on 'Launch it now'
+1. Download the .zip file from the release
+2. Upload the .zip file in Teams by clicking on Store > Manage Your Apps > Upload an App
 
 ### Method 3
 1. If you already people who downloaded the app, ask them to use the share functionality in the app to provide you access
