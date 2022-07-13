@@ -29,4 +29,5 @@ The **M365 Roadmap & Blogs app**, brings Microsoft's product roadmap and blogs i
 ### Method 3
 1. If you already people who downloaded the app, ask them to use the share functionality in the app to provide you access
 
-Do you have any questions and/or remarks? Feel free to message me!
+
+Do you have any questions, remarks or you need help with installing the app? Feel free to message me!
