@@ -1,8 +1,8 @@
 {
   "FormatVersion": "0.24",
   "Header": {
-    "DocVersion": "1.325",
-    "MinVersionToLoad": "1.325",
+    "DocVersion": "1.326",
+    "MinVersionToLoad": "1.326",
     "MSAppStructureVersion": "2.0"
   },
   "Properties": {
@@ -11,6 +11,8 @@
     "AppPreviewFlagsMap": {
       "aibuilderserviceenrollment": true,
       "allowmultiplescreensincanvaspages": false,
+      "appinsightserrortracing": false,
+      "appinstrumentationcorrelationtracing": false,
       "autocreateenvironmentvariables": false,
       "backfromhostaction": false,
       "behaviorpropertyui": false,
@@ -25,8 +27,8 @@
       "delayloadscreens": true,
       "disablecdsfileandlargeimage": false,
       "dynamicschema": false,
-      "enableaimodelsindatapane": true,
       "enableappembeddingux": false,
+      "enablecommandbar": false,
       "enablecomponentnamemaps": false,
       "enablecomponentscopeoldbehavior": false,
       "enableeditcacherefreshfrequency": false,
@@ -43,6 +45,7 @@
       "enhanceddelegation": true,
       "enhancedgalleryinitialization": true,
       "errorhandling": false,
+      "excelcompatibility": false,
       "expandedsavedatasupport": true,
       "exportimportcomponents2": true,
       "externalmessage": false,
@@ -60,9 +63,9 @@
       "projectionmapping": true,
       "reactformulabar": false,
       "reliableconcurrent": true,
+      "reverttooldpowerautomate": false,
       "rtlinstudiopreview": false,
       "rtlsupport": false,
-      "searchtool": false,
       "usedisplaynamemetadata": true,
       "useenforcesavedatalimits": true,
       "useexperimentalcdsconnector": true,
@@ -104,6 +107,8 @@
   "ScreenOrder": [
     "Roadmap startpage",
     "Teams",
+    "Teams_2",
+    "Teams_1",
     "Sharepoint_p",
     "Yammer",
     "PowerApps",

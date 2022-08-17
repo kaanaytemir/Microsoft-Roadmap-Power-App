@@ -27,6 +27,20 @@
     "OverridableProperties": {},
     "Version": "2.2.0"
   },
+  "dropdown": {
+    "CustomGroupControlTemplateName": "",
+    "FirstParty": true,
+    "Id": "http://microsoft.com/appmagic/dropdown",
+    "IsComponentTemplate": false,
+    "IsCustomGroupControlTemplate": false,
+    "IsPcfControl": false,
+    "IsPremiumPcfControl": false,
+    "IsWidgetTemplate": true,
+    "LastModifiedTimestamp": "0",
+    "Name": "dropdown",
+    "OverridableProperties": {},
+    "Version": "2.3.1"
+  },
   "gallery": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": true,
@@ -189,7 +203,7 @@
     "LastModifiedTimestamp": "0",
     "Name": "text",
     "OverridableProperties": {},
-    "Version": "2.3.1"
+    "Version": "2.3.2"
   },
   "timer": {
     "CustomGroupControlTemplateName": "",
