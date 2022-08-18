@@ -17,7 +17,7 @@ Teams_2 As screen:
         OnSelect: =Set(Summary, ThisItem.summary); Set(Title, ThisItem.title); Set(PrimaryLink, ThisItem.primaryLink);Navigate(Details)
         ShowNavigation: =true
         TemplatePadding: =0
-        TemplateSize: =249
+        TemplateSize: =247
         WrapCount: =0
         Y: =321
         ZIndex: =1
@@ -97,6 +97,19 @@ Teams_2 As screen:
             X: =32
             Y: =175
             ZIndex: =9
+
+        HtmlText5 As htmlViewer:
+            Color: =RGBA(202, 202, 202, 1)
+            Height: =41
+            HtmlText: =If ("Education" in Concat(ThisItem.categories,Value,", "), "Education", "Android" in Concat(ThisItem.categories,Value,", "), "Android")
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingTop: =10
+            Size: =14
+            Width: =136
+            X: =32
+            Y: =206
+            ZIndex: =10
 
     Label6_27 As label:
         Font: =Font.'Segoe UI'
@@ -317,6 +330,33 @@ Teams_2 As screen:
         Fill: =RGBA(102, 113, 166, 1)
         Height: =50
         Items: =["Desktop", "Android", "Education", "iOS", "Linux", "Mac", "Mobile", "Devices", "Web"]
+        OnChange: |-
+            =If(Dropdown2_6.Selected.Value ="Desktop",
+            ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Desktop" in categories And "Microsoft Teams" in categories), "updatedOn", Descending)));
+            
+            If(Dropdown2_6.Selected.Value ="Android",
+            ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Android" in categories And "Microsoft Teams" in categories), "updatedOn", Descending)));
+            
+            If(Dropdown2_6.Selected.Value ="Education",
+            ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Education" in categories And "Microsoft Teams" in categories), "updatedOn", Descending)));
+            
+            If(Dropdown2_6.Selected.Value ="iOS",
+            ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "iOS" in categories And "Microsoft Teams" in categories), "updatedOn", Descending)));
+            
+            If(Dropdown2_6.Selected.Value ="Mac",
+            ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Mac" in categories And "Microsoft Teams" in categories), "updatedOn", Descending)));
+            
+            If(Dropdown2_6.Selected.Value ="Linux",
+            ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Linux" in categories And "Microsoft Teams" in categories), "updatedOn", Descending)));
+            
+            If(Dropdown2_6.Selected.Value ="Mobile",
+            ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Mobile" in categories And "Microsoft Teams" in categories), "updatedOn", Descending)));
+            
+            If(Dropdown2_6.Selected.Value ="Devices",
+            ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Teams and Surface Devices" in categories And "Microsoft Teams" in categories), "updatedOn", Descending)));
+            
+            If(Dropdown2_6.Selected.Value ="Web",
+            ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Web" in categories And "Microsoft Teams" in categories), "updatedOn", Descending)));
         OnSelect: |-
             =If(Dropdown2_6.Selected.Value ="Seattle",
             ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "In Development" in categories And "Microsoft Teams" in categories), "updatedOn", Descending)));

@@ -90,6 +90,7 @@
         DisabledBorderColor: =RGBA(109, 49, 162, 1)
         Fill: =RGBA(204, 208, 225, 1)
         Height: =104
+        MaxLength: =59
         Size: =16
         Visible: =VarShowField
         Width: =640
@@ -97,12 +98,13 @@
         ZIndex: =9
 
     Icon6 As icon.Share:
-        Color: =RGBA(255, 255, 255, 1)
+        Color: =RGBA(70, 78, 184, 1)
+        Fill: =RGBA(255, 255, 255, 1)
         Height: =56
         Icon: =Icon.Share
         OnSelect: =Set(VarShowField, !VarShowField)
-        Width: =42
-        X: =582
-        Y: =198
+        Width: =40
+        X: =526
+        Y: =1027
         ZIndex: =10
 
