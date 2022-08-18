@@ -575,7 +575,14 @@
         },
         "ChevronHoverBackground",
         "ChevronDisabledBackground",
-        "SelectionFill",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "RGBA(56, 96, 178, 1)",
+          "InvariantPropertyName": "SelectionFill",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -917,7 +924,14 @@
         },
         "ChevronHoverBackground",
         "ChevronDisabledBackground",
-        "SelectionFill",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "RGBA(56, 96, 178, 1)",
+          "InvariantPropertyName": "SelectionFill",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -991,6 +1005,14 @@
           "AutoRuleBindingEnabled": false,
           "AutoRuleBindingString": "true",
           "InvariantPropertyName": "Visible",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "false",
+          "InvariantPropertyName": "OnChange",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         }
@@ -1223,6 +1245,11 @@
           "Category": "Behavior",
           "PropertyName": "OnSelect",
           "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Behavior",
+          "PropertyName": "OnChange",
+          "RuleProviderType": "Unknown"
         }
       ],
       "StyleName": "defaultDropdownStyle",
@@ -1240,7 +1267,14 @@
           "NameMapSourceSchema": "?"
         },
         "SelectionColor",
-        "ChevronFill",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "RGBA(255, 255, 255, 1)",
+          "InvariantPropertyName": "ChevronFill",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "ChevronHoverFill",
         "ChevronDisabledFill",
         {

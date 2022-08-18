@@ -124,7 +124,7 @@ Teams As screen:
         Text: ="Launched"
         Width: =113
         X: =364
-        Y: =232
+        Y: =234
         ZIndex: =4
 
     Button7_6 As button:
