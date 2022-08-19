@@ -60,7 +60,7 @@ PowerApps_1 As screen:
             Fill: =RGBA(37, 172, 114, 1)
             Font: =Font.'Segoe UI'
             Height: =51
-            OnSelect: =Set(Summary, ThisItem.summary); Set(Title, ThisItem.title); Set(PrimaryLink, ThisItem.primaryLink);Navigate(Details)
+            OnSelect: =Set(HashtagTitle, Label6_31); Set(Summary, ThisItem.summary); Set(Title, ThisItem.title); Set(PrimaryLink, ThisItem.primaryLink);Navigate(Details)
             Size: =16
             Text: ="Details"
             Width: =91

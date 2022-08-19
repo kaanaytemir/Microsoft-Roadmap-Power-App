@@ -58,8 +58,8 @@
             Size: =20
             Text: =Title
             Width: =526
-            X: =69
-            Y: =33
+            X: =78
+            Y: =45
             ZIndex: =1
 
     Icon2_11 As icon.ChevronLeft:
@@ -69,7 +69,7 @@
         OnSelect: =Back()
         Width: =42
         X: =22
-        Y: =86
+        Y: =104
         ZIndex: =6
 
     Label3 As label:
@@ -107,4 +107,23 @@
         X: =526
         Y: =1027
         ZIndex: =10
+
+    Image6_25 As image:
+        Height: =68
+        Image: ='Microsoft logo'
+        Width: =74
+        X: =417
+        Y: =4
+        ZIndex: =11
+
+    Label1 As label:
+        Color: =RGBA(204, 204, 204, 1)
+        Height: =26
+        Size: =14
+        Text: |-
+            =Concatenate(" ", "#", HashtagTitle)
+        Width: =176
+        X: =464
+        Y: =25
+        ZIndex: =12
 

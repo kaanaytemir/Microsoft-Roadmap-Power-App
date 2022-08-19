@@ -60,7 +60,7 @@ Sharepoint_p_1 As screen:
             Fill: =RGBA(2, 131, 135, 1)
             Font: =Font.'Segoe UI'
             Height: =51
-            OnSelect: =Set(Summary, ThisItem.summary); Set(Title, ThisItem.title); Set(PrimaryLink, ThisItem.primaryLink);Navigate(Details)
+            OnSelect: =Set(HashtagTitle, Label6_25); Set(Summary, ThisItem.summary); Set(Title, ThisItem.title); Set(PrimaryLink, ThisItem.primaryLink);Navigate(Details)
             Size: =16
             Text: ="Details"
             Width: =91
