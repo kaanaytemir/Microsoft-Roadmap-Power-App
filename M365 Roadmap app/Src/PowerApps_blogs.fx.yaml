@@ -7,7 +7,7 @@ PowerApps_blogs As screen:
 
     "Gallery1_9 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
         BorderColor: =RGBA(116, 39, 115, 1)
-        Fill: =RGBA(116, 39, 115, 1)
+        Fill: =RGBA(37, 172, 114, 1)
         Height: =815
         Items: =Search(HeedCollection, TextInput3_5.Text, "title")
         Layout: =Layout.Vertical
@@ -38,7 +38,7 @@ PowerApps_blogs As screen:
             ZIndex: =1
 
         Separator2_9 As rectangle:
-            Fill: =RGBA(168, 0, 0, 1)
+            Fill: =RGBA(99, 139, 44, 1)
             Height: =1
             OnSelect: =Select(Parent)
             Width: =Parent.TemplateWidth
@@ -46,7 +46,7 @@ PowerApps_blogs As screen:
             ZIndex: =3
 
         Button1_9 As button:
-            Fill: =RGBA(102, 113, 166, 1)
+            Fill: =RGBA(141, 198, 63, 1)
             Font: =Font.'Segoe UI'
             Height: =51
             OnSelect: =Launch(ThisItem.primaryLink)
@@ -78,10 +78,10 @@ PowerApps_blogs As screen:
         Height: =70
         Size: =32
         Text: |-
-            ="Power Apps
+            ="Power Platform
             "
-        Width: =258
-        X: =186
+        Width: =320
+        X: =160
         Y: =23
         ZIndex: =6
 

@@ -108,6 +108,19 @@ Viva_1 As screen:
             Y: =175
             ZIndex: =8
 
+        HtmlText5_4 As htmlViewer:
+            Color: =RGBA(202, 202, 202, 1)
+            Height: =41
+            HtmlText: =If ("Education" in Concat(ThisItem.categories,Value,", "), "<em>Education</em>", "Preview" in Concat(ThisItem.categories,Value,", "), "<em>Preview</em>", "Worldwide" in Concat(ThisItem.categories,Value,", "), "<em>Worldwide</em>", "Germany" in Concat(ThisItem.categories,Value,", "), "<em>Germany</em>", "GCC High" in Concat(ThisItem.categories,Value,", "), "<em>GCC High</em>", "DoD" in Concat(ThisItem.categories,Value,", "), "<em>DoD</em>", "GCC" in Concat(ThisItem.categories,Value,", "), "<em>GCC</em>")
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingTop: =10
+            Size: =14
+            Width: =136
+            X: =32
+            Y: =208
+            ZIndex: =9
+
     Label6_33 As label:
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
@@ -286,19 +299,23 @@ Viva_1 As screen:
         Color: =RGBA(255, 255, 255, 1)
         Fill: =RGBA(102, 113, 166, 1)
         Height: =50
-        Items: =["In development", "Rolling out", "Launched", "Preview"]
+        Items: =["In development", "Rolling out", "Launched", "Preview", "All"]
         OnChange: |-
             =If(Dropdown2_14.Selected.Value ="In development",
-            ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "In Development" in categories And "Yammer" in categories), "updatedOn", Descending)));
+            ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "In Development" in categories And "Microsoft Viva" in categories), "updatedOn", Descending)));
             
             If(Dropdown2_14.Selected.Value ="Rolling out",
-            ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Rolling out" in categories And "Yammer" in categories), "updatedOn", Descending)));
+            ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Rolling out" in categories And "Microsoft Viva" in categories), "updatedOn", Descending)));
             
             If(Dropdown2_14.Selected.Value ="Launched",
-            ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Launched" in categories And "Yammer" in categories), "updatedOn", Descending)));
+            ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Launched" in categories And "Microsoft Viva" in categories), "updatedOn", Descending)));
             
             If(Dropdown2_14.Selected.Value ="Preview",
-            ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Preview" in categories And "Yammer" in categories), "updatedOn", Descending)));
+            ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Preview" in categories And "Microsoft Viva" in categories), "updatedOn", Descending)));
+            
+            If(Dropdown2_14.Selected.Value ="All",
+            ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Microsoft Viva" in categories), "updatedOn", Descending)));
+            
             
             UpdateContext(
                {
@@ -331,19 +348,19 @@ Viva_1 As screen:
         Items: =["DoD", "GCC", "GCC High", "Germany", "Worldwide"]
         OnChange: |-
             =If(Dropdown2_17.Selected.Value ="GCC",
-            ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "GCC" in categories And "Yammer" in categories), "updatedOn", Descending)));
+            ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "GCC" in categories And "Microsoft Viva" in categories), "updatedOn", Descending)));
             
             If(Dropdown2_17.Selected.Value ="GCC High",
-            ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "GCC High" in categories And "Yammer" in categories), "updatedOn", Descending)));
+            ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "GCC High" in categories And "Microsoft Viva" in categories), "updatedOn", Descending)));
             
             If(Dropdown2_17.Selected.Value ="DoD",
-            ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "DoD" in categories And "Yammer" in categories), "updatedOn", Descending)));
+            ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "DoD" in categories And "Microsoft Viva" in categories), "updatedOn", Descending)));
             
             If(Dropdown2_17.Selected.Value ="Germany",
-            ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Germany" in categories And "Yammer" in categories), "updatedOn", Descending)));
+            ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Germany" in categories And "Microsoft Viva" in categories), "updatedOn", Descending)));
             
             If(Dropdown2_17.Selected.Value ="Worldwide",
-            ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Worldwide (Standard Multi-Tenant)" in categories And "Yammer" in categories), "updatedOn", Descending)));
+            ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Worldwide (Standard Multi-Tenant)" in categories And "Microsoft Viva" in categories), "updatedOn", Descending)));
             
             UpdateContext(
                {
@@ -380,28 +397,28 @@ Viva_1 As screen:
         Items: =["Desktop", "Android", "Education", "iOS", "Mac", "Mobile", "Devices", "Web"]
         OnChange: |-
             =If(Dropdown2_18.Selected.Value ="Desktop",
-            ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Desktop" in categories And "Yammer" in categories), "updatedOn", Descending)));
+            ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Desktop" in categories And "Microsoft Viva" in categories), "updatedOn", Descending)));
             
             If(Dropdown2_18.Selected.Value ="Android",
-            ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Android" in categories And "Yammer" in categories), "updatedOn", Descending)));
+            ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Android" in categories And "Microsoft Viva" in categories), "updatedOn", Descending)));
             
             If(Dropdown2_18.Selected.Value ="Education",
-            ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Education" in categories And "Yammer" in categories), "updatedOn", Descending)));
+            ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Education" in categories And "Microsoft Viva" in categories), "updatedOn", Descending)));
             
             If(Dropdown2_18.Selected.Value ="iOS",
-            ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "iOS" in categories And "Yammer" in categories), "updatedOn", Descending)));
+            ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "iOS" in categories And "Microsoft Viva" in categories), "updatedOn", Descending)));
             
             If(Dropdown2_18.Selected.Value ="Mac",
-            ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Mac" in categories And "Yammer" in categories), "updatedOn", Descending)));
+            ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Mac" in categories And "Microsoft Viva" in categories), "updatedOn", Descending)));
             
             If(Dropdown2_18.Selected.Value ="Mobile",
-            ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Mobile" in categories And "Yammer" in categories), "updatedOn", Descending)));
+            ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Mobile" in categories And "Microsoft Viva" in categories), "updatedOn", Descending)));
             
             If(Dropdown2_18.Selected.Value ="Devices",
-            ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Teams and Surface Devices" in categories And "Yammer" in categories), "updatedOn", Descending)));
+            ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Teams and Surface Devices" in categories And "Microsoft Viva" in categories), "updatedOn", Descending)));
             
             If(Dropdown2_18.Selected.Value ="Web",
-            ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Web" in categories And "Yammer" in categories), "updatedOn", Descending)));
+            ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Web" in categories And "Microsoft Viva" in categories), "updatedOn", Descending)));
             
             UpdateContext(
                {
@@ -433,4 +450,15 @@ Viva_1 As screen:
         X: =583
         Y: =142
         ZIndex: =25
+
+    Label13_4 As label:
+        Height: =45
+        Italic: =true
+        Size: =14
+        Text: =Concatenate(CountRows(Gallery1_14.AllItems), " ", "result(s)")
+        Visible: =!ShowLoader
+        Width: =120
+        X: =520
+        Y: =276
+        ZIndex: =26
 

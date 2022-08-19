@@ -14,7 +14,7 @@
         Fill: =RGBA(70, 78, 184, 1)
         Font: =Font.'Segoe UI'
         Height: =85
-        OnSelect: =Navigate(Teams)
+        OnSelect: =Navigate(Teams_2)
         Size: =24
         Text: ="Teams"
         Width: =269
@@ -56,7 +56,7 @@
         Fill: =RGBA(130, 95, 193, 1)
         Font: =Font.'Segoe UI'
         Height: =85
-        OnSelect: =Navigate(Viva)
+        OnSelect: =Navigate(Viva_1)
         Size: =24
         Text: ="Microsoft Viva"
         Width: =269
@@ -68,7 +68,7 @@
         Fill: =RGBA(2, 131, 135, 1)
         Font: =Font.'Segoe UI'
         Height: =85
-        OnSelect: =Navigate(Sharepoint_p)
+        OnSelect: =Navigate(Sharepoint_p_1)
         Size: =24
         Text: ="SharePoint"
         Width: =269
@@ -80,7 +80,7 @@
         Fill: =RGBA(37, 172, 114, 1)
         Font: =Font.'Segoe UI'
         Height: =85
-        OnSelect: =Navigate(PowerApps)
+        OnSelect: =Navigate(PowerApps_1)
         Size: =24
         Text: ="Power Platform"
         Width: =269
@@ -92,7 +92,7 @@
         Fill: =RGBA(2, 121, 212, 1)
         Font: =Font.'Segoe UI'
         Height: =85
-        OnSelect: =Navigate(Yammer)
+        OnSelect: =Navigate(Yammer_1)
         Size: =24
         Text: ="Yammer"
         Width: =269
@@ -290,6 +290,6 @@
         Image: =PowerPlatform_scalable
         Width: =103
         X: =79
-        Y: =771
+        Y: =760
         ZIndex: =24
 
