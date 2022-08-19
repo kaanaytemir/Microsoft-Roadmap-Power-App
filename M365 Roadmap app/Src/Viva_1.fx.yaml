@@ -1,9 +1,10 @@
-Yammer_1 As screen:
-    Fill: =RGBA(2, 121, 212, 1)
+Viva_1 As screen:
+    Fill: |
+        =RGBA(130,95,193, 1)
     OnVisible: |-
         =Set(ShowLoader, true);
         Set(VarShowField, false);
-        ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "In Development" in categories And "Yammer" in categories), "updatedOn", Descending));
+        ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "In Development" in categories And "Microsoft Viva" in categories), "updatedOn", Descending));
         Set(ShowLoader, false);
         
         UpdateContext( // Sets active state on chevron filter when opened
@@ -15,12 +16,12 @@ Yammer_1 As screen:
            }
         );
 
-    "Gallery1_16 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
+    "Gallery1_18 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
         BorderColor: =RGBA(109, 49, 162, 1)
         DelayItemLoading: =true
         Fill: =If(DarkMode, Black, White)
         Height: =814
-        Items: =Search(FeedCollection, TextInput3_12.Text, "title")
+        Items: =Search(FeedCollection, TextInput3_14.Text, "title")
         Layout: =Layout.Vertical
         OnSelect: =Set(Summary, ThisItem.summary); Set(Title, ThisItem.title); Set(PrimaryLink, ThisItem.primaryLink);Navigate(Details)
         ShowNavigation: =true
@@ -30,7 +31,7 @@ Yammer_1 As screen:
         Y: =321
         ZIndex: =1
 
-        Title2_16 As label:
+        Title2_18 As label:
             Color: =If(DarkMode, White, Black)
             DisplayMode: =DisplayMode.View
             Font: =Font.'Segoe UI'
@@ -48,16 +49,16 @@ Yammer_1 As screen:
             Y: =17
             ZIndex: =1
 
-        Separator2_16 As rectangle:
-            Fill: =RGBA(2, 121, 212, 1)
+        Separator2_18 As rectangle:
+            Fill: =RGBA(130, 95, 193, 1)
             Height: =1
             OnSelect: =Select(Parent)
             Width: =Parent.TemplateWidth
             Y: =Parent.TemplateHeight - 1
             ZIndex: =3
 
-        Button1_16 As button:
-            Fill: =RGBA(2, 121, 212, 1)
+        Button1_18 As button:
+            Fill: =RGBA(130, 95, 193, 1)
             Font: =Font.'Segoe UI'
             Height: =51
             OnSelect: =Set(Summary, ThisItem.summary); Set(Title, ThisItem.title); Set(PrimaryLink, ThisItem.primaryLink);Navigate(Details)
@@ -68,7 +69,7 @@ Yammer_1 As screen:
             Y: =175
             ZIndex: =4
 
-        Label1_19 As label:
+        Label1_23 As label:
             Color: =If(DarkMode, White, Black)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Lighter
@@ -77,11 +78,11 @@ Yammer_1 As screen:
             Size: =18
             Text: =Left(ThisItem.updatedOn, 10)
             Width: =171
-            X: =381
-            Y: =177
+            X: =383
+            Y: =175
             ZIndex: =5
 
-        Label1_18 As label:
+        Label1_22 As label:
             Color: =RGBA(149, 149, 149, 1)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Lighter
@@ -91,47 +92,34 @@ Yammer_1 As screen:
             Text: |-
                 ="Updated:"
             Width: =171
-            X: =282
-            Y: =177
-            ZIndex: =8
+            X: =279
+            Y: =175
+            ZIndex: =7
 
-        HtmlText4_7 As htmlViewer:
+        HtmlText4_9 As htmlViewer:
             Font: =Font.'Segoe UI'
-            Height: =51
+            Height: =53
             HtmlText: |-
                 =If ("Launched" in Concat(ThisItem.categories,Value,", "), "<font color=#0278d4>Launched</font>", "In Development" in Concat(ThisItem.categories,Value,", "), "<font color=#0278d4>In Development</font>", "Rolling out" in Concat(ThisItem.categories,Value,", "), "<font color=#0278d4>Rolling Out</font>", "Preview" in Concat(ThisItem.categories,Value,", "), "<font color=#24395e>Preview</font>")
             OnSelect: =Select(Parent)
             Size: =21
-            Width: =250
+            Width: =236
             X: =32
             Y: =175
-            ZIndex: =9
+            ZIndex: =8
 
-        HtmlText5_2 As htmlViewer:
-            Color: =RGBA(202, 202, 202, 1)
-            Height: =41
-            HtmlText: =If ("Education" in Concat(ThisItem.categories,Value,", "), "<em>Education</em>", "Preview" in Concat(ThisItem.categories,Value,", "), "<em>Preview</em>", "Worldwide" in Concat(ThisItem.categories,Value,", "), "<em>Worldwide</em>", "Germany" in Concat(ThisItem.categories,Value,", "), "<em>Germany</em>", "GCC High" in Concat(ThisItem.categories,Value,", "), "<em>GCC High</em>", "DoD" in Concat(ThisItem.categories,Value,", "), "<em>DoD</em>", "GCC" in Concat(ThisItem.categories,Value,", "), "<em>GCC</em>")
-            OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingTop: =10
-            Size: =14
-            Width: =136
-            X: =32
-            Y: =207
-            ZIndex: =10
-
-    Label6_29 As label:
+    Label6_33 As label:
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
         Height: =70
         Size: =32
-        Text: ="Yammer"
-        Width: =172
-        X: =214
+        Text: ="Microsoft Viva"
+        Width: =323
+        X: =158
         Y: =23
         ZIndex: =6
 
-    Image6_22 As image:
+    Image6_24 As image:
         Height: =74
         Image: ='Microsoft logo'
         OnSelect: =Navigate('Roadmap startpage')
@@ -140,7 +128,7 @@ Yammer_1 As screen:
         Y: =19
         ZIndex: =7
 
-    Icon2_18 As icon.ChevronLeft:
+    Icon2_20 As icon.ChevronLeft:
         Height: =35
         Icon: =Icon.ChevronLeft
         OnSelect: =Back()
@@ -149,14 +137,14 @@ Yammer_1 As screen:
         Y: =38
         ZIndex: =8
 
-    TextInput3_12 As text:
-        BorderColor: =RGBA(2, 121, 212, 1)
+    TextInput3_14 As text:
+        BorderColor: =RGBA(130, 95, 193, 1)
         Clear: =true
         Default: =""
         Font: =Font.'Segoe UI'
         Height: =62
         HintText: ="Search"
-        OnSelect: =Filter(FeedCollection,TextInput3_12.Text = title)
+        OnSelect: =Filter(FeedCollection,TextInput3_14.Text = title)
         RadiusBottomLeft: =12
         RadiusBottomRight: =12
         RadiusTopLeft: =12
@@ -167,17 +155,17 @@ Yammer_1 As screen:
         Y: =126
         ZIndex: =10
 
-    Icon1_12 As icon.Search:
-        Color: =RGBA(2, 121, 212, 1)
+    Icon1_14 As icon.Search:
+        Color: =RGBA(130, 95, 193, 1)
         Height: =37
         Icon: =Icon.Search
-        Visible: =IsBlank(TextInput3_12.Text)
+        Visible: =IsBlank(TextInput3_14.Text)
         Width: =37
         X: =394
-        Y: =142
+        Y: =143
         ZIndex: =11
 
-    Label6_30 As label:
+    Label6_34 As label:
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Bold
         Height: =35
@@ -188,13 +176,13 @@ Yammer_1 As screen:
         Y: =73
         ZIndex: =12
 
-    Label5_7 As label:
+    Label5_9 As label:
         Color: =RGBA(255, 255, 255, 1)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Bold
         Height: =54
         HoverColor: =Black
-        OnSelect: =Navigate(Yammer_blogs)
+        OnSelect: =Navigate(Viva_blogs)
         Size: =22
         Text: ="Blogs"
         Underline: =true
@@ -203,7 +191,7 @@ Yammer_1 As screen:
         Y: =126
         ZIndex: =13
 
-    Label10_20 As label:
+    Label10_24 As label:
         Align: =Align.Center
         Color: =If(DarkMode, White, Black)
         FontWeight: =FontWeight.Bold
@@ -215,7 +203,7 @@ Yammer_1 As screen:
             "
         Visible: |-
             =If (
-              CountRows(Gallery1_16.AllItems) = 0,
+              CountRows(Gallery1_18.AllItems) = 0,
               true
             )
         Width: =502
@@ -223,16 +211,16 @@ Yammer_1 As screen:
         Y: =591
         ZIndex: =16
 
-    Button3_7 As button:
-        Fill: =RGBA(2, 121, 212, 1)
+    Button3_9 As button:
+        Fill: =RGBA(130, 95, 193, 1)
         Height: =90
         OnSelect: |-
-            =Launch("https://feedbackportal.microsoft.com/feedback/forum/bd6e5ec2-3f1c-ec11-b6e7-0022481f8472")
+            =Launch("https://feedbackportal.microsoft.com/feedback/forum/ad198462-1c1c-ec11-b6e7-0022481f8472")
         Size: =20
         Text: ="Share your roadmap idea"
         Visible: |-
             =If (
-              CountRows(Gallery1_16.AllItems) = 0,
+              CountRows(Gallery1_18.AllItems) = 0,
               true
             )
         Width: =472
@@ -240,7 +228,7 @@ Yammer_1 As screen:
         Y: =831
         ZIndex: =17
 
-    Label10_21 As label:
+    Label10_25 As label:
         Align: =Align.Center
         Color: =RGBA(184, 0, 0, 1)
         FontWeight: =FontWeight.Bold
@@ -249,7 +237,7 @@ Yammer_1 As screen:
         Text: ="No result?"
         Visible: |-
             =If (
-              CountRows(Gallery1_16.AllItems) = 0,
+              CountRows(Gallery1_18.AllItems) = 0,
               true
             )
         Width: =502
@@ -257,7 +245,7 @@ Yammer_1 As screen:
         Y: =699
         ZIndex: =18
 
-    Image2_12 As image:
+    Image2_14 As image:
         Height: =1067
         Image: =microsoft
         ImagePosition: =ImagePosition.Fill
@@ -265,7 +253,7 @@ Yammer_1 As screen:
         Width: =640
         ZIndex: =19
 
-    Timer1_7 As timer:
+    Timer1_9 As timer:
         AutoStart: =true
         Duration: =10000
         Height: =70
@@ -280,7 +268,7 @@ Yammer_1 As screen:
         Y: =41
         ZIndex: =20
 
-    HtmlText3_7 As htmlViewer:
+    HtmlText3_9 As htmlViewer:
         Fill: =RGBA(255, 255, 255, 1)
         Height: =147
         HtmlText: =Concatenate("<center>" & Text(First(Shuffle(CollectionFacts)).Test) & "</center>")
@@ -290,7 +278,7 @@ Yammer_1 As screen:
         Y: =989
         ZIndex: =21
 
-    Dropdown2_10 As dropdown:
+    Dropdown2_14 As dropdown:
         ChevronBackground: |-
             =If(
                OneClicked, RGBA(125, 183, 0, 1), ColorFade(RGBA(56, 96, 178, 1), -20%)
@@ -300,16 +288,16 @@ Yammer_1 As screen:
         Height: =50
         Items: =["In development", "Rolling out", "Launched", "Preview"]
         OnChange: |-
-            =If(Dropdown2_10.Selected.Value ="In development",
+            =If(Dropdown2_14.Selected.Value ="In development",
             ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "In Development" in categories And "Yammer" in categories), "updatedOn", Descending)));
             
-            If(Dropdown2_10.Selected.Value ="Rolling out",
+            If(Dropdown2_14.Selected.Value ="Rolling out",
             ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Rolling out" in categories And "Yammer" in categories), "updatedOn", Descending)));
             
-            If(Dropdown2_10.Selected.Value ="Launched",
+            If(Dropdown2_14.Selected.Value ="Launched",
             ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Launched" in categories And "Yammer" in categories), "updatedOn", Descending)));
             
-            If(Dropdown2_10.Selected.Value ="Preview",
+            If(Dropdown2_14.Selected.Value ="Preview",
             ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Preview" in categories And "Yammer" in categories), "updatedOn", Descending)));
             
             UpdateContext(
@@ -332,7 +320,7 @@ Yammer_1 As screen:
         Y: =222
         ZIndex: =22
 
-    Dropdown2_11 As dropdown:
+    Dropdown2_17 As dropdown:
         ChevronBackground: |-
             =If(
                ThreeClicked, RGBA(125, 183, 0, 1), ColorFade(RGBA(56, 96, 178, 1), -20%)
@@ -342,19 +330,19 @@ Yammer_1 As screen:
         Height: =50
         Items: =["DoD", "GCC", "GCC High", "Germany", "Worldwide"]
         OnChange: |-
-            =If(Dropdown2_11.Selected.Value ="GCC",
+            =If(Dropdown2_17.Selected.Value ="GCC",
             ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "GCC" in categories And "Yammer" in categories), "updatedOn", Descending)));
             
-            If(Dropdown2_11.Selected.Value ="GCC High",
+            If(Dropdown2_17.Selected.Value ="GCC High",
             ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "GCC High" in categories And "Yammer" in categories), "updatedOn", Descending)));
             
-            If(Dropdown2_11.Selected.Value ="DoD",
+            If(Dropdown2_17.Selected.Value ="DoD",
             ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "DoD" in categories And "Yammer" in categories), "updatedOn", Descending)));
             
-            If(Dropdown2_11.Selected.Value ="Germany",
+            If(Dropdown2_17.Selected.Value ="Germany",
             ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Germany" in categories And "Yammer" in categories), "updatedOn", Descending)));
             
-            If(Dropdown2_11.Selected.Value ="Worldwide",
+            If(Dropdown2_17.Selected.Value ="Worldwide",
             ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Worldwide (Standard Multi-Tenant)" in categories And "Yammer" in categories), "updatedOn", Descending)));
             
             UpdateContext(
@@ -366,7 +354,7 @@ Yammer_1 As screen:
                }
             );
         OnSelect: |-
-            =If(Dropdown2_11.Selected.Value ="Tokyo",
+            =If(Dropdown2_17.Selected.Value ="Tokyo",
             ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "In Development" in categories And "Microsoft Teams" in categories), "updatedOn", Descending)));
         SelectionFill: |-
             =If(
@@ -379,7 +367,7 @@ Yammer_1 As screen:
         Y: =222
         ZIndex: =23
 
-    Dropdown2_12 As dropdown:
+    Dropdown2_18 As dropdown:
         ChevronBackground: |-
             =If(
                TwoClicked, RGBA(125, 183, 0, 1), ColorFade(RGBA(56, 96, 178, 1), -20%)
@@ -391,28 +379,28 @@ Yammer_1 As screen:
         Height: =50
         Items: =["Desktop", "Android", "Education", "iOS", "Mac", "Mobile", "Devices", "Web"]
         OnChange: |-
-            =If(Dropdown2_12.Selected.Value ="Desktop",
+            =If(Dropdown2_18.Selected.Value ="Desktop",
             ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Desktop" in categories And "Yammer" in categories), "updatedOn", Descending)));
             
-            If(Dropdown2_12.Selected.Value ="Android",
+            If(Dropdown2_18.Selected.Value ="Android",
             ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Android" in categories And "Yammer" in categories), "updatedOn", Descending)));
             
-            If(Dropdown2_12.Selected.Value ="Education",
+            If(Dropdown2_18.Selected.Value ="Education",
             ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Education" in categories And "Yammer" in categories), "updatedOn", Descending)));
             
-            If(Dropdown2_12.Selected.Value ="iOS",
+            If(Dropdown2_18.Selected.Value ="iOS",
             ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "iOS" in categories And "Yammer" in categories), "updatedOn", Descending)));
             
-            If(Dropdown2_12.Selected.Value ="Mac",
+            If(Dropdown2_18.Selected.Value ="Mac",
             ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Mac" in categories And "Yammer" in categories), "updatedOn", Descending)));
             
-            If(Dropdown2_12.Selected.Value ="Mobile",
+            If(Dropdown2_18.Selected.Value ="Mobile",
             ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Mobile" in categories And "Yammer" in categories), "updatedOn", Descending)));
             
-            If(Dropdown2_12.Selected.Value ="Devices",
+            If(Dropdown2_18.Selected.Value ="Devices",
             ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Teams and Surface Devices" in categories And "Yammer" in categories), "updatedOn", Descending)));
             
-            If(Dropdown2_12.Selected.Value ="Web",
+            If(Dropdown2_18.Selected.Value ="Web",
             ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Web" in categories And "Yammer" in categories), "updatedOn", Descending)));
             
             UpdateContext(
@@ -435,25 +423,14 @@ Yammer_1 As screen:
         Y: =222
         ZIndex: =24
 
-    Label13_2 As label:
-        Height: =45
-        Italic: =true
-        Size: =14
-        Text: =Concatenate(CountRows(Gallery1_14.AllItems), " ", "result(s)")
-        Visible: =!ShowLoader
-        Width: =120
-        X: =520
-        Y: =276
-        ZIndex: =25
-
-    Icon3_3 As icon.NextArrow:
+    Icon3_5 As icon.NextArrow:
         Color: =RGBA(230, 230, 230, 1)
         Height: =31
         Icon: =Icon.NextArrow
-        OnSelect: =Navigate(Yammer_blogs)
+        OnSelect: =Navigate(Viva_blogs)
         Visible: =!ShowLoader
         Width: =44
         X: =583
         Y: =142
-        ZIndex: =26
+        ZIndex: =25
 
