@@ -17,7 +17,7 @@
         OnSelect: =Navigate(Teams)
         Size: =24
         Text: ="Teams"
-        Width: =264
+        Width: =269
         X: =202
         Y: =281
         ZIndex: =2
@@ -60,7 +60,7 @@
         Size: =24
         Text: ="Microsoft Viva"
         Width: =269
-        X: =201
+        X: =202
         Y: =397
         ZIndex: =6
 
@@ -72,20 +72,20 @@
         Size: =24
         Text: ="SharePoint"
         Width: =269
-        X: =201
-        Y: =747
+        X: =202
+        Y: =633
         ZIndex: =7
 
     Button7_8 As button:
-        Fill: =RGBA(116, 39, 115, 1)
+        Fill: =RGBA(37, 172, 114, 1)
         Font: =Font.'Segoe UI'
         Height: =85
         OnSelect: =Navigate(PowerApps)
         Size: =24
-        Text: ="Power Apps"
+        Text: ="Power Platform"
         Width: =269
-        X: =201
-        Y: =513
+        X: =202
+        Y: =749
         ZIndex: =8
 
     Button7_10 As button:
@@ -97,7 +97,7 @@
         Text: ="Yammer"
         Width: =269
         X: =202
-        Y: =630
+        Y: =512
         ZIndex: =10
 
     Image1 As image:
@@ -121,7 +121,7 @@
         Image: ='Yammer logo'
         Width: =66
         X: =98
-        Y: =637
+        Y: =521
         ZIndex: =13
 
     Image1_5 As image:
@@ -129,7 +129,7 @@
         Image: =Sharepoint
         Width: =66
         X: =98
-        Y: =755
+        Y: =640
         ZIndex: =15
 
     Icon4 As icon.Hamburger:
@@ -251,7 +251,7 @@
         Size: =24
         Text: ="Other products"
         Width: =269
-        X: =201
+        X: =202
         Y: =866
         ZIndex: =20
 
@@ -286,10 +286,10 @@
         ZIndex: =23
 
     Image3 As image:
-        Height: =142
-        Image: ='power-apps-logo-800-600'
-        Width: =148
-        X: =61
-        Y: =488
+        Height: =74
+        Image: =PowerPlatform_scalable
+        Width: =103
+        X: =79
+        Y: =771
         ZIndex: =24
 
