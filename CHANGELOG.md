@@ -1,5 +1,5 @@
 # Changelog
-All notable changes to this project will be documented in this file.
+All notable changes regarding the Microsoft 365 Roadmap * Blogs app will be documented in this file.
 
 ## [1.1] - 2022-08-22
 ### Added
