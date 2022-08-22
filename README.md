@@ -5,7 +5,7 @@ The **M365 Roadmap & Blogs app**, brings Microsoft's product roadmap and blogs i
 
 ## Features
 - Ability to easily see what is coming up per product
-- Filter roadmap items (check whether a roadmap item is in development, being rolled out, in preview or already live)
+- Filter roadmap items *(check whether a roadmap item is in development, being rolled out, in preview or already live)*
 - Real-time search for roadmap items of any Microsoft product/tool
 - Push notification (email) if new roadmap item is added
 - Detailed information per roadmap item, including its GA date
@@ -26,7 +26,7 @@ Before you install it, please check the email address you are using to install o
 **Important**: if you do not have a Microsoft email address (@microsoft.com), the app might not work. It is crucial that the email address you are using is added to the Microsoft tenant (as a guest) and this is verified by the creator of this app. This is a security measure,
 
 ### Method 1
-1. Go to **aka.ms/GetRoadmapApp** *(preferably new incognito window)*
+1. Go to **aka.ms/GetRoadmapApp** *(preferably in new incognito window)*
 2. Click on 'Launch it now'
 
 ### Method 2
