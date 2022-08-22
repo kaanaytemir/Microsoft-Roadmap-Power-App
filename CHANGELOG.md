@@ -1,5 +1,5 @@
 # Changelog
-All notable changes regarding the Microsoft 365 Roadmap * Blogs app will be documented in this file.
+All notable changes regarding the **Microsoft 365 Roadmap & Blogs app** will be documented in this file.
 
 ## [1.1] - 2022-08-22
 ### Added
@@ -12,7 +12,7 @@ All notable changes regarding the Microsoft 365 Roadmap * Blogs app will be docu
 ### Changed
 - Power Platform blog section styling
 - New Power Platform logo
-- README.md - added install instructions for non-Microsoft users
+- [README.md](https://github.com/kaanaytemir/Microsoft-Roadmap-Power-App/blob/main/README.md)  - added install instructions for non-Microsoft users
 
 ### Fixed
 - Minor style fixes
