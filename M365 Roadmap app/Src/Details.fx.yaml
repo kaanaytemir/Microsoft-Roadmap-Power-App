@@ -99,7 +99,7 @@
 
     Icon6 As icon.Share:
         Color: =RGBA(70, 78, 184, 1)
-        Fill: =RGBA(255, 255, 255, 1)
+        Fill: =If(DarkMode, Black, White)
         Height: =56
         Icon: =Icon.Share
         OnSelect: =Set(VarShowField, !VarShowField)
