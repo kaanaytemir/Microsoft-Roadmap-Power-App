@@ -30,11 +30,19 @@ Before you install it, please check the email address you are using to install o
 2. Click on 'Launch it now'
 
 ### Method 2
-1. Download the latest .zip file from the release section
+1. Download the latest `.zip` file from the release section
 2. Upload the .zip file in Teams by clicking on `Store > Manage Your Apps > Upload an App`
 
 ### Method 3
 1. If you know people who downloaded the app already, ask them to use the share functionality in the app to provide you access
+
+### Method 4 *(especially for non-Microsoft employees)*
+1. Download the latest `.zip` file from the [release section](https://github.com/kaanaytemir/Microsoft-Roadmap-Power-App/releases) 
+2. Go to your Power Apps portal and log in as admin (or ask your admin to do this for you)
+3. Upload the file and click "Upload"
+4. Click the `Import` button and wait until it is finished
+5. The app will be shown on the list of apps - click on the three dots next to the app
+6. Click `Share` and add the email address(es) of people that require access
 
 
 Do you have any questions, remarks or you need help with installing the app? Feel free to message me!
