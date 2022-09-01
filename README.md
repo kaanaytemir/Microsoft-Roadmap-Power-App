@@ -39,7 +39,10 @@ Before you install it, please check the email address you are using to install o
 ### Method 4 *(especially for non-Microsoft employees)*
 1. Download the latest `.zip` file from the [release section](https://github.com/kaanaytemir/Microsoft-Roadmap-Power-App/releases) 
 2. Go to your Power Apps portal and log in as admin (or ask your admin to do this for you)
-3. Upload the file and click "Upload"
+3. Click `Import Canvas App` and upload the file by clicking "Upload"
+
+![](https://github.com/kaanaytemir/Microsoft-Roadmap-Power-App/blob/main/Power%20App%20Portal%20-%20import%20app.png)
+
 4. Click the `Import` button and wait until it is finished
 5. The app will be shown on the list of apps - click on the three dots next to the app
 6. Click `Share` and add the email address(es) of people that require access
