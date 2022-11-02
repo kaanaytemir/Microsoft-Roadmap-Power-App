@@ -121,6 +121,31 @@
     "dependents": [],
     "id": "3036026d-978e-4d67-97dc-e27fa862c2b5"
   },
+  "3f020f1a-e8eb-47cf-97c6-2d48b06dae00": {
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1607/1.0.1607.3068/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline"
+    },
+    "datasets": {
+      "https://microsofteur-my.sharepoint.com/personal/caytemir_microsoft_com": {
+        "dataSources": {
+          "Fav list": {
+            "tableName": "af852171-a4d5-4c55-9459-66a548a32520"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "Fav list"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "3f020f1a-e8eb-47cf-97c6-2d48b06dae00"
+  },
   "5a29f62a-d8d4-4476-b475-911dd39f67c5": {
     "connectionParameters": {
       "sku": "Enterprise"
