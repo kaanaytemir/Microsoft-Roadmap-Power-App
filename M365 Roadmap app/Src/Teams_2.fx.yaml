@@ -120,16 +120,6 @@ Teams_2 As screen:
             Y: =206
             ZIndex: =10
 
-        Icon3 As icon.ArrowRight:
-            Icon: =Icon.ArrowRight
-            OnSelect: |-
-                =Patch('Fav list', Defaults('Fav list'), {Title: ThisItem.title, UserEmail: User().Email});
-                ClearCollect(CurrentUserFavsCollection, Filter('Fav list', UserEmail = User().Email));
-                AddColumns(FeedCollection, "Favorite", If(ThisItem.title in CurrentUserFavsCollection.Title, true));
-            X: =537
-            Y: =111
-            ZIndex: =11
-
     Label6_27 As label:
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
@@ -468,14 +458,4 @@ Teams_2 As screen:
         X: =520
         Y: =276
         ZIndex: =29
-
-    Button7 As button:
-        Height: =70
-        OnSelect: =FeedCollection
-        Size: =24
-        Text: ="Button"
-        Width: =280
-        X: =60
-        Y: =60
-        ZIndex: =30
 
