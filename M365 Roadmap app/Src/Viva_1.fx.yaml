@@ -455,7 +455,7 @@ Viva_1 As screen:
         Height: =45
         Italic: =true
         Size: =14
-        Text: =Concatenate(CountRows(Gallery1_14.AllItems), " ", "result(s)")
+        Text: =Concatenate(CountRows(Gallery1_18.AllItems), " ", "result(s)")
         Visible: =!ShowLoader
         Width: =120
         X: =520

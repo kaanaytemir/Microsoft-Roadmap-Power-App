@@ -452,7 +452,7 @@ Teams_2 As screen:
         Height: =45
         Italic: =true
         Size: =14
-        Text: =Concatenate(CountRows(Gallery1_14.AllItems), " ", "result(s)")
+        Text: =Concatenate(CountRows(Gallery1_15.AllItems), " ", "result(s)")
         Visible: =!ShowLoader
         Width: =120
         X: =520
