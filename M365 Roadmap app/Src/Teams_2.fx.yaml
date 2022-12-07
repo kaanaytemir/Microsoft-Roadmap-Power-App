@@ -291,6 +291,10 @@ Teams_2 As screen:
         ZIndex: =24
 
     Dropdown2_4 As dropdown:
+        BorderColor: |-
+            =If(
+               OneClicked, RGBA(125, 183, 0, 1), ColorFade(RGBA(56, 96, 178, 1), -20%)
+            )
         ChevronBackground: |-
             =If(
                OneClicked, RGBA(125, 183, 0, 1), ColorFade(RGBA(56, 96, 178, 1), -20%)
@@ -337,11 +341,16 @@ Teams_2 As screen:
         ZIndex: =25
 
     Dropdown2_5 As dropdown:
+        BorderColor: |-
+            =If(
+               ThreeClicked, RGBA(125, 183, 0, 1), ColorFade(RGBA(56, 96, 178, 1), -20%)
+            )
         ChevronBackground: |-
             =If(
                ThreeClicked, RGBA(125, 183, 0, 1), ColorFade(RGBA(56, 96, 178, 1), -20%)
             )
         Color: =RGBA(255, 255, 255, 1)
+        Default: ="Worldwide"
         Fill: =RGBA(102, 113, 166, 1)
         Height: =50
         Items: =["DoD", "GCC", "GCC High", "Germany", "Worldwide"]
@@ -382,6 +391,10 @@ Teams_2 As screen:
         ZIndex: =26
 
     Dropdown2_6 As dropdown:
+        BorderColor: |-
+            =If(
+               TwoClicked, RGBA(125, 183, 0, 1), ColorFade(RGBA(56, 96, 178, 1), -20%)
+            )
         ChevronBackground: |-
             =If(
                TwoClicked, RGBA(125, 183, 0, 1), ColorFade(RGBA(56, 96, 178, 1), -20%)

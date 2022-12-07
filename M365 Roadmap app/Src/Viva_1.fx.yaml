@@ -292,6 +292,10 @@ Viva_1 As screen:
         ZIndex: =21
 
     Dropdown2_14 As dropdown:
+        BorderColor: |-
+            =If(
+               OneClicked, RGBA(125, 183, 0, 1), ColorFade(RGBA(56, 96, 178, 1), -20%)
+            )
         ChevronBackground: |-
             =If(
                OneClicked, RGBA(125, 183, 0, 1), ColorFade(RGBA(56, 96, 178, 1), -20%)
@@ -338,11 +342,16 @@ Viva_1 As screen:
         ZIndex: =22
 
     Dropdown2_17 As dropdown:
+        BorderColor: |-
+            =If(
+               ThreeClicked, RGBA(125, 183, 0, 1), ColorFade(RGBA(56, 96, 178, 1), -20%)
+            )
         ChevronBackground: |-
             =If(
                ThreeClicked, RGBA(125, 183, 0, 1), ColorFade(RGBA(56, 96, 178, 1), -20%)
             )
         Color: =RGBA(255, 255, 255, 1)
+        Default: ="Worldwide"
         Fill: =RGBA(102, 113, 166, 1)
         Height: =50
         Items: =["DoD", "GCC", "GCC High", "Germany", "Worldwide"]
@@ -385,6 +394,10 @@ Viva_1 As screen:
         ZIndex: =23
 
     Dropdown2_18 As dropdown:
+        BorderColor: |-
+            =If(
+               TwoClicked, RGBA(125, 183, 0, 1), ColorFade(RGBA(56, 96, 178, 1), -20%)
+            )
         ChevronBackground: |-
             =If(
                TwoClicked, RGBA(125, 183, 0, 1), ColorFade(RGBA(56, 96, 178, 1), -20%)
