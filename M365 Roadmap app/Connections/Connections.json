@@ -135,12 +135,16 @@
         "dataSources": {
           "Fav list": {
             "tableName": "af852171-a4d5-4c55-9459-66a548a32520"
+          },
+          "LikeList": {
+            "tableName": "55cc59f9-9232-4a92-9614-0263477e37ed"
           }
         }
       }
     },
     "dataSources": [
-      "Fav list"
+      "Fav list",
+      "LikeList"
     ],
     "dependencies": {},
     "dependents": [],

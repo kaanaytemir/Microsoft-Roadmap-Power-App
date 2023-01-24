@@ -20,7 +20,13 @@ Sharepoint_p_1 As screen:
         DelayItemLoading: =true
         Fill: =If(DarkMode, Black, White)
         Height: =814
-        Items: =Search(FeedCollection, TextInput3_10.Text, "title")
+        Items: |
+            =If(
+             Checkbox2.Value,
+             Filter(Search(FeedCollection, TextInput3_10.Text, "title"), id in // if checkbox is checked, execute filter first and filter the result of the search, otherwise just execute search
+             Filter(LikeList,UserEmail=User().Email).Title),
+             Search(FeedCollection, TextInput3_10.Text, "title")
+            )
         Layout: =Layout.Vertical
         OnSelect: =Set(Summary, ThisItem.summary); Set(Title, ThisItem.title); Set(PrimaryLink, ThisItem.primaryLink);Navigate(Details)
         ShowNavigation: =true
@@ -120,6 +126,45 @@ Sharepoint_p_1 As screen:
             Y: =206
             ZIndex: =9
 
+        Icon15 As icon.Heart:
+            Color: |-
+                =If(
+                    IsBlank(
+                        LookUp(
+                            LikeList,
+                            Title = ThisItem.id && UserEmail = User().Email
+                        )
+                    ),
+                   Black,
+                   Red
+                )
+            Height: =38
+            Icon: =Icon.Heart
+            OnSelect: |-
+                =If(
+                    IsBlank(
+                        LookUp(
+                            LikeList,
+                            Title = ThisItem.id && UserEmail = User().Email
+                        )
+                    ),
+                    Patch(
+                        LikeList,
+                        {
+                            Title: ThisItem.id,
+                            UserEmail: User().Email
+                        }
+                    ),
+                    RemoveIf(
+                        LikeList,
+                        Title = ThisItem.id && UserEmail = User().Email
+                    )
+                )
+            Width: =33
+            X: =553
+            Y: =130
+            ZIndex: =10
+
     Label6_25 As label:
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
@@ -129,7 +174,7 @@ Sharepoint_p_1 As screen:
         Width: =235
         X: =181
         Y: =23
-        ZIndex: =6
+        ZIndex: =2
 
     Image6_20 As image:
         Height: =74
@@ -138,16 +183,7 @@ Sharepoint_p_1 As screen:
         Width: =133
         X: =507
         Y: =19
-        ZIndex: =7
-
-    Icon2_16 As icon.ChevronLeft:
-        Height: =35
-        Icon: =Icon.ChevronLeft
-        OnSelect: =Back()
-        Width: =42
-        X: =25
-        Y: =38
-        ZIndex: =8
+        ZIndex: =3
 
     TextInput3_10 As text:
         BorderColor: =RGBA(0, 76, 100, 1)
@@ -162,10 +198,10 @@ Sharepoint_p_1 As screen:
         RadiusTopLeft: =12
         RadiusTopRight: =12
         Size: =21
-        Width: =419
+        Width: =238
         X: =25
-        Y: =126
-        ZIndex: =10
+        Y: =118
+        ZIndex: =4
 
     Icon1_10 As icon.Search:
         Color: =RGBA(2, 131, 135, 1)
@@ -173,9 +209,9 @@ Sharepoint_p_1 As screen:
         Icon: =Icon.Search
         Visible: =IsBlank(TextInput3_10.Text)
         Width: =37
-        X: =395
-        Y: =139
-        ZIndex: =11
+        X: =215
+        Y: =130
+        ZIndex: =5
 
     Label6_26 As label:
         Font: =Font.'Segoe UI'
@@ -186,7 +222,7 @@ Sharepoint_p_1 As screen:
         Width: =84
         X: =531
         Y: =73
-        ZIndex: =12
+        ZIndex: =6
 
     Label5_5 As label:
         Color: =RGBA(255, 255, 255, 1)
@@ -201,7 +237,7 @@ Sharepoint_p_1 As screen:
         Width: =89
         X: =497
         Y: =126
-        ZIndex: =13
+        ZIndex: =7
 
     Label10_16 As label:
         Align: =Align.Center
@@ -221,7 +257,7 @@ Sharepoint_p_1 As screen:
         Width: =502
         X: =67
         Y: =591
-        ZIndex: =16
+        ZIndex: =8
 
     Button3_5 As button:
         Fill: =RGBA(2, 131, 135, 1)
@@ -238,7 +274,7 @@ Sharepoint_p_1 As screen:
         Width: =472
         X: =82
         Y: =831
-        ZIndex: =17
+        ZIndex: =9
 
     Label10_17 As label:
         Align: =Align.Center
@@ -255,7 +291,7 @@ Sharepoint_p_1 As screen:
         Width: =502
         X: =69
         Y: =699
-        ZIndex: =18
+        ZIndex: =10
 
     Image2_10 As image:
         Height: =1067
@@ -263,7 +299,7 @@ Sharepoint_p_1 As screen:
         ImagePosition: =ImagePosition.Fill
         Visible: =ShowLoader
         Width: =640
-        ZIndex: =19
+        ZIndex: =11
 
     Timer1_5 As timer:
         AutoStart: =true
@@ -278,7 +314,7 @@ Sharepoint_p_1 As screen:
         Width: =280
         X: =40
         Y: =41
-        ZIndex: =20
+        ZIndex: =12
 
     HtmlText3_5 As htmlViewer:
         Fill: =RGBA(255, 255, 255, 1)
@@ -288,7 +324,7 @@ Sharepoint_p_1 As screen:
         Visible: =ShowLoader
         Width: =640
         Y: =989
-        ZIndex: =21
+        ZIndex: =13
 
     Dropdown2_7 As dropdown:
         BorderColor: |-
@@ -341,7 +377,7 @@ Sharepoint_p_1 As screen:
         Width: =214
         X: =25
         Y: =222
-        ZIndex: =22
+        ZIndex: =14
 
     Dropdown2_8 As dropdown:
         BorderColor: |-
@@ -394,7 +430,7 @@ Sharepoint_p_1 As screen:
         Width: =171
         X: =456
         Y: =222
-        ZIndex: =23
+        ZIndex: =15
 
     Dropdown2_9 As dropdown:
         BorderColor: |-
@@ -458,7 +494,7 @@ Sharepoint_p_1 As screen:
         Width: =168
         X: =263
         Y: =222
-        ZIndex: =24
+        ZIndex: =16
 
     Icon3_2 As icon.NextArrow:
         Color: =RGBA(230, 230, 230, 1)
@@ -469,7 +505,7 @@ Sharepoint_p_1 As screen:
         Width: =44
         X: =583
         Y: =142
-        ZIndex: =25
+        ZIndex: =17
 
     Label13 As label:
         Height: =45
@@ -480,5 +516,26 @@ Sharepoint_p_1 As screen:
         Width: =120
         X: =520
         Y: =276
-        ZIndex: =26
+        ZIndex: =18
+
+    Icon2_21 As icon.ChevronLeft:
+        Height: =35
+        Icon: =Icon.ChevronLeft
+        OnSelect: =Back()
+        Width: =42
+        X: =25
+        Y: =38
+        ZIndex: =19
+
+    Checkbox2 As checkbox:
+        Color: =RGBA(255, 255, 255, 1)
+        Default: =!IsBlank(Filter(LikeList,UserEmail=User().Email)) /*If the current user's like list is not empty, all records will be displayed by default*/
+        Height: =70
+        Size: =15
+        Text: ="Show favorites"
+        Visible: =!ShowLoader
+        Width: =190
+        X: =279
+        Y: =112
+        ZIndex: =20
 

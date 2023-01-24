@@ -21,14 +21,20 @@ Viva_1 As screen:
         DelayItemLoading: =true
         Fill: =If(DarkMode, Black, White)
         Height: =814
-        Items: =Search(FeedCollection, TextInput3_14.Text, "title")
+        Items: |
+            =If(
+             Checkbox5.Value,
+             Filter(Search(FeedCollection, TextInput3_14.Text, "title"), id in // if checkbox is checked, execute filter first and filter the result of the search, otherwise just execute search
+             Filter(LikeList,UserEmail=User().Email).Title),
+             Search(FeedCollection, TextInput3_14.Text, "title")
+            )
         Layout: =Layout.Vertical
         OnSelect: =Set(Summary, ThisItem.summary); Set(Title, ThisItem.title); Set(PrimaryLink, ThisItem.primaryLink);Navigate(Details)
         ShowNavigation: =true
         TemplatePadding: =0
         TemplateSize: =249
         WrapCount: =0
-        Y: =321
+        Y: =322
         ZIndex: =1
 
         Title2_18 As label:
@@ -121,6 +127,45 @@ Viva_1 As screen:
             Y: =208
             ZIndex: =9
 
+        Icon19 As icon.Heart:
+            Color: |-
+                =If(
+                    IsBlank(
+                        LookUp(
+                            LikeList,
+                            Title = ThisItem.id && UserEmail = User().Email
+                        )
+                    ),
+                   Black,
+                   Red
+                )
+            Height: =38
+            Icon: =Icon.Heart
+            OnSelect: |-
+                =If(
+                    IsBlank(
+                        LookUp(
+                            LikeList,
+                            Title = ThisItem.id && UserEmail = User().Email
+                        )
+                    ),
+                    Patch(
+                        LikeList,
+                        {
+                            Title: ThisItem.id,
+                            UserEmail: User().Email
+                        }
+                    ),
+                    RemoveIf(
+                        LikeList,
+                        Title = ThisItem.id && UserEmail = User().Email
+                    )
+                )
+            Width: =33
+            X: =555
+            Y: =130
+            ZIndex: =10
+
     Label6_33 As label:
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
@@ -163,9 +208,9 @@ Viva_1 As screen:
         RadiusTopLeft: =12
         RadiusTopRight: =12
         Size: =21
-        Width: =419
+        Width: =238
         X: =25
-        Y: =126
+        Y: =118
         ZIndex: =10
 
     Icon1_14 As icon.Search:
@@ -174,8 +219,8 @@ Viva_1 As screen:
         Icon: =Icon.Search
         Visible: =IsBlank(TextInput3_14.Text)
         Width: =37
-        X: =394
-        Y: =143
+        X: =214
+        Y: =130
         ZIndex: =11
 
     Label6_34 As label:
@@ -474,4 +519,16 @@ Viva_1 As screen:
         X: =520
         Y: =276
         ZIndex: =26
+
+    Checkbox5 As checkbox:
+        Color: =RGBA(255, 255, 255, 1)
+        Default: =!IsBlank(Filter(LikeList,UserEmail=User().Email)) /*If the current user's like list is not empty, all records will be displayed by default*/
+        Height: =70
+        Size: =15
+        Text: ="Show favorites"
+        Visible: =!ShowLoader
+        Width: =190
+        X: =279
+        Y: =112
+        ZIndex: =27
 
