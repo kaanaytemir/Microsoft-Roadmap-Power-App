@@ -529,7 +529,7 @@ PowerApps_1 As screen:
 
     Checkbox4 As checkbox:
         Color: =RGBA(255, 255, 255, 1)
-        Default: =!IsBlank(Filter(LikeList,UserEmail=User().Email)) /*If the current user's like list is not empty, all records will be displayed by default*/
+        Default: =false && !IsBlank(Filter(LikeList,UserEmail=User().Email)) /*If the current user's like list is not empty, all records will be displayed by default*/
         Height: =70
         Size: =15
         Text: ="Show favorites"
