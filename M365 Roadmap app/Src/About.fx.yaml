@@ -40,7 +40,7 @@ About As screen:
             In case you have any questions and/or remarks, please reach out to Kaan."
         Width: =523
         X: =58
-        Y: =412
+        Y: =355
         ZIndex: =4
 
     HtmlText1_1 As htmlViewer:
@@ -49,8 +49,8 @@ About As screen:
         HtmlText: ="<i>The Microsoft 365 roadmap provides estimated release dates and descriptions for commercial features. All information is subject to change.</i>"
         Size: =14
         Width: =548
-        X: =62
-        Y: =1012
+        X: =58
+        Y: =948
         ZIndex: =5
 
     Image6_13 As image:
@@ -78,7 +78,7 @@ About As screen:
         Text: ="Share app"
         Width: =210
         X: =67
-        Y: =854
+        Y: =808
         ZIndex: =10
 
     Button1_1 As button:
@@ -88,7 +88,16 @@ About As screen:
         Size: =20
         Text: ="Rate app"
         Width: =217
-        X: =342
-        Y: =854
+        X: =334
+        Y: =810
         ZIndex: =11
+
+    Label10 As label:
+        Height: =47
+        Size: =14
+        Text: ="v1.2 (Erik)"
+        Width: =130
+        X: =507
+        Y: =1089
+        ZIndex: =12
 

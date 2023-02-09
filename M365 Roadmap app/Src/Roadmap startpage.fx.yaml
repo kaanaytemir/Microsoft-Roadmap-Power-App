@@ -1,4 +1,5 @@
 "'Roadmap startpage' As screen":
+    BackgroundImage: =
     Fill: =If(DarkMode, Black, White)
     OnVisible: |-
         =UpdateContext( { ctxWaffle1open: false} )
@@ -107,14 +108,6 @@
         X: =98
         Y: =289
         ZIndex: =11
-
-    Image1_1 As image:
-        Height: =70
-        Image: ='Microsoft Viva'
-        Width: =66
-        X: =98
-        Y: =403
-        ZIndex: =12
 
     Image1_2 As image:
         Height: =70
@@ -292,4 +285,12 @@
         X: =79
         Y: =760
         ZIndex: =24
+
+    Image4 As image:
+        Height: =70
+        Image: =VivaTopics_CLR_Small_2x
+        Width: =66
+        X: =98
+        Y: =404
+        ZIndex: =25
 
