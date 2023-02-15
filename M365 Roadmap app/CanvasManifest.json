@@ -1,7 +1,7 @@
 {
   "FormatVersion": "0.24",
   "Header": {
-    "DocVersion": "1.327",
+    "DocVersion": "1.328",
     "MinVersionToLoad": "1.327",
     "MSAppStructureVersion": "2.0"
   },
@@ -22,6 +22,7 @@
       "consistentreturnschemafortabularfunctions": false,
       "copyandmerge": true,
       "datatablev2control": true,
+      "dataverseactionsenabled": false,
       "delaycontrolrendering": false,
       "delayloadscreens": true,
       "disablecdsfileandlargeimage": false,
@@ -74,7 +75,7 @@
       "rtlinstudiopreview": false,
       "rtlsupport": false,
       "supportcolumnnamesasidentifiers": false,
-      "tabledoesntwraprecords": false,
+      "tabledoesntwraprecords": true,
       "untypedobject": false,
       "usedisplaynamemetadata": true,
       "useenforcesavedatalimits": true,

@@ -7,7 +7,7 @@ Yammer_blogs As screen:
 
     "Gallery1_11 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
         BorderColor: =RGBA(109, 49, 162, 1)
-        Fill: =RGBA(2, 121, 212, 1)
+        Fill: =RGBA(52, 146, 222, 1)
         Height: =837
         Items: =Search(HeedCollection, TextInput3_7.Text, "title")
         Layout: =Layout.Vertical
@@ -44,7 +44,7 @@ Yammer_blogs As screen:
             ZIndex: =3
 
         Button1_11 As button:
-            Fill: =RGBA(70, 78, 184, 1)
+            Fill: =RGBA(28, 100, 180, 1)
             Font: =Font.'Segoe UI'
             Height: =51
             OnSelect: =Launch(ThisItem.primaryLink)
@@ -76,10 +76,10 @@ Yammer_blogs As screen:
         Height: =70
         Size: =32
         Text: |-
-            ="Yammer
+            ="Viva Engage
             "
-        Width: =184
-        X: =215
+        Width: =254
+        X: =193
         Y: =23
         ZIndex: =3
 

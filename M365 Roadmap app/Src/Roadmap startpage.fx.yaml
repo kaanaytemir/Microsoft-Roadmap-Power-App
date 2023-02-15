@@ -90,12 +90,12 @@
         ZIndex: =8
 
     Button7_10 As button:
-        Fill: =RGBA(2, 121, 212, 1)
+        Fill: =RGBA(52, 146, 222, 1)
         Font: =Font.'Segoe UI'
         Height: =85
         OnSelect: =Navigate(Yammer_1)
         Size: =24
-        Text: ="Yammer"
+        Text: ="Viva Engage"
         Width: =269
         X: =202
         Y: =512
@@ -111,7 +111,7 @@
 
     Image1_2 As image:
         Height: =70
-        Image: ='Yammer logo'
+        Image: =VivaEngage_CLR_Small_2x
         Width: =66
         X: =98
         Y: =521

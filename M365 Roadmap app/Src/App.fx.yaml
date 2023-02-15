@@ -5,3 +5,10 @@ App As appinfo:
         ClearCollect(FeedCollection, "https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/");
     StartScreen: ='Roadmap startpage'
 
+    Host As hostControl.DefaultHostControlVariant:
+        OnCancel: =false
+        OnEdit: =false
+        OnNew: =false
+        OnSave: =false
+        OnView: =false
+

@@ -95,7 +95,7 @@ About As screen:
     Label10 As label:
         Height: =47
         Size: =14
-        Text: ="v1.2 (Erik)"
+        Text: ="v1.2.1 (Erik)"
         Width: =130
         X: =507
         Y: =1089
