@@ -1,5 +1,5 @@
 Settings As screen:
-    Fill: =If(DarkMode, Black, White)
+    Fill: =If(DarkMode, Color.Black, Color.White)
 
     Rectangle2_3 As rectangle:
         BorderColor: =RGBA(56, 96, 178, 1)
@@ -30,7 +30,7 @@ Settings As screen:
         ZIndex: =3
 
     Label4_3 As label:
-        Color: =If(DarkMode, White, Black)
+        Color: =If(DarkMode, Color.White, Color.Black)
         Height: =206
         Size: =20
         Text: ="Email me when a new roadmap item is added"
@@ -40,7 +40,7 @@ Settings As screen:
         ZIndex: =4
 
     HtmlText1_3 As htmlViewer:
-        Color: =If(DarkMode, White, Black)
+        Color: =If(DarkMode, Color.White, Color.Black)
         Height: =102
         HtmlText: ="<i>The Microsoft 365 roadmap provides estimated release dates and descriptions for commercial features. All information is subject to change.</i>"
         Size: =14
@@ -77,7 +77,7 @@ Settings As screen:
         ZIndex: =8
 
     Label4_4 As label:
-        Color: =If(DarkMode, White, Black)
+        Color: =If(DarkMode, Color.White, Color.Black)
         Height: =206
         Size: =20
         Text: ="Dark mode"

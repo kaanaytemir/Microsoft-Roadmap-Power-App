@@ -3,7 +3,7 @@
     "ApiId": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
     "CdpRevision": {
       "BaseUrl": "/",
-      "LastChangedTimeString": "2022-06-02T17:40:00.9680000Z",
+      "LastChangedTimeString": "2023-04-05T17:37:49.6310000Z",
       "RevisionNumber": 1
     },
     "ConnectedDataSourceInfoNameMapping": {
@@ -31,6 +31,7 @@
       "Editor#Claims": "Modified By Claims",
       "ID": "ID",
       "Modified": "Modified",
+      "OData__ColorTag": "Color Tag",
       "Title": "Title"
     },
     "DatasetName": "https://microsofteur.sharepoint.com/teams/M365RoadmapBlogsapp",

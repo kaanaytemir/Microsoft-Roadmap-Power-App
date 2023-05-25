@@ -105,7 +105,7 @@ Teams_blogs As screen:
         Font: =Font.'Segoe UI'
         Height: =51
         OnSelect: |-
-            =ClearCollect(HeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://techcommunity.microsoft.com/plugins/custom/microsoft/o365/custom-blog-rss?tid=-3791806597164216636&board=MicrosoftTeamsBlog&size=25"), "New in Microsoft" in title), "updatedOn", Descending))
+            =ClearCollect(HeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://techcommunity.microsoft.com/plugins/custom/microsoft/o365/custom-blog-rss?tid=-3791806597164216636&board=MicrosoftTeamsBlog&size=25"), "New in Microsoft" in title), "updatedOn", SortOrder.Descending))
         Size: =18
         Text: ="What's new?"
         Width: =189

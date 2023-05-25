@@ -1,8 +1,8 @@
 "Details As screen.'phoneLayout_Tutorial_ver3.0'":
-    Fill: =If(DarkMode, Black, White)
+    Fill: =If(DarkMode, Color.Black, Color.White)
 
     HtmlText2 As htmlViewer:
-        Color: =If(DarkMode, White, Black)
+        Color: =If(DarkMode, Color.White, Color.Black)
         ContentLanguage: =
         DisplayMode: =DisplayMode.View
         Font: =Font.'Segoe UI'
@@ -33,7 +33,7 @@
         ZIndex: =2
 
     Label2 As label:
-        Color: =If(DarkMode, White, Black)
+        Color: =If(DarkMode, Color.White, Color.Black)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Bold
         Height: =70
@@ -99,7 +99,7 @@
 
     Icon6 As icon.Share:
         Color: =RGBA(70, 78, 184, 1)
-        Fill: =If(DarkMode, Black, White)
+        Fill: =If(DarkMode, Color.Black, Color.White)
         Height: =56
         Icon: =Icon.Share
         OnSelect: =Set(VarShowField, !VarShowField)

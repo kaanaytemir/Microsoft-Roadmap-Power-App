@@ -1,8 +1,5 @@
 {
   "1ff7e106-c14d-4664-89f5-d1d79e32fb37": {
-    "connectionParameters": {
-      "sku": "Enterprise"
-    },
     "connectionRef": {
       "apiTier": "Standard",
       "displayName": "SharePoint",
@@ -44,9 +41,6 @@
     "id": "1ff7e106-c14d-4664-89f5-d1d79e32fb37"
   },
   "2412fa8a-62fc-4d29-bf19-9c5fce13dff8": {
-    "connectionParameters": {
-      "sku": "Enterprise"
-    },
     "connectionRef": {
       "apiTier": "Standard",
       "displayName": "Office 365 Users",
@@ -67,12 +61,6 @@
     "id": "2412fa8a-62fc-4d29-bf19-9c5fce13dff8"
   },
   "3036026d-978e-4d67-97dc-e27fa862c2b5": {
-    "connectionParameters": {
-      "workFlowCallbackUri": "https://prod-182.westus.logic.azure.com:443/workflows/3a13ee97baf54ef88d3ffa16940e182e/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=AYW91IEQR4k6yO6BToFBZr3601UkYcQMvVgZ5h2g8_o",
-      "workflowEndpoint": "/subscriptions/2e6e5a0a-b35f-4167-82de-61b3afa7d1ec/resourceGroups/72f988bf86f141af91ab2d7cd011db47-ccb7769c5b6945f3bb2b14610febffec/providers/Microsoft.Logic/workflows/beb7ccfb-00c9-47ec-9d85-a4f7126fcb19",
-      "workflowName": "beb7ccfb-00c9-47ec-9d85-a4f7126fcb19",
-      "workflowPath": "/subscriptions/2e6e5a0a-b35f-4167-82de-61b3afa7d1ec/resourceGroups/72f988bf86f141af91ab2d7cd011db47-ccb7769c5b6945f3bb2b14610febffec/providers/Microsoft.Logic/workflows/beb7ccfb-00c9-47ec-9d85-a4f7126fcb19"
-    },
     "connectionRef": {
       "apiTier": "Standard",
       "displayName": "Logic flows",
@@ -122,9 +110,6 @@
     "id": "3036026d-978e-4d67-97dc-e27fa862c2b5"
   },
   "3f020f1a-e8eb-47cf-97c6-2d48b06dae00": {
-    "connectionParameters": {
-      "sku": "Enterprise"
-    },
     "connectionRef": {
       "displayName": "SharePoint",
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1607/1.0.1607.3068/sharepointonline/icon.png",
@@ -151,9 +136,6 @@
     "id": "3f020f1a-e8eb-47cf-97c6-2d48b06dae00"
   },
   "5a29f62a-d8d4-4476-b475-911dd39f67c5": {
-    "connectionParameters": {
-      "sku": "Enterprise"
-    },
     "connectionRef": {
       "apiTier": "Standard",
       "displayName": "Office 365 Outlook",
@@ -173,9 +155,6 @@
     "id": "5a29f62a-d8d4-4476-b475-911dd39f67c5"
   },
   "f13792b9-d4a0-4866-a39b-88a09ea0b279": {
-    "connectionParameters": {
-      "sku": "Enterprise"
-    },
     "connectionRef": {
       "apiTier": "Standard",
       "displayName": "RSS",

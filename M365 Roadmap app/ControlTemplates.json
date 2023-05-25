@@ -95,7 +95,7 @@
     "LastModifiedTimestamp": "0",
     "Name": "groupContainer",
     "OverridableProperties": {},
-    "Version": "1.1.0"
+    "Version": "1.3.0"
   },
   "hostControl": {
     "CustomGroupControlTemplateName": "",

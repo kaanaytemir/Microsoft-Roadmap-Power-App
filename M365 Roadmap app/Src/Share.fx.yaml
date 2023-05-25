@@ -1,5 +1,5 @@
 Share As screen:
-    Fill: =If(DarkMode, Black, White)
+    Fill: =If(DarkMode, Color.Black, Color.White)
 
     Rectangle2_2 As rectangle:
         BorderColor: =RGBA(56, 96, 178, 1)
@@ -30,7 +30,7 @@ Share As screen:
         ZIndex: =3
 
     Label4_1 As label:
-        Color: =If(DarkMode, White, Black)
+        Color: =If(DarkMode, Color.White, Color.Black)
         FontWeight: =FontWeight.Bold
         Height: =206
         Size: =24
@@ -43,7 +43,7 @@ Share As screen:
         ZIndex: =4
 
     HtmlText1_2 As htmlViewer:
-        Color: =If(DarkMode, White, Black)
+        Color: =If(DarkMode, Color.White, Color.Black)
         Height: =102
         HtmlText: ="<i>The Microsoft 365 roadmap provides estimated release dates and descriptions for commercial features. All information is subject to change.</i>"
         Size: =14
@@ -70,7 +70,7 @@ Share As screen:
         ZIndex: =7
 
     Label4_2 As label:
-        Color: =If(DarkMode, White, Black)
+        Color: =If(DarkMode, Color.White, Color.Black)
         Height: =126
         Size: =21
         Text: ="Provide their email address below!"
@@ -91,7 +91,7 @@ Share As screen:
         ZIndex: =9
 
     Icon5 As icon.Send:
-        Color: =If(SuccessColor,Green, DarkMode, White, Black)
+        Color: =If(SuccessColor,Color.Green, DarkMode, Color.White, Color.Black)
         Height: =52
         Icon: =Icon.Send
         OnSelect: |-

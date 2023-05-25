@@ -1,6 +1,6 @@
 "'Roadmap startpage' As screen":
     BackgroundImage: =
-    Fill: =If(DarkMode, Black, White)
+    Fill: =If(DarkMode, Color.Black, Color.White)
     OnVisible: |-
         =UpdateContext( { ctxWaffle1open: false} )
 
@@ -19,8 +19,8 @@
         Size: =24
         Text: ="Teams"
         Width: =269
-        X: =202
-        Y: =281
+        X: =200
+        Y: =205
         ZIndex: =2
 
     Image6_1 As image:
@@ -44,13 +44,13 @@
         ZIndex: =4
 
     Label7 As label:
-        Color: =If(DarkMode, White, Black)
+        Color: =If(DarkMode, Color.White, Color.Black)
         Height: =70
         Size: =21
         Text: ="Choose a product"
         Width: =245
-        X: =202
-        Y: =126
+        X: =212
+        Y: =119
         ZIndex: =5
 
     Button7_4 As button:
@@ -61,8 +61,8 @@
         Size: =24
         Text: ="Microsoft Viva"
         Width: =269
-        X: =202
-        Y: =397
+        X: =200
+        Y: =327
         ZIndex: =6
 
     Button7_7 As button:
@@ -73,8 +73,8 @@
         Size: =24
         Text: ="SharePoint"
         Width: =269
-        X: =202
-        Y: =633
+        X: =200
+        Y: =571
         ZIndex: =7
 
     Button7_8 As button:
@@ -86,7 +86,7 @@
         Text: ="Power Platform"
         Width: =269
         X: =202
-        Y: =749
+        Y: =815
         ZIndex: =8
 
     Button7_10 As button:
@@ -98,7 +98,7 @@
         Text: ="Viva Engage"
         Width: =269
         X: =202
-        Y: =512
+        Y: =449
         ZIndex: =10
 
     Image1 As image:
@@ -106,7 +106,7 @@
         Image: ='Teams logo'
         Width: =66
         X: =98
-        Y: =289
+        Y: =219
         ZIndex: =11
 
     Image1_2 As image:
@@ -114,15 +114,15 @@
         Image: =VivaEngage_CLR_Small_2x
         Width: =66
         X: =98
-        Y: =521
+        Y: =466
         ZIndex: =13
 
     Image1_5 As image:
         Height: =70
         Image: =Sharepoint
         Width: =66
-        X: =98
-        Y: =640
+        X: =97
+        Y: =585
         ZIndex: =15
 
     Icon4 As icon.Hamburger:
@@ -236,7 +236,7 @@
             ZIndex: =11
 
     Button7_18 As button:
-        Fill: =RGBA(221, 79, 14, 1)
+        Fill: =RGBA(255, 185, 0, 1)
         Font: =Font.'Segoe UI'
         Height: =85
         OnSelect: |-
@@ -244,8 +244,8 @@
         Size: =24
         Text: ="Other products"
         Width: =269
-        X: =202
-        Y: =866
+        X: =203
+        Y: =937
         ZIndex: =20
 
     Image6_5 As image:
@@ -253,29 +253,30 @@
         Image: ='Microsoft logo'
         Width: =238
         X: =12
-        Y: =843
+        Y: =914
         ZIndex: =21
 
     HtmlText1 As htmlViewer:
-        Color: =If(DarkMode, White, Black)
-        Height: =102
-        HtmlText: ="<i>The Microsoft 365 roadmap provides estimated release dates and descriptions for commercial features. All information is subject to change.</i>"
-        Size: =14
-        Width: =548
-        X: =61
-        Y: =998
+        Color: =If(DarkMode, Color.White, Color.Black)
+        Font: =Font.'Segoe UI'
+        Height: =86
+        HtmlText: ="<i>The Microsoft 365 roadmap provides estimated release dates & descriptions for commercial features. All information is subject to change.</i>"
+        Size: =12
+        Width: =389
+        X: =143
+        Y: =1047
         ZIndex: =22
 
     Icon2 As icon.Help:
         BorderColor: =RGBA(0, 134, 208, 1)
         Color: =RGBA(0, 134, 208, 1)
-        Fill: =If(DarkMode, Black, White)
+        Fill: =If(DarkMode, Color.Black, Color.White)
         Height: =40
         Icon: =Icon.Help
         OnSelect: =Navigate(About)
         Width: =34
-        X: =588
-        Y: =1083
+        X: =579
+        Y: =1070
         ZIndex: =23
 
     Image3 As image:
@@ -283,7 +284,7 @@
         Image: =PowerPlatform_scalable
         Width: =103
         X: =79
-        Y: =760
+        Y: =826
         ZIndex: =24
 
     Image4 As image:
@@ -291,6 +292,26 @@
         Image: =VivaTopics_CLR_Small_2x
         Width: =66
         X: =98
-        Y: =404
+        Y: =340
         ZIndex: =25
+
+    Button7_30 As button:
+        Fill: =RGBA(220, 62, 21, 1)
+        Font: =Font.'Segoe UI'
+        Height: =85
+        OnSelect: =Navigate(M365)
+        Size: =24
+        Text: ="Microsoft 365"
+        Width: =269
+        X: =203
+        Y: =693
+        ZIndex: =26
+
+    Image1_3 As image:
+        Height: =70
+        Image: ='office logo'
+        Width: =66
+        X: =98
+        Y: =701
+        ZIndex: =27
 

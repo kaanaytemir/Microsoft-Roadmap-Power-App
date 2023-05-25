@@ -1,5 +1,5 @@
 Rating As screen:
-    Fill: =If(DarkMode, Black, White)
+    Fill: =If(DarkMode, Color.Black, Color.White)
 
     Rectangle2_4 As rectangle:
         BorderColor: =RGBA(56, 96, 178, 1)
@@ -75,7 +75,7 @@ Rating As screen:
         ZIndex: =9
 
     Label9 As label:
-        Color: =If(DarkMode, White, Black)
+        Color: =If(DarkMode, Color.White, Color.Black)
         Height: =133
         Size: =21
         Text: ="Rate this app and provide your feedback to help us improve it"
