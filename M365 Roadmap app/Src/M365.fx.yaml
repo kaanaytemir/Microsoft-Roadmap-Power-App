@@ -249,7 +249,7 @@ M365 As screen:
         FontWeight: =FontWeight.Bold
         Height: =54
         HoverColor: =Color.Black
-        OnSelect: =Navigate(Viva_blogs)
+        OnSelect: =Navigate(M365_blogs)
         Size: =22
         Text: ="Blogs"
         Underline: =true

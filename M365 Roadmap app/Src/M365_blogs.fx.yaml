@@ -1,0 +1,148 @@
+M365_blogs As screen:
+    Fill: =RGBA(255, 255, 255, 1)
+    OnVisible: |-
+        =Set(ShowLoader, true);
+        ClearCollect(HeedCollection, RSS.ListFeedItems("https://techcommunity.microsoft.com/plugins/custom/microsoft/o365/custom-blog-rss?tid=4977418726937613481&board=MicrosoftVivaBlog&size=25"));
+        Set(ShowLoader, false);
+
+    "Gallery1_20 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
+        BorderColor: =RGBA(109, 49, 162, 1)
+        Fill: =RGBA(220, 62, 21, 1)
+        Height: =815
+        Items: |-
+            =Search(RSS.ListFeedItems("https://techcommunity.microsoft.com/plugins/custom/microsoft/o365/custom-blog-rss?tid=2531344329857759529&board=microsoft_365blog&size=50"), TextInput3_16.Text, "title") 
+        Layout: =Layout.Vertical
+        ShowNavigation: =true
+        ShowScrollbar: =false
+        TemplatePadding: =0
+        TemplateSize: =215
+        WrapCount: =0
+        Y: =299
+        ZIndex: =1
+
+        Title2_20 As label:
+            DisplayMode: =DisplayMode.View
+            Font: =Font.'Segoe UI'
+            Height: =112
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =22
+            Text: =ThisItem.title
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 104
+            X: =32
+            Y: =17
+            ZIndex: =1
+
+        Separator2_20 As rectangle:
+            Fill: =RGBA(109, 49, 162, 1)
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =3
+
+        Button1_20 As button:
+            Fill: =RGBA(219, 108, 83, 1)
+            Font: =Font.'Segoe UI'
+            Height: =51
+            OnSelect: =Launch(ThisItem.primaryLink)
+            Size: =16
+            Text: ="Read blog"
+            Width: =109
+            X: =501
+            Y: =146
+            ZIndex: =5
+
+    Button7_36 As button:
+        Fill: =RGBA(220, 62, 21, 1)
+        Font: =Font.'Segoe UI'
+        Height: =51
+        OnSelect: |-
+            =ClearCollect(HeedCollection, RSS.ListFeedItems("https://techcommunity.microsoft.com/plugins/custom/microsoft/o365/custom-blog-rss?tid=2531344329857759529&board=microsoft_365blog&size=125"))
+        Size: =18
+        Text: |-
+            ="All blogs
+            "
+        Width: =175
+        X: =228
+        Y: =219
+        ZIndex: =5
+
+    Label6_37 As label:
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =70
+        Size: =32
+        Text: |-
+            ="Microsoft 365
+            "
+        Width: =303
+        X: =166
+        Y: =23
+        ZIndex: =6
+
+    Image6_27 As image:
+        Height: =74
+        Image: ='Microsoft logo'
+        Width: =133
+        X: =507
+        Y: =19
+        ZIndex: =7
+
+    Icon2_16 As icon.ChevronLeft:
+        Height: =35
+        Icon: =Icon.ChevronLeft
+        OnSelect: =Back()
+        Width: =42
+        X: =25
+        Y: =38
+        ZIndex: =8
+
+    TextInput3_16 As text:
+        BorderColor: =RGBA(130, 95, 193, 1)
+        Clear: =true
+        Default: =""
+        Font: =Font.'Segoe UI'
+        Height: =70
+        HintText: ="Search"
+        OnSelect: =Filter(HeedCollection,TextInput3_16.Text = title)
+        Size: =21
+        Width: =410
+        X: =102
+        Y: =121
+        ZIndex: =10
+
+    Icon1_16 As icon.Search:
+        Color: =RGBA(130, 95, 193, 1)
+        Height: =37
+        Icon: =Icon.Search
+        Visible: =IsBlank(TextInput3_16.Text)
+        Width: =37
+        X: =469
+        Y: =137
+        ZIndex: =11
+
+    Label6_38 As label:
+        Align: =Align.Center
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =42
+        Size: =12
+        Text: ="Blog"
+        Width: =56
+        X: =545
+        Y: =73
+        ZIndex: =12
+
+    Image2_16 As image:
+        Height: =1136
+        Image: =microsoft
+        ImagePosition: =ImagePosition.Fill
+        Visible: =ShowLoader
+        Width: =640
+        ZIndex: =13
+
