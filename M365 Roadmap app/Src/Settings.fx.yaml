@@ -68,7 +68,7 @@ Settings As screen:
 
     Toggle1 As toggleSwitch:
         Height: =49
-        OnCheck: =ClickabuttoninPowerAppstosendanemail.Run(User().Email, "Test", "Test")
+        OnCheck: =ClickabuttoninPowerAppstosendanemail.Run(User().Email, "New roadmap item added", "New roadmap item added")
         ShowLabel: =false
         Size: =21
         Width: =154
