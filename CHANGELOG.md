@@ -1,6 +1,15 @@
 # Changelog
 All notable changes regarding the **Microsoft 365 Roadmap & Blogs app** will be documented in this file.
 
+## [1.2] & [1.3] - 2022-01-06
+### Added
+- Follow (favorites) roadmap item functionality
+- "All" filter to show all roadmap items, regardless of its release phase
+- "Added this week" filter to show newly added roadmap items
+- Counter on search screen to see how many roadmap items are in place
+- M365 products and services roadmap items + blogs
+- Minor bug fixes and tweaks
+
 ## [1.1] - 2022-08-22
 ### Added
 - New cloud instance filters (DoD, GCC, GCC High, Worldwide, Germany)
