@@ -10,6 +10,9 @@ All notable changes regarding the **Microsoft 365 Roadmap & Blogs app** will be 
 - M365 products and services roadmap items + blogs
 - Minor bug fixes and tweaks
 
+### Changed
+- Yammer to Viva Engage rebrand
+
 ## [1.1] - 2022-08-22
 ### Added
 - New cloud instance filters (DoD, GCC, GCC High, Worldwide, Germany)
