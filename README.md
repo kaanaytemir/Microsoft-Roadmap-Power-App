@@ -8,9 +8,10 @@ The **M365 Roadmap & Blogs app**, brings Microsoft's product roadmap and blogs i
 - Filter roadmap items *(check whether a roadmap item is in development, being rolled out, in preview or already live)*
 - Real-time search for roadmap items of any Microsoft product/tool
 - Push notification (email) if new roadmap item is added
-- Detailed information per roadmap item, including its GA date
+- Detailed information per roadmap item, including its GA and preview date
 - Overview of the latest blogs and news per product
 - Links to the feedback page per product
+- Favorites to track relevant roadmap items
 - Dark mode
 
 ## Changelog
