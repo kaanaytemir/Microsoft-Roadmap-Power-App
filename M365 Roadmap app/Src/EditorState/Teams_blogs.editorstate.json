@@ -85,6 +85,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button1_6",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -357,6 +358,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button7_12",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -629,6 +631,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button7_13",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -893,7 +896,10 @@
           "InvariantPropertyName": "ShowScrollbar",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
-        }
+        },
+        "MaxTemplateSize",
+        "#CopilotOverlayLabel",
+        "#CopilotOverlayVisible"
       ],
       "GalleryTemplateChildName": "galleryTemplate1_5",
       "HasDynamicProperties": false,
@@ -906,6 +912,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Gallery1_5",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1038,6 +1045,21 @@
           "Category": "Design",
           "PropertyName": "ShowScrollbar",
           "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "MaxTemplateSize",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "#CopilotOverlayLabel",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "#CopilotOverlayVisible",
+          "RuleProviderType": "Unknown"
         }
       ],
       "StyleName": "defaultGalleryStyle",
@@ -1058,6 +1080,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "galleryTemplate1_5",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1115,6 +1138,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Icon1_1",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1287,6 +1311,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Icon2_2",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1479,6 +1504,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Image2_3",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1686,6 +1712,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Image6_2",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1927,6 +1954,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label10_5",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2215,6 +2243,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label6_2",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2505,6 +2534,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label6_3",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2736,6 +2766,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%TemplateBrowseGallerySeparator1.ID%",
       "Name": "Separator2_5",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2861,6 +2892,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Teams_blogs",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -3017,6 +3049,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "TextInput3_1",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -3314,6 +3347,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%TemplateBrowseGalleryTitle.ID%",
       "Name": "Title2_5",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [

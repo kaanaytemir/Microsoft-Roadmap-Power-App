@@ -85,6 +85,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button1_9",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -357,6 +358,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button7_21",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -622,7 +624,10 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "Visible"
+        "Visible",
+        "MaxTemplateSize",
+        "#CopilotOverlayLabel",
+        "#CopilotOverlayVisible"
       ],
       "GalleryTemplateChildName": "galleryTemplate1_9",
       "HasDynamicProperties": false,
@@ -635,6 +640,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Gallery1_9",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -772,6 +778,21 @@
           "Category": "Design",
           "PropertyName": "Visible",
           "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "MaxTemplateSize",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "#CopilotOverlayLabel",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "#CopilotOverlayVisible",
+          "RuleProviderType": "Unknown"
         }
       ],
       "StyleName": "defaultGalleryStyle",
@@ -793,6 +814,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "galleryTemplate1_9",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -869,6 +891,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Icon1_5",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1041,6 +1064,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Icon2_6",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1233,6 +1257,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Image2_1",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1440,6 +1465,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Image6_7",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1673,6 +1699,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label6_11",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1963,6 +1990,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label6_12",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2208,6 +2236,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "PowerApps_blogs",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2296,6 +2325,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%TemplateBrowseGallerySeparator1.ID%",
       "Name": "Separator2_9",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2489,6 +2519,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "TextInput3_5",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2786,6 +2817,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%TemplateBrowseGalleryTitle.ID%",
       "Name": "Title2_9",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [

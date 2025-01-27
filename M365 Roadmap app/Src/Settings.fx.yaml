@@ -41,6 +41,7 @@ Settings As screen:
 
     HtmlText1_3 As htmlViewer:
         Color: =If(DarkMode, Color.White, Color.Black)
+        DisabledBorderColor: =RGBA(56, 56, 56, 1)
         Height: =102
         HtmlText: ="<i>The Microsoft 365 roadmap provides estimated release dates and descriptions for commercial features. All information is subject to change.</i>"
         Size: =14

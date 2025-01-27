@@ -1,0 +1,122 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps is in preview. The schema is being actively developed.
+# Content may be incomplete and subject to change.
+# This file is read-only and should only be used to review changes made within Power Apps Studio.
+# This file isn't used when loading the app. External editing, merging and conflict resolution are
+# not supported.
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  Settings:
+    Properties:
+      Fill: =If(DarkMode, Color.Black, Color.White)
+      LoadingSpinnerColor: =RGBA(56, 96, 178, 1)
+    Children:
+      - Rectangle2_3:
+          Control: Rectangle@2.3.0
+          Properties:
+            BorderColor: =RGBA(56, 96, 178, 1)
+            Fill: =RGBA(0, 134, 208, 1)
+            Height: =104
+            Width: =640
+      - Image6_16:
+          Control: Image@2.2.3
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Height: =74
+            Image: ='Microsoft logo'
+            Width: =133
+            X: =507
+            Y: =19
+      - Label6_23:
+          Control: Label@2.5.1
+          Properties:
+            Align: =Align.Right
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =54
+            Size: =32
+            Text: ="Settings"
+            Width: =198
+            X: =207
+            Y: =25
+      - Label4_3:
+          Control: Label@2.5.1
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =If(DarkMode, Color.White, Color.Black)
+            Font: =Font.'Open Sans'
+            Height: =206
+            Size: =20
+            Text: ="Email me when a new roadmap item is added"
+            Width: =319
+            X: =67
+            Y: =338
+      - HtmlText1_3:
+          Control: HtmlViewer@2.1.0
+          Properties:
+            Color: =If(DarkMode, Color.White, Color.Black)
+            DisabledBorderColor: =RGBA(56, 56, 56, 1)
+            Font: =Font.'Open Sans'
+            Height: =102
+            HtmlText: ="<i>The Microsoft 365 roadmap provides estimated release dates and descriptions for commercial features. All information is subject to change.</i>"
+            Size: =14
+            Width: =548
+            X: =62
+            Y: =1012
+      - Image6_17:
+          Control: Image@2.2.3
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Height: =270
+            Image: ='Microsoft logo'
+            Width: =509
+            X: =62
+            Y: =131
+      - Icon2_14:
+          Control: Classic/Icon@2.5.0
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 18, 107, 1)
+            Height: =35
+            Icon: =Icon.ChevronLeft
+            OnSelect: =Navigate('Roadmap startpage')
+            Width: =42
+            X: =25
+            Y: =38
+      - Toggle1:
+          Control: Classic/Toggle@2.1.0
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Font: =Font.'Open Sans'
+            OnCheck: =ClickabuttoninPowerAppstosendanemail.Run(User().Email, "New roadmap item added", "New roadmap item added")
+            ShowLabel: =false
+            TrueFill: =RGBA(56, 96, 178, 1)
+            X: =456
+            Y: =417
+      - Label4_4:
+          Control: Label@2.5.1
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =If(DarkMode, Color.White, Color.Black)
+            Font: =Font.'Open Sans'
+            Height: =206
+            Size: =20
+            Text: ="Dark mode"
+            Width: =319
+            X: =62
+            Y: =439
+      - Toggle1_1:
+          Control: Classic/Toggle@2.1.0
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Font: =Font.'Open Sans'
+            OnCheck: =Set(DarkMode, true)
+            OnUncheck: =Set(DarkMode, false)
+            ShowLabel: =false
+            TrueFill: =RGBA(56, 96, 178, 1)
+            X: =456
+            Y: =518

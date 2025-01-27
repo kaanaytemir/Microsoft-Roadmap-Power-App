@@ -258,6 +258,7 @@
 
     HtmlText1 As htmlViewer:
         Color: =If(DarkMode, Color.White, Color.Black)
+        DisabledBorderColor: =RGBA(56, 56, 56, 1)
         Font: =Font.'Segoe UI'
         Height: =86
         HtmlText: ="<i>The Microsoft 365 roadmap provides estimated release dates & descriptions for commercial features. All information is subject to change.</i>"

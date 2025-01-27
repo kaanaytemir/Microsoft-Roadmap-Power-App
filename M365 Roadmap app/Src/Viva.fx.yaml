@@ -8,11 +8,12 @@ Viva As screen:
         Set(ShowLoader, false);
 
     "Gallery1_6 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
+        '#CopilotOverlayLabel': ="Filtered"
         BorderColor: =RGBA(109, 49, 162, 1)
         DelayItemLoading: =true
         Fill: =If(DarkMode, Color.Black, Color.White)
         Height: =814
-        Items: =Search(FeedCollection, TextInput3_2.Text, "title")
+        Items: =Search(FeedCollection, TextInput3_2.Text, title)
         Layout: =Layout.Vertical
         OnSelect: =Set(Summary, ThisItem.summary); Set(Title, ThisItem.title); Set(PrimaryLink, ThisItem.primaryLink);Navigate(Details)
         ShowNavigation: =true
@@ -88,6 +89,7 @@ Viva As screen:
             ZIndex: =7
 
         HtmlText4_1 As htmlViewer:
+            DisabledBorderColor: =RGBA(56, 56, 56, 1)
             Font: =Font.'Segoe UI'
             Height: =53
             HtmlText: |-
@@ -377,6 +379,7 @@ Viva As screen:
         ZIndex: =20
 
     HtmlText3_4 As htmlViewer:
+        DisabledBorderColor: =RGBA(56, 56, 56, 1)
         Fill: =RGBA(255, 255, 255, 1)
         Height: =147
         HtmlText: =Concatenate("<center>" & Text(First(Shuffle(CollectionFacts)).Test) & "</center>")

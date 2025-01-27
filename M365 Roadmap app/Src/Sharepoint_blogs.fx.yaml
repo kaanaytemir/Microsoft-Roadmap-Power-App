@@ -6,11 +6,12 @@ Sharepoint_blogs As screen:
         Set(ShowLoader, false);
 
     "Gallery1_13 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
+        '#CopilotOverlayLabel': ="Filtered"
         BorderColor: =RGBA(109, 49, 162, 1)
         Fill: =RGBA(2, 131, 135, 1)
         Height: =837
         Items: |-
-            =Search(RSS.ListFeedItems("https://techcommunity.microsoft.com/plugins/custom/microsoft/o365/custom-blog-rss?tid=8846757002319583340&board=SPBlog&size=25"), TextInput3_9.Text, "title")
+            =Search(RSS.ListFeedItems("https://techcommunity.microsoft.com/plugins/custom/microsoft/o365/custom-blog-rss?tid=8846757002319583340&board=SPBlog&size=25"), TextInput3_9.Text, title)
         Layout: =Layout.Vertical
         ShowNavigation: =true
         ShowScrollbar: =false

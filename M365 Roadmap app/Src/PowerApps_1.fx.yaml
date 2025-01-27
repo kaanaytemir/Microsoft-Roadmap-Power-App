@@ -17,6 +17,7 @@ PowerApps_1 As screen:
         );
 
     "Gallery1_17 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
+        '#CopilotOverlayLabel': ="Filtered"
         BorderColor: =RGBA(109, 49, 162, 1)
         DelayItemLoading: =true
         Fill: =If(DarkMode, Color.Black, Color.White)
@@ -24,9 +25,9 @@ PowerApps_1 As screen:
         Items: |
             =If(
              Checkbox4.Value,
-             Filter(Search(FeedCollection, TextInput3_13.Text, "title"), id in // if checkbox is checked, execute filter first and filter the result of the search, otherwise just execute search
+             Filter(Search(FeedCollection, TextInput3_13.Text, title), id in // if checkbox is checked, execute filter first and filter the result of the search, otherwise just execute search
              Filter(LikeList,UserEmail=User().Email).Title),
-             Search(FeedCollection, TextInput3_13.Text, "title")
+             Search(FeedCollection, TextInput3_13.Text, title)
             )
         Layout: =Layout.Vertical
         OnSelect: =Set(Summary, ThisItem.summary); Set(Title, ThisItem.title); Set(PrimaryLink, ThisItem.primaryLink);Navigate(Details)
@@ -103,6 +104,7 @@ PowerApps_1 As screen:
             ZIndex: =7
 
         HtmlText4_8 As htmlViewer:
+            DisabledBorderColor: =RGBA(56, 56, 56, 1)
             Font: =Font.'Segoe UI'
             Height: =50
             HtmlText: |-
@@ -116,6 +118,7 @@ PowerApps_1 As screen:
 
         HtmlText5_3 As htmlViewer:
             Color: =RGBA(202, 202, 202, 1)
+            DisabledBorderColor: =RGBA(56, 56, 56, 1)
             Height: =41
             HtmlText: =If ("Education" in Concat(ThisItem.categories,Value,", "), "<em>Education</em>", "Preview" in Concat(ThisItem.categories,Value,", "), "<em>Preview</em>", "Worldwide" in Concat(ThisItem.categories,Value,", "), "<em>Worldwide</em>", "Germany" in Concat(ThisItem.categories,Value,", "), "<em>Germany</em>", "GCC High" in Concat(ThisItem.categories,Value,", "), "<em>GCC High</em>", "DoD" in Concat(ThisItem.categories,Value,", "), "<em>DoD</em>", "GCC" in Concat(ThisItem.categories,Value,", "), "<em>GCC</em>")
             OnSelect: =Select(Parent)
@@ -327,6 +330,7 @@ PowerApps_1 As screen:
         ZIndex: =20
 
     HtmlText3_8 As htmlViewer:
+        DisabledBorderColor: =RGBA(56, 56, 56, 1)
         Fill: =RGBA(255, 255, 255, 1)
         Height: =147
         HtmlText: =Concatenate("<center>" & Text(First(Shuffle(CollectionFacts)).Test) & "</center>")

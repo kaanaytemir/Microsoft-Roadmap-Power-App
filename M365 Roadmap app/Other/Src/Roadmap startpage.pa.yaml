@@ -1,0 +1,428 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps is in preview. The schema is being actively developed.
+# Content may be incomplete and subject to change.
+# This file is read-only and should only be used to review changes made within Power Apps Studio.
+# This file isn't used when loading the app. External editing, merging and conflict resolution are
+# not supported.
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  Roadmap startpage:
+    Properties:
+      Fill: =If(DarkMode, Color.Black, Color.White)
+      LoadingSpinnerColor: =RGBA(56, 96, 178, 1)
+      OnVisible: |-
+        =UpdateContext( { ctxWaffle1open: false} )
+    Children:
+      - Rectangle2:
+          Control: Rectangle@2.3.0
+          Properties:
+            BorderColor: =RGBA(56, 96, 178, 1)
+            Fill: =RGBA(0, 134, 208, 1)
+            Height: =104
+            Width: =640
+      - Button7_3:
+          Control: Classic/Button@2.2.0
+          Properties:
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(70, 78, 184, 1)
+            Font: =Font.'Segoe UI'
+            Height: =85
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+            OnSelect: =Navigate(Teams_2)
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Self.Color
+            Text: ="Teams"
+            Width: =269
+            X: =200
+            Y: =205
+      - Image6_1:
+          Control: Image@2.2.3
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Height: =74
+            Image: ='Microsoft logo'
+            Width: =133
+            X: =507
+            Y: =19
+      - Label6_1:
+          Control: Label@2.5.1
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Size: =32
+            Text: ="Roadmap"
+            Width: =206
+            X: =222
+            Y: =19
+      - Label7:
+          Control: Label@2.5.1
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =If(DarkMode, Color.White, Color.Black)
+            Font: =Font.'Open Sans'
+            Text: ="Choose a product"
+            Width: =245
+            X: =212
+            Y: =119
+      - Button7_4:
+          Control: Classic/Button@2.2.0
+          Properties:
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(130, 95, 193, 1)
+            Font: =Font.'Segoe UI'
+            Height: =85
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+            OnSelect: =Navigate(Viva_1)
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Self.Color
+            Text: ="Microsoft Viva"
+            Width: =269
+            X: =200
+            Y: =327
+      - Button7_7:
+          Control: Classic/Button@2.2.0
+          Properties:
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(2, 131, 135, 1)
+            Font: =Font.'Segoe UI'
+            Height: =85
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+            OnSelect: =Navigate(Sharepoint_p_1)
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Self.Color
+            Text: ="SharePoint"
+            Width: =269
+            X: =200
+            Y: =571
+      - Button7_8:
+          Control: Classic/Button@2.2.0
+          Properties:
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(37, 172, 114, 1)
+            Font: =Font.'Segoe UI'
+            Height: =85
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+            OnSelect: =Navigate(PowerApps_1)
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Self.Color
+            Text: ="Power Platform"
+            Width: =269
+            X: =202
+            Y: =815
+      - Button7_10:
+          Control: Classic/Button@2.2.0
+          Properties:
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(52, 146, 222, 1)
+            Font: =Font.'Segoe UI'
+            Height: =85
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+            OnSelect: =Navigate(Yammer_1)
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Self.Color
+            Text: ="Viva Engage"
+            Width: =269
+            X: =202
+            Y: =449
+      - Image1:
+          Control: Image@2.2.3
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Height: =70
+            Image: ='Teams logo'
+            Width: =66
+            X: =98
+            Y: =219
+      - Image1_2:
+          Control: Image@2.2.3
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Height: =70
+            Image: =VivaEngage_CLR_Small_2x
+            Width: =66
+            X: =98
+            Y: =466
+      - Image1_5:
+          Control: Image@2.2.3
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Height: =70
+            Image: =Sharepoint
+            Width: =66
+            X: =97
+            Y: =585
+      - Icon4:
+          Control: Classic/Icon@2.5.0
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 18, 107, 1)
+            Height: =55
+            Icon: =Icon.Hamburger
+            OnSelect: |-
+              =UpdateContext( { ctxWaffle1open: !ctxWaffle1open } )
+            Width: =53
+            X: =34
+            Y: =28
+      - Container1:
+          Control: GroupContainer@1.3.0
+          Variant: AutoLayout
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            BorderThickness: =2
+            DropShadow: =DropShadow.None
+            Fill: =RGBA(0, 134, 208, 1)
+            Height: =237
+            LayoutDirection: =LayoutDirection.Vertical
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Visible: =ctxWaffle1open
+            Width: =640
+            Y: =104
+          Children:
+            - Button6_7:
+                Control: Classic/Button@2.2.0
+                Properties:
+                  AlignInContainer: =AlignInContainer.Center
+                  BorderColor: =ColorFade(Self.Fill, -15%)
+                  BorderThickness: =0
+                  Color: =RGBA(255, 255, 255, 1)
+                  DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                  Fill: =RGBA(0, 18, 107, 1)
+                  Font: =Font.'Segoe UI'
+                  Height: =60
+                  HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+                  HoverColor: =RGBA(255, 255, 255, 1)
+                  HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+                  OnSelect: =Navigate(Settings)
+                  PaddingBottom: =10
+                  PaddingLeft: =10
+                  PaddingRight: =10
+                  PaddingTop: =10
+                  PressedBorderColor: =Self.Fill
+                  PressedColor: =Self.Fill
+                  PressedFill: =Self.Color
+                  RadiusBottomLeft: =0
+                  RadiusBottomRight: =0
+                  RadiusTopLeft: =0
+                  RadiusTopRight: =0
+                  Size: =22
+                  Text: ="Settings"
+                  Width: =700
+            - Button6_8:
+                Control: Classic/Button@2.2.0
+                Properties:
+                  AlignInContainer: =AlignInContainer.Center
+                  BorderColor: =ColorFade(Self.Fill, -15%)
+                  BorderThickness: =0
+                  Color: =RGBA(255, 255, 255, 1)
+                  DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                  Fill: =RGBA(0, 18, 107, 1)
+                  Font: =Font.'Segoe UI'
+                  Height: =60
+                  HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+                  HoverColor: =RGBA(255, 255, 255, 1)
+                  HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+                  OnSelect: =Navigate(Share)
+                  PaddingBottom: =10
+                  PaddingLeft: =10
+                  PaddingRight: =10
+                  PaddingTop: =10
+                  PressedBorderColor: =Self.Fill
+                  PressedColor: =Self.Fill
+                  PressedFill: =Self.Color
+                  RadiusBottomLeft: =0
+                  RadiusBottomRight: =0
+                  RadiusTopLeft: =0
+                  RadiusTopRight: =0
+                  Size: =22
+                  Text: ="Share this app"
+                  Width: =700
+            - Button6_9:
+                Control: Classic/Button@2.2.0
+                Properties:
+                  AlignInContainer: =AlignInContainer.Center
+                  BorderColor: =ColorFade(Self.Fill, -15%)
+                  BorderThickness: =0
+                  Color: =RGBA(255, 255, 255, 1)
+                  DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                  Fill: =RGBA(0, 18, 107, 1)
+                  Font: =Font.'Segoe UI'
+                  Height: =60
+                  HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+                  HoverColor: =RGBA(255, 255, 255, 1)
+                  HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+                  OnSelect: =Navigate(Rating)
+                  PaddingBottom: =10
+                  PaddingLeft: =10
+                  PaddingRight: =10
+                  PaddingTop: =10
+                  PressedBorderColor: =Self.Fill
+                  PressedColor: =Self.Fill
+                  PressedFill: =Self.Color
+                  RadiusBottomLeft: =0
+                  RadiusBottomRight: =0
+                  RadiusTopLeft: =0
+                  RadiusTopRight: =0
+                  Size: =22
+                  Text: ="Feedback"
+                  Width: =700
+            - Button6_10:
+                Control: Classic/Button@2.2.0
+                Properties:
+                  AlignInContainer: =AlignInContainer.Center
+                  BorderColor: =ColorFade(Self.Fill, -15%)
+                  BorderThickness: =0
+                  Color: =RGBA(255, 255, 255, 1)
+                  DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                  Fill: =RGBA(0, 18, 107, 1)
+                  Font: =Font.'Segoe UI'
+                  Height: =60
+                  HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+                  HoverColor: =RGBA(255, 255, 255, 1)
+                  HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+                  OnSelect: =Navigate(About)
+                  PaddingBottom: =10
+                  PaddingLeft: =10
+                  PaddingRight: =10
+                  PaddingTop: =10
+                  PressedBorderColor: =Self.Fill
+                  PressedColor: =Self.Fill
+                  PressedFill: =Self.Color
+                  RadiusBottomLeft: =0
+                  RadiusBottomRight: =0
+                  RadiusTopLeft: =0
+                  RadiusTopRight: =0
+                  Size: =22
+                  Text: ="About"
+                  Width: =700
+      - Button7_18:
+          Control: Classic/Button@2.2.0
+          Properties:
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(255, 185, 0, 1)
+            Font: =Font.'Segoe UI'
+            Height: =85
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+            OnSelect: =Launch("https://www.microsoft.com/nl-nl/microsoft-365/roadmap")
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Self.Color
+            Text: ="Other products"
+            Width: =269
+            X: =203
+            Y: =937
+      - Image6_5:
+          Control: Image@2.2.3
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Height: =130
+            Image: ='Microsoft logo'
+            Width: =238
+            X: =12
+            Y: =914
+      - HtmlText1:
+          Control: HtmlViewer@2.1.0
+          Properties:
+            Color: =If(DarkMode, Color.White, Color.Black)
+            DisabledBorderColor: =RGBA(56, 56, 56, 1)
+            Font: =Font.'Segoe UI'
+            Height: =86
+            HtmlText: ="<i>The Microsoft 365 roadmap provides estimated release dates & descriptions for commercial features. All information is subject to change.</i>"
+            Size: =12
+            Width: =389
+            X: =143
+            Y: =1047
+      - Icon2:
+          Control: Classic/Icon@2.5.0
+          Properties:
+            BorderColor: =RGBA(0, 134, 208, 1)
+            Color: =RGBA(0, 134, 208, 1)
+            Fill: =If(DarkMode, Color.Black, Color.White)
+            Height: =40
+            Icon: =Icon.Help
+            OnSelect: =Navigate(About)
+            Width: =34
+            X: =579
+            Y: =1070
+      - Image3:
+          Control: Image@2.2.3
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Height: =74
+            Image: =PowerPlatform_scalable
+            Width: =103
+            X: =79
+            Y: =826
+      - Image4:
+          Control: Image@2.2.3
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Height: =70
+            Image: =VivaTopics_CLR_Small_2x
+            Width: =66
+            X: =98
+            Y: =340
+      - Button7_30:
+          Control: Classic/Button@2.2.0
+          Properties:
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(220, 62, 21, 1)
+            Font: =Font.'Segoe UI'
+            Height: =85
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+            OnSelect: =Navigate(M365)
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Self.Color
+            Text: ="Microsoft 365"
+            Width: =269
+            X: =203
+            Y: =693
+      - Image1_3:
+          Control: Image@2.2.3
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Height: =70
+            Image: ='office logo'
+            Width: =66
+            X: =98
+            Y: =701

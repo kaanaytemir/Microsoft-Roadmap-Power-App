@@ -71,6 +71,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button4",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -303,6 +304,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Icon2_15",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -480,6 +482,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Image6_18",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -682,6 +685,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Image6_19",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -929,6 +933,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label6_24",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1198,6 +1203,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label9",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1428,6 +1434,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Rating",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1525,6 +1532,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Rectangle2_4",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1681,6 +1689,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "ServiceQuality",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1929,6 +1938,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "ServiceRating",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [

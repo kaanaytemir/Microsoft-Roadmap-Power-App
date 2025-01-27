@@ -4,6 +4,7 @@ App As appinfo:
         =Set(DarkMode, false);
         ClearCollect(FeedCollection, "https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/");
     StartScreen: ='Roadmap startpage'
+    Theme: =PowerAppsTheme
 
     Host As hostControl.DefaultHostControlVariant:
         OnCancel: =false

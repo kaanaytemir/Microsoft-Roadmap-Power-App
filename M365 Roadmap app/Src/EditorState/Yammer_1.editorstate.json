@@ -85,6 +85,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button1_16",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -358,6 +359,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button3_7",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 18,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -645,6 +647,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Checkbox3",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -989,6 +992,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Dropdown2_10",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 11,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1367,6 +1371,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Dropdown2_11",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 13,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1771,6 +1776,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Dropdown2_12",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 12,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2089,7 +2095,10 @@
           "InvariantPropertyName": "DelayItemLoading",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
-        }
+        },
+        "MaxTemplateSize",
+        "#CopilotOverlayLabel",
+        "#CopilotOverlayVisible"
       ],
       "GalleryTemplateChildName": "galleryTemplate1_16",
       "HasDynamicProperties": false,
@@ -2102,6 +2111,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Gallery1_16",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 15,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2239,6 +2249,21 @@
           "Category": "Design",
           "PropertyName": "DelayItemLoading",
           "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "MaxTemplateSize",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "#CopilotOverlayLabel",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "#CopilotOverlayVisible",
+          "RuleProviderType": "Unknown"
         }
       ],
       "StyleName": "defaultGalleryStyle",
@@ -2267,6 +2292,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "galleryTemplate1_16",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2351,6 +2377,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "HtmlText3_7",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 19,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2445,7 +2472,7 @@
           "RuleProviderType": "Unknown"
         }
       ],
-      "StyleName": "",
+      "StyleName": "defaultHtmlViewerStyle",
       "Type": "ControlInfo"
     },
     "HtmlText4_7": {
@@ -2501,6 +2528,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "HtmlText4_7",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2595,7 +2623,7 @@
           "RuleProviderType": "Unknown"
         }
       ],
-      "StyleName": "",
+      "StyleName": "defaultHtmlViewerStyle",
       "Type": "ControlInfo"
     },
     "HtmlText5_2": {
@@ -2667,6 +2695,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "HtmlText5_2",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2771,7 +2800,7 @@
           "RuleProviderType": "Unknown"
         }
       ],
-      "StyleName": "",
+      "StyleName": "defaultHtmlViewerStyle",
       "Type": "ControlInfo"
     },
     "Icon1_12": {
@@ -2826,6 +2855,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Icon1_12",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -3033,6 +3063,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Icon16",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -3205,6 +3236,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Icon2_18",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -3414,6 +3446,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Icon3_3",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -3616,6 +3649,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Image2_12",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -3831,6 +3865,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Image6_22",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -4077,6 +4112,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label1_18",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -4373,6 +4409,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label1_19",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -4683,6 +4720,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label10_20",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 16,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -4993,6 +5031,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label10_21",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 17,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -5289,6 +5328,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label13_2",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 14,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -5634,6 +5674,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label5_7",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -5922,6 +5963,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label6_29",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -6212,6 +6254,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label6_30",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -6450,6 +6493,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%TemplateBrowseGallerySeparator1.ID%",
       "Name": "Separator2_16",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -6685,6 +6729,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "TextInput3_12",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -7003,6 +7048,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Timer1_7",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -7275,6 +7321,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%TemplateBrowseGalleryTitle.ID%",
       "Name": "Title2_16",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -7505,6 +7552,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Yammer_1",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [

@@ -1,0 +1,483 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps is in preview. The schema is being actively developed.
+# Content may be incomplete and subject to change.
+# This file is read-only and should only be used to review changes made within Power Apps Studio.
+# This file isn't used when loading the app. External editing, merging and conflict resolution are
+# not supported.
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  PowerApps:
+    Properties:
+      Fill: =RGBA(116, 39, 115, 1)
+      LoadingSpinnerColor: =RGBA(56, 96, 178, 1)
+      OnVisible: |-
+        =Set(ShowLoader, true);
+        Set(VarShowField, false);
+        ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "In Development" in categories And "PowerApps" in categories), "updatedOn", SortOrder.Descending));
+        Set(ShowLoader, false);
+    Children:
+      - Gallery1_8:
+          Control: Gallery@2.15.0
+          Variant: BrowseLayout_Vertical_OneTextVariant_ver4.0
+          Properties:
+            BorderColor: =RGBA(109, 49, 162, 1)
+            DelayItemLoading: =true
+            Fill: =If(DarkMode, Color.Black, Color.White)
+            Height: =814
+            Items: =Search(FeedCollection, TextInput3_4.Text, title)
+            OnSelect: =Set(Summary, ThisItem.summary); Set(Title, ThisItem.title); Set(PrimaryLink, ThisItem.primaryLink);Navigate(Details)
+            ShowNavigation: =true
+            TemplateSize: =249
+            WrapCount: =0
+            Y: =321
+          Children:
+            - Title2_8:
+                Control: Label@2.5.1
+                Properties:
+                  BorderColor: =RGBA(0, 0, 0, 1)
+                  Color: =If(DarkMode, Color.White, Color.Black)
+                  DisplayMode: =DisplayMode.View
+                  Font: =Font.'Segoe UI'
+                  FontWeight: =FontWeight.Semibold
+                  Height: =112
+                  OnSelect: =Select(Parent)
+                  PaddingBottom: =0
+                  PaddingLeft: =0
+                  PaddingRight: =0
+                  PaddingTop: =0
+                  Size: =22
+                  Text: =ThisItem.title
+                  VerticalAlign: =VerticalAlign.Top
+                  Width: =Parent.TemplateWidth - 104
+                  X: =32
+                  Y: =17
+            - Separator2_8:
+                Control: Rectangle@2.3.0
+                Properties:
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Fill: =RGBA(116, 39, 115, 1)
+                  Height: =1
+                  OnSelect: =Select(Parent)
+                  Width: =Parent.TemplateWidth
+                  Y: =Parent.TemplateHeight - 1
+            - Button1_8:
+                Control: Classic/Button@2.2.0
+                Properties:
+                  BorderColor: =ColorFade(Self.Fill, -15%)
+                  Color: =RGBA(255, 255, 255, 1)
+                  DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                  Fill: =RGBA(116, 39, 115, 1)
+                  Font: =Font.'Segoe UI'
+                  Height: =51
+                  HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+                  HoverColor: =RGBA(255, 255, 255, 1)
+                  HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+                  OnSelect: =Set(Summary, ThisItem.summary); Set(Title, ThisItem.title); Set(PrimaryLink, ThisItem.primaryLink);Navigate(Details)
+                  PressedBorderColor: =Self.Fill
+                  PressedColor: =Self.Fill
+                  PressedFill: =Self.Color
+                  Size: =16
+                  Text: ="Details"
+                  Width: =91
+                  X: =524
+                  Y: =175
+            - Label1_6:
+                Control: Label@2.5.1
+                Properties:
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Color: =If(DarkMode, Color.White, Color.Black)
+                  Font: =Font.'Segoe UI'
+                  FontWeight: =FontWeight.Lighter
+                  Height: =53
+                  OnSelect: =Select(Parent)
+                  Size: =18
+                  Text: =Left(ThisItem.updatedOn, 10)
+                  Width: =171
+                  X: =385
+                  Y: =173
+            - Label1_12:
+                Control: Label@2.5.1
+                Properties:
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Color: =RGBA(149, 149, 149, 1)
+                  Font: =Font.'Segoe UI'
+                  FontWeight: =FontWeight.Lighter
+                  Height: =53
+                  OnSelect: =Select(Parent)
+                  Size: =18
+                  Text: ="Updated:"
+                  Width: =171
+                  X: =281
+                  Y: =173
+            - HtmlText4_3:
+                Control: HtmlViewer@2.1.0
+                Properties:
+                  DisabledBorderColor: =RGBA(56, 56, 56, 1)
+                  Font: =Font.'Segoe UI'
+                  Height: =50
+                  HtmlText: =If ("Launched" in Concat(ThisItem.categories,Value,", "), "<font color=#0278d4>Launched</font>", "In Development" in Concat(ThisItem.categories,Value,", "), "<font color=#0278d4>In Development</font>", "Rolling out" in Concat(ThisItem.categories,Value,", "), "<font color=#0278d4>Rolling Out</font>", "Preview" in Concat(ThisItem.categories,Value,", "), "<font color=#24395e>Preview</font>")
+                  OnSelect: =Select(Parent)
+                  Width: =228
+                  X: =32
+                  Y: =176
+      - Button7_20:
+          Control: Classic/Button@2.2.0
+          Properties:
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            Fill: |-
+              =If(
+                 ThreeClicked, Color.MidnightBlue, RGBA(102, 113, 166, 1)
+              )
+            Font: =Font.'Segoe UI'
+            Height: =49
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+            OnSelect: |+
+              =ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Launched" in categories And "PowerApps" in categories), "updatedOn", SortOrder.Descending));
+
+              UpdateContext(
+                 {
+                    OneClicked: false, 
+                    TwoClicked: false,
+                    ThreeClicked: true,
+                    FourClicked: false
+                 }
+              );
+
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Self.Color
+            RadiusBottomLeft: =12
+            RadiusBottomRight: =12
+            RadiusTopLeft: =12
+            RadiusTopRight: =12
+            Size: =16
+            Text: ="Launched"
+            Width: =115
+            X: =354
+            Y: =235
+      - Button7_9:
+          Control: Classic/Button@2.2.0
+          Properties:
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            Fill: |-
+              =If(
+                 OneClicked, Color.MidnightBlue, RGBA(102, 113, 166, 1)
+              )
+            Font: =Font.'Segoe UI'
+            Height: =51
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+            OnSelect: |+
+              =ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "In Development" in categories And "PowerApps" in categories), "updatedOn", SortOrder.Descending));
+
+              UpdateContext(
+                 {
+                    OneClicked: true, 
+                    TwoClicked: false,
+                    ThreeClicked: false,
+                    FourClicked: false
+                 }
+              );
+
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Self.Color
+            RadiusBottomLeft: =12
+            RadiusBottomRight: =12
+            RadiusTopLeft: =12
+            RadiusTopRight: =12
+            Size: =16
+            Text: ="In development"
+            Width: =165
+            X: =25
+            Y: =233
+      - Label6_9:
+          Control: Label@2.5.1
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Size: =32
+            Text: ="Power Apps"
+            Width: =245
+            X: =176
+            Y: =23
+      - Image6_6:
+          Control: Image@2.2.3
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Height: =74
+            Image: ='Microsoft logo'
+            OnSelect: =Navigate('Roadmap startpage')
+            Width: =133
+            X: =507
+            Y: =19
+      - Icon2_5:
+          Control: Classic/Icon@2.5.0
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 18, 107, 1)
+            Height: =35
+            Icon: =Icon.ChevronLeft
+            OnSelect: =Back()
+            Width: =42
+            X: =25
+            Y: =38
+      - Button7_19:
+          Control: Classic/Button@2.2.0
+          Properties:
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            Fill: |-
+              =If(
+                 TwoClicked, Color.MidnightBlue, RGBA(102, 113, 166, 1)
+              )
+            Font: =Font.'Segoe UI'
+            Height: =49
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+            OnSelect: |+
+              =ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Rolling out" in categories And "PowerApps" in categories), "updatedOn", SortOrder.Descending));
+
+              UpdateContext(
+                 {
+                    OneClicked: false, 
+                    TwoClicked: true,
+                    ThreeClicked: false,
+                    FourClicked: false
+                 }
+              );
+
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Self.Color
+            RadiusBottomLeft: =12
+            RadiusBottomRight: =12
+            RadiusTopLeft: =12
+            RadiusTopRight: =12
+            Size: =16
+            Text: ="Rolling out"
+            Width: =120
+            X: =212
+            Y: =235
+      - TextInput3_4:
+          Control: Classic/TextInput@2.3.2
+          Properties:
+            BorderColor: =RGBA(116, 39, 115, 1)
+            Clear: =true
+            Default: =""
+            Font: =Font.'Segoe UI'
+            HintText: ="Search"
+            HoverBorderColor: =RGBA(0, 18, 107, 1)
+            HoverFill: =RGBA(186, 202, 226, 1)
+            OnSelect: =Filter(FeedCollection,TextInput3_4.Text = title)
+            RadiusBottomLeft: =12
+            RadiusBottomRight: =12
+            RadiusTopLeft: =12
+            RadiusTopRight: =12
+            Width: =458
+            X: =25
+            Y: =126
+      - Icon1_4:
+          Control: Classic/Icon@2.5.0
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(116, 39, 115, 1)
+            Height: =37
+            Icon: =Icon.Search
+            Visible: =IsBlank(TextInput3_4.Text)
+            Width: =37
+            X: =432
+            Y: =143
+      - Label6_10:
+          Control: Label@2.5.1
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Height: =35
+            Size: =12
+            Text: ="Roadmap"
+            Width: =84
+            X: =531
+            Y: =73
+      - Label5_2:
+          Control: Label@2.5.1
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Height: =54
+            HoverColor: =Color.Black
+            OnSelect: =Navigate(PowerApps_blogs)
+            Size: =22
+            Text: ="Blogs"
+            Underline: =true
+            Width: =89
+            X: =526
+            Y: =134
+      - Label10_6:
+          Control: Label@2.5.1
+          Properties:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =If(DarkMode, Color.White, Color.Black)
+            Font: =Font.'Open Sans'
+            FontWeight: =FontWeight.Bold
+            Height: =132
+            Size: =24
+            Text: |-
+              ="Please choose a status to see 
+              relevant roadmap items
+              "
+            Visible: |-
+              =If (
+                CountRows(Gallery1_8.AllItems) = 0,
+                true
+              )
+            Width: =502
+            X: =67
+            Y: =591
+      - Button3:
+          Control: Classic/Button@2.2.0
+          Properties:
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(116, 39, 115, 1)
+            Font: =Font.'Open Sans'
+            Height: =90
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+            OnSelect: =Launch("https://feedbackportal.microsoft.com/feedback/forum/ad198462-1c1c-ec11-b6e7-0022481f8472")
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Self.Color
+            Size: =20
+            Text: ="Share your roadmap idea"
+            Visible: |-
+              =If (
+                CountRows(Gallery1_8.AllItems) = 0,
+                true
+              )
+            Width: =472
+            X: =82
+            Y: =831
+      - Label10_7:
+          Control: Label@2.5.1
+          Properties:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(184, 0, 0, 1)
+            Font: =Font.'Open Sans'
+            FontWeight: =FontWeight.Bold
+            Height: =132
+            Size: =24
+            Text: ="No result?"
+            Visible: |-
+              =If (
+                CountRows(Gallery1_8.AllItems) = 0,
+                true
+              )
+            Width: =502
+            X: =69
+            Y: =699
+      - Button7_31:
+          Control: Classic/Button@2.2.0
+          Properties:
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            Fill: |-
+              =If(
+                 FourClicked, Color.MidnightBlue, RGBA(102, 113, 166, 1)
+              )
+            Font: =Font.'Segoe UI'
+            Height: =49
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+            OnSelect: |+
+              =ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Preview" in categories And "PowerApps" in categories), "updatedOn", SortOrder.Descending));
+
+              UpdateContext(
+                 {
+                    OneClicked: false, 
+                    TwoClicked: false,
+                    ThreeClicked: false,
+                    FourClicked: true
+                 }
+              );
+
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Self.Color
+            RadiusBottomLeft: =12
+            RadiusBottomRight: =12
+            RadiusTopLeft: =12
+            RadiusTopRight: =12
+            Size: =16
+            Text: ="Previews"
+            Width: =107
+            X: =496
+            Y: =235
+      - Image2_8:
+          Control: Image@2.2.3
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Height: =1067
+            Image: =microsoft
+            ImagePosition: =ImagePosition.Fill
+            Visible: =ShowLoader
+            Width: =640
+      - Timer1_3:
+          Control: Timer@2.1.0
+          Properties:
+            AutoStart: =true
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =ColorFade(Self.BorderColor, 70%)
+            DisabledColor: =ColorFade(Self.Fill, 90%)
+            DisabledFill: =ColorFade(Self.Fill, 70%)
+            Duration: =10000
+            Fill: =RGBA(56, 96, 178, 1)
+            Font: =Font.'Open Sans'
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+            OnTimerEnd: =
+            OnTimerStart: |-
+              =ClearCollect(CollectionFacts,{Test: First(Shuffle('M365 Roadmap & Blogs - Facts')).Title})
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Self.Color
+            Repeat: =true
+            Start: =
+            Visible: =false
+            X: =40
+            Y: =41
+      - HtmlText3_3:
+          Control: HtmlViewer@2.1.0
+          Properties:
+            DisabledBorderColor: =RGBA(56, 56, 56, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans'
+            Height: =147
+            HtmlText: =Concatenate("<center>" & Text(First(Shuffle(CollectionFacts)).Test) & "</center>")
+            Size: =18
+            Visible: =ShowLoader
+            Width: =640
+            Y: =989

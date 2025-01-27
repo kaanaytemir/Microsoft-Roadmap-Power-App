@@ -4,6 +4,7 @@
     HtmlText2 As htmlViewer:
         Color: =If(DarkMode, Color.White, Color.Black)
         ContentLanguage: =
+        DisabledBorderColor: =RGBA(56, 56, 56, 1)
         DisplayMode: =DisplayMode.View
         Font: =Font.'Segoe UI'
         Height: =539
@@ -121,7 +122,7 @@
         Height: =26
         Size: =14
         Text: |-
-            =Concatenate(" ", "#", HashtagTitle)
+            =Concatenate(" ", "#", HashtagTitle.Text)
         Width: =176
         X: =464
         Y: =25

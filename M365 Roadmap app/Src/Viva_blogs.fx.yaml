@@ -6,11 +6,12 @@ Viva_blogs As screen:
         Set(ShowLoader, false);
 
     "Gallery1_7 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
+        '#CopilotOverlayLabel': ="Filtered"
         BorderColor: =RGBA(109, 49, 162, 1)
         Fill: =RGBA(130, 95, 193, 1)
         Height: =815
         Items: |-
-            =Search(RSS.ListFeedItems("https://techcommunity.microsoft.com/plugins/custom/microsoft/o365/custom-blog-rss?tid=4977418726937613481&board=MicrosoftVivaBlog&size=25"), TextInput3_3.Text, "title") 
+            =Search(RSS.ListFeedItems("https://techcommunity.microsoft.com/plugins/custom/microsoft/o365/custom-blog-rss?tid=4977418726937613481&board=MicrosoftVivaBlog&size=25"), TextInput3_3.Text, title) 
         Layout: =Layout.Vertical
         ShowNavigation: =true
         ShowScrollbar: =false

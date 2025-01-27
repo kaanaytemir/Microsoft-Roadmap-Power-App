@@ -48,12 +48,7 @@ Rating As screen:
 
     ServiceRating As rating:
         Default: =5
-        DisabledFill: =Self.Fill
-        DisplayMode: =DisplayMode.Edit
-        FocusedBorderColor: =Self.BorderColor
         Height: =77
-        HoverFill: =Self.Fill
-        PressedFill: =Self.Fill
         RatingFill: =RGBA(0, 134, 208, 1)
         Width: =350
         X: =144

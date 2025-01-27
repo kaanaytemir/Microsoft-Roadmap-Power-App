@@ -59,6 +59,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "HtmlText1_2",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -148,7 +149,7 @@
           "RuleProviderType": "Unknown"
         }
       ],
-      "StyleName": "",
+      "StyleName": "defaultHtmlViewerStyle",
       "Type": "ControlInfo"
     },
     "Icon2_13": {
@@ -196,6 +197,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Icon2_13",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -375,6 +377,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Icon5",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -552,6 +555,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Image6_14",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -754,6 +758,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Image6_15",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -987,6 +992,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label4_1",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1263,6 +1269,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label4_2",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1560,6 +1567,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label6_22",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1812,6 +1820,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Rectangle2_2",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1922,6 +1931,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Share",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2043,6 +2053,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "TextInput1",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
