@@ -1,10 +1,10 @@
 "Details As screen.'phoneLayout_Tutorial_ver3.0'":
     Fill: =If(DarkMode, Color.Black, Color.White)
+    LoadingSpinnerColor: =RGBA(100, 118, 132, 1)
 
     HtmlText2 As htmlViewer:
         Color: =If(DarkMode, Color.White, Color.Black)
         ContentLanguage: =
-        DisabledBorderColor: =RGBA(56, 56, 56, 1)
         DisplayMode: =DisplayMode.View
         Font: =Font.'Segoe UI'
         Height: =539
@@ -22,9 +22,15 @@
         ZIndex: =1
 
     Button2 As button:
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
         Fill: =RGBA(70, 78, 184, 1)
         Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
         Height: =61
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
         OnSelect: =Launch(PrimaryLink)
         Size: =24
         Text: ="Read further"
@@ -34,7 +40,9 @@
         ZIndex: =2
 
     Label2 As label:
+        BorderColor: =RGBA(32, 54, 71, 1)
         Color: =If(DarkMode, Color.White, Color.Black)
+        DisabledColor: =RGBA(166, 166, 166, 1)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Bold
         Height: =70
@@ -46,14 +54,21 @@
         ZIndex: =3
 
     Container2 As groupContainer.manualLayoutContainer:
+        DropShadow: =DropShadow.Light
         Fill: =RGBA(70, 78, 184, 1)
         Height: =266
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
         Width: =640
         ZIndex: =4
 
         Label8 As label:
             Align: =Align.Center
+            BorderColor: =RGBA(32, 54, 71, 1)
             Color: =RGBA(255, 255, 255, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
             FontWeight: =FontWeight.Bold
             Height: =184
             Size: =20
@@ -64,7 +79,10 @@
             ZIndex: =1
 
     Icon2_11 As icon.ChevronLeft:
+        BorderColor: =RGBA(32, 54, 71, 1)
         Color: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
         Height: =35
         Icon: =Icon.ChevronLeft
         OnSelect: =Back()
@@ -74,7 +92,9 @@
         ZIndex: =6
 
     Label3 As label:
+        BorderColor: =RGBA(32, 54, 71, 1)
         Color: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
         Height: =42
         Size: =12
         Text: |-
@@ -87,10 +107,18 @@
     TextInput2 As text:
         BorderColor: =RGBA(70, 78, 184, 1)
         BorderStyle: =BorderStyle.Dashed
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
         Default: =PrimaryLink
         DisabledBorderColor: =RGBA(109, 49, 162, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
         Fill: =RGBA(204, 208, 225, 1)
+        FocusedBorderThickness: =4
         Height: =104
+        HoverBorderColor: =RGBA(32, 54, 71, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(205, 209, 213, 1)
         MaxLength: =59
         Size: =16
         Visible: =VarShowField
@@ -99,7 +127,10 @@
         ZIndex: =9
 
     Icon6 As icon.Share:
+        BorderColor: =RGBA(32, 54, 71, 1)
         Color: =RGBA(70, 78, 184, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
         Fill: =If(DarkMode, Color.Black, Color.White)
         Height: =56
         Icon: =Icon.Share
@@ -110,6 +141,9 @@
         ZIndex: =10
 
     Image6_25 As image:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
         Height: =68
         Image: ='Microsoft logo'
         Width: =74
@@ -118,9 +152,10 @@
         ZIndex: =11
 
     Label1 As label:
+        BorderColor: =RGBA(32, 54, 71, 1)
         Color: =RGBA(204, 204, 204, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
         Height: =26
-        Size: =14
         Text: |-
             =Concatenate(" ", "#", HashtagTitle.Text)
         Width: =176

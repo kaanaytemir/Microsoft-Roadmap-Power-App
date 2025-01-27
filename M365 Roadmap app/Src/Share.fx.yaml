@@ -1,5 +1,6 @@
 Share As screen:
     Fill: =If(DarkMode, Color.Black, Color.White)
+    LoadingSpinnerColor: =RGBA(100, 118, 132, 1)
 
     Rectangle2_2 As rectangle:
         BorderColor: =RGBA(56, 96, 178, 1)
@@ -9,6 +10,9 @@ Share As screen:
         ZIndex: =1
 
     Image6_14 As image:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
         Height: =74
         Image: ='Microsoft logo'
         Width: =133
@@ -18,7 +22,9 @@ Share As screen:
 
     Label6_22 As label:
         Align: =Align.Right
+        BorderColor: =RGBA(32, 54, 71, 1)
         Color: =RGBA(255, 255, 255, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
         Height: =58
@@ -30,7 +36,9 @@ Share As screen:
         ZIndex: =3
 
     Label4_1 As label:
+        BorderColor: =RGBA(32, 54, 71, 1)
         Color: =If(DarkMode, Color.White, Color.Black)
+        DisabledColor: =RGBA(166, 166, 166, 1)
         FontWeight: =FontWeight.Bold
         Height: =206
         Size: =24
@@ -44,7 +52,6 @@ Share As screen:
 
     HtmlText1_2 As htmlViewer:
         Color: =If(DarkMode, Color.White, Color.Black)
-        DisabledBorderColor: =RGBA(56, 56, 56, 1)
         Height: =102
         HtmlText: ="<i>The Microsoft 365 roadmap provides estimated release dates and descriptions for commercial features. All information is subject to change.</i>"
         Size: =14
@@ -54,6 +61,9 @@ Share As screen:
         ZIndex: =5
 
     Image6_15 As image:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
         Height: =270
         Image: ='Microsoft logo'
         Width: =509
@@ -62,6 +72,10 @@ Share As screen:
         ZIndex: =6
 
     Icon2_13 As icon.ChevronLeft:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        Color: =RGBA(32, 54, 71, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
         Height: =35
         Icon: =Icon.ChevronLeft
         OnSelect: =Navigate('Roadmap startpage')
@@ -71,7 +85,9 @@ Share As screen:
         ZIndex: =7
 
     Label4_2 As label:
+        BorderColor: =RGBA(32, 54, 71, 1)
         Color: =If(DarkMode, Color.White, Color.Black)
+        DisabledColor: =RGBA(166, 166, 166, 1)
         Height: =126
         Size: =21
         Text: ="Provide their email address below!"
@@ -82,9 +98,18 @@ Share As screen:
 
     TextInput1 As text:
         BorderColor: =RGBA(0, 134, 208, 1)
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
         Default: =""
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
         Height: =78
         HintText: ="Email address"
+        HoverBorderColor: =RGBA(32, 54, 71, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(205, 209, 213, 1)
         Size: =21
         Width: =400
         X: =107
@@ -92,7 +117,10 @@ Share As screen:
         ZIndex: =9
 
     Icon5 As icon.Send:
+        BorderColor: =RGBA(32, 54, 71, 1)
         Color: =If(SuccessColor,Color.Green, DarkMode, Color.White, Color.Black)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
         Height: =52
         Icon: =Icon.Send
         OnSelect: |-

@@ -11,7 +11,7 @@ Screens:
   Teams_2:
     Properties:
       Fill: =RGBA(70, 78, 184, 1)
-      LoadingSpinnerColor: =RGBA(56, 96, 178, 1)
+      LoadingSpinnerColor: =RGBA(100, 118, 132, 1)
       OnVisible: |-
         =Set(ShowLoader, true);
         Set(VarShowField, false);
@@ -72,8 +72,8 @@ Screens:
             - Separator2_15:
                 Control: Rectangle@2.3.0
                 Properties:
-                  BorderColor: =RGBA(0, 18, 107, 1)
-                  Fill: =RGBA(0, 18, 107, 1)
+                  BorderColor: =RGBA(32, 54, 71, 1)
+                  Fill: =RGBA(32, 54, 71, 1)
                   Height: =1
                   OnSelect: =Select(Parent)
                   Width: =Parent.TemplateWidth
@@ -89,7 +89,7 @@ Screens:
                   Height: =51
                   HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
                   HoverColor: =RGBA(255, 255, 255, 1)
-                  HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+                  HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
                   OnSelect: =Set(HashtagTitle, Label6_27); Set(Summary, ThisItem.summary); Set(Title, ThisItem.title); Set(PrimaryLink, ThisItem.primaryLink);Navigate(Details)
                   PressedBorderColor: =Self.Fill
                   PressedColor: =Self.Fill
@@ -102,7 +102,7 @@ Screens:
             - Label1_17:
                 Control: Label@2.5.1
                 Properties:
-                  BorderColor: =RGBA(0, 18, 107, 1)
+                  BorderColor: =RGBA(32, 54, 71, 1)
                   Color: =If(DarkMode, Color.White, Color.Black)
                   Font: =Font.'Segoe UI'
                   FontWeight: =FontWeight.Lighter
@@ -116,7 +116,7 @@ Screens:
             - Label1_16:
                 Control: Label@2.5.1
                 Properties:
-                  BorderColor: =RGBA(0, 18, 107, 1)
+                  BorderColor: =RGBA(32, 54, 71, 1)
                   Color: =RGBA(149, 149, 149, 1)
                   Font: =Font.'Segoe UI'
                   FontWeight: =FontWeight.Lighter
@@ -156,7 +156,7 @@ Screens:
             - Icon9:
                 Control: Classic/Icon@2.5.0
                 Properties:
-                  BorderColor: =RGBA(0, 18, 107, 1)
+                  BorderColor: =RGBA(32, 54, 71, 1)
                   Color: |-
                     =If(
                         IsBlank(
@@ -196,7 +196,7 @@ Screens:
       - Label6_27:
           Control: Label@2.5.1
           Properties:
-            BorderColor: =RGBA(0, 18, 107, 1)
+            BorderColor: =RGBA(32, 54, 71, 1)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
             Size: =32
@@ -207,7 +207,7 @@ Screens:
       - Image6_21:
           Control: Image@2.2.3
           Properties:
-            BorderColor: =RGBA(0, 18, 107, 1)
+            BorderColor: =RGBA(32, 54, 71, 1)
             Height: =74
             Image: ='Microsoft logo'
             OnSelect: =Navigate('Roadmap startpage')
@@ -217,8 +217,8 @@ Screens:
       - Icon2_17:
           Control: Classic/Icon@2.5.0
           Properties:
-            BorderColor: =RGBA(0, 18, 107, 1)
-            Color: =RGBA(0, 18, 107, 1)
+            BorderColor: =RGBA(32, 54, 71, 1)
+            Color: =RGBA(32, 54, 71, 1)
             Height: =35
             Icon: =Icon.ChevronLeft
             OnSelect: =Back()
@@ -228,14 +228,14 @@ Screens:
       - TextInput3_11:
           Control: Classic/TextInput@2.3.2
           Properties:
-            BorderColor: =RGBA(0, 18, 107, 1)
+            BorderColor: =RGBA(32, 54, 71, 1)
             Clear: =true
             Default: =""
             Font: =Font.'Segoe UI'
             Height: =62
             HintText: ="Search"
-            HoverBorderColor: =RGBA(0, 18, 107, 1)
-            HoverFill: =RGBA(186, 202, 226, 1)
+            HoverBorderColor: =RGBA(32, 54, 71, 1)
+            HoverFill: =RGBA(205, 209, 213, 1)
             OnSelect: =Filter(FeedCollection,TextInput3_11.Text = title)
             RadiusBottomLeft: =12
             RadiusBottomRight: =12
@@ -247,8 +247,8 @@ Screens:
       - Icon1_11:
           Control: Classic/Icon@2.5.0
           Properties:
-            BorderColor: =RGBA(0, 18, 107, 1)
-            Color: =RGBA(0, 18, 107, 1)
+            BorderColor: =RGBA(32, 54, 71, 1)
+            Color: =RGBA(32, 54, 71, 1)
             Height: =37
             Icon: =Icon.Search
             Visible: =IsBlank(TextInput3_11.Text)
@@ -258,7 +258,7 @@ Screens:
       - Label6_28:
           Control: Label@2.5.1
           Properties:
-            BorderColor: =RGBA(0, 18, 107, 1)
+            BorderColor: =RGBA(32, 54, 71, 1)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Bold
             Height: =35
@@ -270,7 +270,7 @@ Screens:
       - Label5_6:
           Control: Label@2.5.1
           Properties:
-            BorderColor: =RGBA(0, 18, 107, 1)
+            BorderColor: =RGBA(32, 54, 71, 1)
             Color: =RGBA(255, 255, 255, 1)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Bold
@@ -289,7 +289,7 @@ Screens:
           Control: Label@2.5.1
           Properties:
             Align: =Align.Center
-            BorderColor: =RGBA(0, 18, 107, 1)
+            BorderColor: =RGBA(32, 54, 71, 1)
             Color: =If(DarkMode, Color.White, Color.Black)
             Font: =Font.'Open Sans'
             FontWeight: =FontWeight.Bold
@@ -318,7 +318,7 @@ Screens:
             Height: =90
             HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
             HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+            HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
             OnSelect: =Launch("https://feedbackportal.microsoft.com/feedback/forum/ad198462-1c1c-ec11-b6e7-0022481f8472")
             PressedBorderColor: =Self.Fill
             PressedColor: =Self.Fill
@@ -337,7 +337,7 @@ Screens:
           Control: Label@2.5.1
           Properties:
             Align: =Align.Center
-            BorderColor: =RGBA(0, 18, 107, 1)
+            BorderColor: =RGBA(32, 54, 71, 1)
             Color: =RGBA(184, 0, 0, 1)
             Font: =Font.'Open Sans'
             FontWeight: =FontWeight.Bold
@@ -355,7 +355,7 @@ Screens:
       - Image2_11:
           Control: Image@2.2.3
           Properties:
-            BorderColor: =RGBA(0, 18, 107, 1)
+            BorderColor: =RGBA(32, 54, 71, 1)
             Height: =1066
             Image: =microsoft
             ImagePosition: =ImagePosition.Fill
@@ -371,11 +371,11 @@ Screens:
             DisabledColor: =ColorFade(Self.Fill, 90%)
             DisabledFill: =ColorFade(Self.Fill, 70%)
             Duration: =10000
-            Fill: =RGBA(56, 96, 178, 1)
+            Fill: =RGBA(100, 118, 132, 1)
             Font: =Font.'Open Sans'
             HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
             HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+            HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
             OnTimerEnd: =
             OnTimerStart: |-
               =ClearCollect(CollectionFacts,{Test: First(Shuffle('M365 Roadmap & Blogs - Facts')).Title})
@@ -411,13 +411,13 @@ Screens:
                  OneClicked, RGBA(125, 183, 0, 1), ColorFade(RGBA(56, 96, 178, 1), -20%)
               )
             ChevronFill: =RGBA(255, 255, 255, 1)
-            ChevronHoverBackground: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+            ChevronHoverBackground: =ColorFade(RGBA(100, 118, 132, 1), -20%)
             ChevronHoverFill: =RGBA(255, 255, 255, 1)
             Color: =RGBA(255, 255, 255, 1)
             Fill: =RGBA(102, 113, 166, 1)
             Font: =Font.'Open Sans'
             Height: =50
-            HoverFill: =RGBA(186, 202, 226, 1)
+            HoverFill: =RGBA(205, 209, 213, 1)
             Items: =["All", "Added this week", "In development", "Rolling out", "Launched", "Preview"]
             OnChange: |-
               =If(Dropdown2_4.Selected.Value ="In development",
@@ -449,7 +449,7 @@ Screens:
               );
             OnSelect: =
             PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =RGBA(0, 18, 107, 1)
+            PressedFill: =RGBA(32, 54, 71, 1)
             SelectionColor: =RGBA(255, 255, 255, 1)
             SelectionFill: |-
               =If(
@@ -472,14 +472,14 @@ Screens:
                  ThreeClicked, RGBA(125, 183, 0, 1), ColorFade(RGBA(56, 96, 178, 1), -20%)
               )
             ChevronFill: =RGBA(255, 255, 255, 1)
-            ChevronHoverBackground: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+            ChevronHoverBackground: =ColorFade(RGBA(100, 118, 132, 1), -20%)
             ChevronHoverFill: =RGBA(255, 255, 255, 1)
             Color: =RGBA(255, 255, 255, 1)
             Default: ="Worldwide"
             Fill: =RGBA(102, 113, 166, 1)
             Font: =Font.'Open Sans'
             Height: =50
-            HoverFill: =RGBA(186, 202, 226, 1)
+            HoverFill: =RGBA(205, 209, 213, 1)
             Items: =["DoD", "GCC", "GCC High", "Germany", "Worldwide"]
             OnChange: |-
               =If(Dropdown2_5.Selected.Value ="GCC",
@@ -507,7 +507,7 @@ Screens:
               );
             OnSelect: =
             PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =RGBA(0, 18, 107, 1)
+            PressedFill: =RGBA(32, 54, 71, 1)
             SelectionColor: =RGBA(255, 255, 255, 1)
             SelectionFill: |-
               =If(
@@ -530,14 +530,14 @@ Screens:
                  TwoClicked, RGBA(125, 183, 0, 1), ColorFade(RGBA(56, 96, 178, 1), -20%)
               )
             ChevronFill: =Color.White
-            ChevronHoverBackground: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+            ChevronHoverBackground: =ColorFade(RGBA(100, 118, 132, 1), -20%)
             ChevronHoverFill: =RGBA(255, 255, 255, 1)
             Color: =RGBA(255, 255, 255, 1)
             Default: ="Platform & Instance"
             Fill: =RGBA(102, 113, 166, 1)
             Font: =Font.'Open Sans'
             Height: =50
-            HoverFill: =RGBA(186, 202, 226, 1)
+            HoverFill: =RGBA(205, 209, 213, 1)
             Items: =["Desktop", "Android", "Education", "iOS", "Mac", "Mobile", "Devices", "Web"]
             OnChange: |-
               =If(Dropdown2_6.Selected.Value ="Desktop",
@@ -574,7 +574,7 @@ Screens:
               );
             OnSelect: =
             PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =RGBA(0, 18, 107, 1)
+            PressedFill: =RGBA(32, 54, 71, 1)
             SelectionColor: =RGBA(255, 255, 255, 1)
             SelectionFill: |-
               =If(
@@ -588,7 +588,7 @@ Screens:
       - Icon3_1:
           Control: Classic/Icon@2.5.0
           Properties:
-            BorderColor: =RGBA(0, 18, 107, 1)
+            BorderColor: =RGBA(32, 54, 71, 1)
             Color: =RGBA(230, 230, 230, 1)
             Height: =31
             Icon: =Icon.NextArrow
@@ -600,7 +600,7 @@ Screens:
       - Label13_1:
           Control: Label@2.5.1
           Properties:
-            BorderColor: =RGBA(0, 18, 107, 1)
+            BorderColor: =RGBA(32, 54, 71, 1)
             Font: =Font.'Open Sans'
             Height: =45
             Italic: =true
@@ -613,14 +613,14 @@ Screens:
       - Checkbox1:
           Control: Classic/CheckBox@2.1.0
           Properties:
-            BorderColor: =RGBA(0, 18, 107, 1)
-            CheckboxBorderColor: =RGBA(0, 18, 107, 1)
+            BorderColor: =RGBA(32, 54, 71, 1)
+            CheckboxBorderColor: =RGBA(32, 54, 71, 1)
             CheckmarkFill: =RGBA(0, 0, 0, 1)
             Color: =RGBA(255, 255, 255, 1)
             Default: =false && !IsBlank(Filter(LikeList,UserEmail=User().Email)) /*If the current user's like list is not empty, all records will be displayed by default*/
             Font: =Font.'Open Sans'
             Height: =70
-            HoverColor: =RGBA(0, 18, 107, 1)
+            HoverColor: =RGBA(32, 54, 71, 1)
             Size: =15
             Text: ="Show favorites"
             Visible: =!ShowLoader

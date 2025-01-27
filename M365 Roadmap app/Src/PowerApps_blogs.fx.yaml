@@ -1,5 +1,5 @@
 PowerApps_blogs As screen:
-    Fill: =RGBA(255, 255, 255, 1)
+    LoadingSpinnerColor: =RGBA(100, 118, 132, 1)
     OnVisible: |-
         =Set(ShowLoader, true);
         ClearCollect(HeedCollection, RSS.ListFeedItems("https://cloudblogs.microsoft.com/powerplatform/feed/"));
@@ -22,8 +22,10 @@ PowerApps_blogs As screen:
 
         Title2_9 As label:
             Color: =RGBA(255, 255, 255, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
             DisplayMode: =DisplayMode.View
             Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
             Height: =112
             OnSelect: =Select(Parent)
             PaddingBottom: =0
@@ -39,6 +41,7 @@ PowerApps_blogs As screen:
             ZIndex: =1
 
         Separator2_9 As rectangle:
+            BorderColor: =RGBA(32, 54, 71, 1)
             Fill: =RGBA(99, 139, 44, 1)
             Height: =1
             OnSelect: =Select(Parent)
@@ -47,9 +50,15 @@ PowerApps_blogs As screen:
             ZIndex: =3
 
         Button1_9 As button:
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
             Fill: =RGBA(141, 198, 63, 1)
             Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
             Height: =51
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
             OnSelect: =Launch(ThisItem.primaryLink)
             Size: =16
             Text: ="Read blog"
@@ -59,9 +68,15 @@ PowerApps_blogs As screen:
             ZIndex: =5
 
     Button7_21 As button:
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
         Fill: =RGBA(102, 113, 166, 1)
         Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
         Height: =51
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
         OnSelect: |-
             =ClearCollect(HeedCollection, RSS.ListFeedItems("https://cloudblogs.microsoft.com/powerplatform/feed/"))
         Size: =18
@@ -74,6 +89,9 @@ PowerApps_blogs As screen:
         ZIndex: =5
 
     Label6_11 As label:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
         Height: =70
@@ -87,6 +105,9 @@ PowerApps_blogs As screen:
         ZIndex: =6
 
     Image6_7 As image:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
         Height: =74
         Image: ='Microsoft logo'
         Width: =133
@@ -95,6 +116,10 @@ PowerApps_blogs As screen:
         ZIndex: =7
 
     Icon2_6 As icon.ChevronLeft:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        Color: =RGBA(32, 54, 71, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
         Height: =35
         Icon: =Icon.ChevronLeft
         OnSelect: =Back()
@@ -105,11 +130,20 @@ PowerApps_blogs As screen:
 
     TextInput3_5 As text:
         BorderColor: =RGBA(116, 39, 115, 1)
+        BorderThickness: =2
         Clear: =true
+        Color: =RGBA(0, 0, 0, 1)
         Default: =""
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         Height: =70
         HintText: ="Search"
+        HoverBorderColor: =RGBA(32, 54, 71, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(205, 209, 213, 1)
         OnSelect: =If(IsBlank(TextInput3_9.Text), HeedCollection, Search(HeedCollection,TextInput3_9.Text, title))
         Size: =21
         Width: =410
@@ -120,6 +154,8 @@ PowerApps_blogs As screen:
     Icon1_5 As icon.Search:
         BorderColor: =RGBA(116, 39, 115, 1)
         Color: =RGBA(116, 39, 115, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
         Height: =37
         Icon: =Icon.Search
         Visible: =IsBlank(TextInput3_5.Text)
@@ -130,6 +166,9 @@ PowerApps_blogs As screen:
 
     Label6_12 As label:
         Align: =Align.Center
+        BorderColor: =RGBA(32, 54, 71, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Bold
         Height: =42
@@ -141,6 +180,9 @@ PowerApps_blogs As screen:
         ZIndex: =12
 
     Image2_1 As image:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
         Height: =1136
         Image: =microsoft
         ImagePosition: =ImagePosition.Fill

@@ -1,5 +1,6 @@
 Rating As screen:
     Fill: =If(DarkMode, Color.Black, Color.White)
+    LoadingSpinnerColor: =RGBA(100, 118, 132, 1)
 
     Rectangle2_4 As rectangle:
         BorderColor: =RGBA(56, 96, 178, 1)
@@ -9,6 +10,9 @@ Rating As screen:
         ZIndex: =1
 
     Image6_18 As image:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
         Height: =74
         Image: ='Microsoft logo'
         Width: =133
@@ -18,7 +22,9 @@ Rating As screen:
 
     Label6_24 As label:
         Align: =Align.Right
+        BorderColor: =RGBA(32, 54, 71, 1)
         Color: =RGBA(255, 255, 255, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
         Height: =66
@@ -30,6 +36,9 @@ Rating As screen:
         ZIndex: =3
 
     Image6_19 As image:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
         Height: =258
         Image: ='Microsoft logo'
         Width: =523
@@ -38,6 +47,10 @@ Rating As screen:
         ZIndex: =6
 
     Icon2_15 As icon.ChevronLeft:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        Color: =RGBA(32, 54, 71, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
         Height: =35
         Icon: =Icon.ChevronLeft
         OnSelect: =Back()
@@ -47,7 +60,9 @@ Rating As screen:
         ZIndex: =7
 
     ServiceRating As rating:
+        BorderColor: =RGBA(32, 54, 71, 1)
         Default: =5
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
         Height: =77
         RatingFill: =RGBA(0, 134, 208, 1)
         Width: =350
@@ -56,8 +71,14 @@ Rating As screen:
         ZIndex: =8
 
     Button4 As button:
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
         Fill: =RGBA(0, 134, 208, 1)
+        FontWeight: =FontWeight.Semibold
         Height: =68
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
         OnSelect: |-
             =Patch('App feedback list', Defaults('App feedback list'), {Title: ServiceQuality.Text}, {RatingOfApp: ServiceRating.Value});
             Notify( "Feedback sent!", NotificationType.Success, 0);
@@ -70,7 +91,9 @@ Rating As screen:
         ZIndex: =9
 
     Label9 As label:
+        BorderColor: =RGBA(32, 54, 71, 1)
         Color: =If(DarkMode, Color.White, Color.Black)
+        DisabledColor: =RGBA(166, 166, 166, 1)
         Height: =133
         Size: =21
         Text: ="Rate this app and provide your feedback to help us improve it"
@@ -81,9 +104,18 @@ Rating As screen:
 
     ServiceQuality As text:
         BorderColor: =RGBA(0, 134, 208, 1)
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
         Default: =""
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
         Height: =208
         HintText: =If(ServiceRating.Value < 5, "What can we improve?", "  Add your feedback here")
+        HoverBorderColor: =RGBA(32, 54, 71, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(205, 209, 213, 1)
         Size: =21
         Width: =400
         X: =135

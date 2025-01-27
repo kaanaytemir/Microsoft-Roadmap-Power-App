@@ -1,10 +1,11 @@
 Yammer_1 As screen:
     Fill: =RGBA(8, 199, 119, 1)
+    LoadingSpinnerColor: =RGBA(100, 118, 132, 1)
     OnVisible: |-
         =Set(ShowLoader, true);
         Set(VarShowField, false);
         // ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "In Development" in categories And "Yammer" in categories), "updatedOn", Descending)); - Using "All" instead of "In development"
-        ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Yammer" in categories), "updatedOn", SortOrder.Descending));
+        ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Microsoft Copilot (Microsoft 365)" in categories), "updatedOn", SortOrder.Descending));
         Set(ShowLoader, false);
         
         UpdateContext( // Sets active state on chevron filter when opened
@@ -40,8 +41,10 @@ Yammer_1 As screen:
 
         Title2_16 As label:
             Color: =If(DarkMode, Color.White, Color.Black)
+            DisabledColor: =RGBA(166, 166, 166, 1)
             DisplayMode: =DisplayMode.View
             Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
             Height: =112
             OnSelect: =Select(Parent)
             PaddingBottom: =0
@@ -57,6 +60,7 @@ Yammer_1 As screen:
             ZIndex: =1
 
         Separator2_16 As rectangle:
+            BorderColor: =RGBA(32, 54, 71, 1)
             Fill: =RGBA(2, 121, 212, 1)
             Height: =1
             OnSelect: =Select(Parent)
@@ -65,9 +69,15 @@ Yammer_1 As screen:
             ZIndex: =3
 
         Button1_16 As button:
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
             Fill: =RGBA(8, 199, 119, 1)
             Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
             Height: =51
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
             OnSelect: =Set(HashtagTitle, Label6_29); Set(Summary, ThisItem.summary); Set(Title, ThisItem.title); Set(PrimaryLink, ThisItem.primaryLink);Navigate(Details)
             Size: =16
             Text: ="Details"
@@ -77,7 +87,9 @@ Yammer_1 As screen:
             ZIndex: =4
 
         Label1_19 As label:
+            BorderColor: =RGBA(32, 54, 71, 1)
             Color: =If(DarkMode, Color.White, Color.Black)
+            DisabledColor: =RGBA(166, 166, 166, 1)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Lighter
             Height: =53
@@ -90,7 +102,9 @@ Yammer_1 As screen:
             ZIndex: =5
 
         Label1_18 As label:
+            BorderColor: =RGBA(32, 54, 71, 1)
             Color: =RGBA(149, 149, 149, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Lighter
             Height: =53
@@ -104,7 +118,6 @@ Yammer_1 As screen:
             ZIndex: =8
 
         HtmlText4_7 As htmlViewer:
-            DisabledBorderColor: =RGBA(56, 56, 56, 1)
             Font: =Font.'Segoe UI'
             Height: =51
             HtmlText: |-
@@ -118,7 +131,6 @@ Yammer_1 As screen:
 
         HtmlText5_2 As htmlViewer:
             Color: =RGBA(202, 202, 202, 1)
-            DisabledBorderColor: =RGBA(56, 56, 56, 1)
             Height: =41
             HtmlText: =If ("Education" in Concat(ThisItem.categories,Value,", "), "<em>Education</em>", "Preview" in Concat(ThisItem.categories,Value,", "), "<em>Preview</em>", "Worldwide" in Concat(ThisItem.categories,Value,", "), "<em>Worldwide</em>", "Germany" in Concat(ThisItem.categories,Value,", "), "<em>Germany</em>", "GCC High" in Concat(ThisItem.categories,Value,", "), "<em>GCC High</em>", "DoD" in Concat(ThisItem.categories,Value,", "), "<em>DoD</em>", "GCC" in Concat(ThisItem.categories,Value,", "), "<em>GCC</em>")
             OnSelect: =Select(Parent)
@@ -131,6 +143,7 @@ Yammer_1 As screen:
             ZIndex: =10
 
         Icon16 As icon.Heart:
+            BorderColor: =RGBA(32, 54, 71, 1)
             Color: |-
                 =If(
                     IsBlank(
@@ -142,6 +155,8 @@ Yammer_1 As screen:
                    Color.Black,
                    Color.Red
                 )
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
             Height: =38
             Icon: =Icon.Heart
             OnSelect: |-
@@ -170,6 +185,9 @@ Yammer_1 As screen:
             ZIndex: =11
 
     Label6_29 As label:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
         Height: =70
@@ -181,6 +199,9 @@ Yammer_1 As screen:
         ZIndex: =6
 
     Image6_22 As image:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
         Height: =74
         Image: ='Microsoft logo'
         OnSelect: =Navigate('Roadmap startpage')
@@ -190,6 +211,10 @@ Yammer_1 As screen:
         ZIndex: =7
 
     Icon2_18 As icon.ChevronLeft:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        Color: =RGBA(32, 54, 71, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
         Height: =35
         Icon: =Icon.ChevronLeft
         OnSelect: =Back()
@@ -200,11 +225,20 @@ Yammer_1 As screen:
 
     TextInput3_12 As text:
         BorderColor: =RGBA(2, 121, 212, 1)
+        BorderThickness: =2
         Clear: =true
+        Color: =RGBA(0, 0, 0, 1)
         Default: =""
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         Height: =62
         HintText: ="Search"
+        HoverBorderColor: =RGBA(32, 54, 71, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(205, 209, 213, 1)
         OnSelect: =Filter(FeedCollection,TextInput3_12.Text = title)
         RadiusBottomLeft: =12
         RadiusBottomRight: =12
@@ -217,7 +251,10 @@ Yammer_1 As screen:
         ZIndex: =10
 
     Icon1_12 As icon.Search:
+        BorderColor: =RGBA(32, 54, 71, 1)
         Color: =RGBA(2, 121, 212, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
         Height: =37
         Icon: =Icon.Search
         Visible: =IsBlank(TextInput3_12.Text)
@@ -227,6 +264,9 @@ Yammer_1 As screen:
         ZIndex: =11
 
     Label6_30 As label:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Bold
         Height: =35
@@ -238,7 +278,9 @@ Yammer_1 As screen:
         ZIndex: =12
 
     Label5_7 As label:
+        BorderColor: =RGBA(32, 54, 71, 1)
         Color: =RGBA(255, 255, 255, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Bold
         Height: =54
@@ -254,7 +296,9 @@ Yammer_1 As screen:
 
     Label10_20 As label:
         Align: =Align.Center
+        BorderColor: =RGBA(32, 54, 71, 1)
         Color: =If(DarkMode, Color.White, Color.Black)
+        DisabledColor: =RGBA(166, 166, 166, 1)
         FontWeight: =FontWeight.Bold
         Height: =132
         Size: =24
@@ -273,8 +317,14 @@ Yammer_1 As screen:
         ZIndex: =16
 
     Button3_7 As button:
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
         Fill: =RGBA(8, 199, 119, 1)
+        FontWeight: =FontWeight.Semibold
         Height: =90
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
         OnSelect: |-
             =Launch("https://feedbackportal.microsoft.com/feedback/forum/bd6e5ec2-3f1c-ec11-b6e7-0022481f8472")
         Size: =20
@@ -291,7 +341,9 @@ Yammer_1 As screen:
 
     Label10_21 As label:
         Align: =Align.Center
+        BorderColor: =RGBA(32, 54, 71, 1)
         Color: =RGBA(184, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
         FontWeight: =FontWeight.Bold
         Height: =132
         Size: =24
@@ -307,6 +359,9 @@ Yammer_1 As screen:
         ZIndex: =18
 
     Image2_12 As image:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
         Height: =1067
         Image: =microsoft
         ImagePosition: =ImagePosition.Fill
@@ -317,7 +372,10 @@ Yammer_1 As screen:
     Timer1_7 As timer:
         AutoStart: =true
         Duration: =10000
+        Fill: =RGBA(100, 118, 132, 1)
         Height: =70
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
         OnTimerEnd: =
         OnTimerStart: |-
             =ClearCollect(CollectionFacts,{Test: First(Shuffle('M365 Roadmap & Blogs - Facts')).Title})
@@ -330,7 +388,6 @@ Yammer_1 As screen:
         ZIndex: =20
 
     HtmlText3_7 As htmlViewer:
-        DisabledBorderColor: =RGBA(56, 56, 56, 1)
         Fill: =RGBA(255, 255, 255, 1)
         Height: =147
         HtmlText: =Concatenate("<center>" & Text(First(Shuffle(CollectionFacts)).Test) & "</center>")
@@ -349,9 +406,18 @@ Yammer_1 As screen:
             =If(
                OneClicked, RGBA(125, 183, 0, 1), ColorFade(RGBA(56, 96, 178, 1), -20%)
             )
+        ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+        ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+        ChevronHoverBackground: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+        ChevronHoverFill: =RGBA(255, 255, 255, 1)
         Color: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
         Fill: =RGBA(102, 113, 166, 1)
         Height: =50
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(205, 209, 213, 1)
         Items: =["All", "Added this week", "In development", "Rolling out", "Launched", "Preview"]
         OnChange: |-
             =If(Dropdown2_10.Selected.Value ="In development",
@@ -381,6 +447,8 @@ Yammer_1 As screen:
                }
             );
         OnSelect: =
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(32, 54, 71, 1)
         SelectionFill: |-
             =If(
                OneClicked, RGBA(125, 183, 0, 1), RGBA(102, 113, 166, 1)
@@ -401,10 +469,19 @@ Yammer_1 As screen:
             =If(
                ThreeClicked, RGBA(125, 183, 0, 1), ColorFade(RGBA(52, 146, 222, 1), -20%)
             )
+        ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+        ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+        ChevronHoverBackground: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+        ChevronHoverFill: =RGBA(255, 255, 255, 1)
         Color: =RGBA(255, 255, 255, 1)
         Default: ="Worldwide"
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
         Fill: =RGBA(102, 113, 166, 1)
         Height: =50
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(205, 209, 213, 1)
         Items: =["DoD", "GCC", "GCC High", "Germany", "Worldwide"]
         OnChange: |-
             =If(Dropdown2_11.Selected.Value ="GCC",
@@ -433,6 +510,8 @@ Yammer_1 As screen:
         OnSelect: |-
             =If(Dropdown2_11.Selected.Value ="Tokyo",
             ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "In Development" in categories And "Microsoft Teams" in categories), "updatedOn", SortOrder.Descending)));
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(32, 54, 71, 1)
         SelectionFill: |-
             =If(
                ThreeClicked, RGBA(125, 183, 0, 1), RGBA(102, 113, 166, 1)
@@ -453,11 +532,20 @@ Yammer_1 As screen:
             =If(
                TwoClicked, RGBA(125, 183, 0, 1), ColorFade(RGBA(52, 146, 222, 1), -20%)
             )
+        ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+        ChevronDisabledFill: =RGBA(244, 244, 244, 1)
         ChevronFill: =Color.White
+        ChevronHoverBackground: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+        ChevronHoverFill: =RGBA(255, 255, 255, 1)
         Color: =RGBA(255, 255, 255, 1)
         Default: ="Platform & Instance"
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
         Fill: =RGBA(102, 113, 166, 1)
         Height: =50
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(205, 209, 213, 1)
         Items: =["Desktop", "Android", "Education", "iOS", "Mac", "Mobile", "Devices", "Web"]
         OnChange: |-
             =If(Dropdown2_12.Selected.Value ="Desktop",
@@ -493,6 +581,8 @@ Yammer_1 As screen:
                }
             );
         OnSelect: =
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(32, 54, 71, 1)
         SelectionFill: |-
             =If(
                TwoClicked, RGBA(125, 183, 0, 1), RGBA(102, 113, 166, 1)
@@ -505,9 +595,11 @@ Yammer_1 As screen:
         ZIndex: =24
 
     Label13_2 As label:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
         Height: =45
         Italic: =true
-        Size: =14
         Text: =Concatenate(CountRows(Gallery1_16.AllItems), " ", "result(s)")
         Visible: =!ShowLoader
         Width: =120
@@ -516,7 +608,10 @@ Yammer_1 As screen:
         ZIndex: =25
 
     Icon3_3 As icon.NextArrow:
+        BorderColor: =RGBA(32, 54, 71, 1)
         Color: =RGBA(230, 230, 230, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
         Height: =31
         Icon: =Icon.NextArrow
         OnSelect: =Navigate(Yammer_blogs)
@@ -527,9 +622,12 @@ Yammer_1 As screen:
         ZIndex: =26
 
     Checkbox3 As checkbox:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        CheckboxBorderColor: =RGBA(32, 54, 71, 1)
         Color: =RGBA(255, 255, 255, 1)
         Default: =false && !IsBlank(Filter(LikeList,UserEmail=User().Email)) /*If the current user's like list is not empty, all records will be displayed by default*/
         Height: =70
+        HoverColor: =RGBA(32, 54, 71, 1)
         Size: =15
         Text: ="Show favorites"
         Visible: =!ShowLoader

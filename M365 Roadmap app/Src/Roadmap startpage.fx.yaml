@@ -1,6 +1,7 @@
 "'Roadmap startpage' As screen":
     BackgroundImage: =
     Fill: =If(DarkMode, Color.Black, Color.White)
+    LoadingSpinnerColor: =RGBA(100, 118, 132, 1)
     OnVisible: |-
         =UpdateContext( { ctxWaffle1open: false} )
 
@@ -12,18 +13,27 @@
         ZIndex: =1
 
     Button7_3 As button:
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
         Fill: =RGBA(70, 78, 184, 1)
         Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
         Height: =85
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
         OnSelect: =Navigate(Teams_2)
         Size: =24
         Text: ="Teams"
         Width: =269
-        X: =203
-        Y: =343
+        X: =212
+        Y: =345
         ZIndex: =2
 
     Image6_1 As image:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
         Height: =74
         Image: ='Microsoft logo'
         Width: =133
@@ -32,7 +42,9 @@
         ZIndex: =3
 
     Label6_1 As label:
+        BorderColor: =RGBA(32, 54, 71, 1)
         Color: =RGBA(255, 255, 255, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
         Height: =70
@@ -44,7 +56,9 @@
         ZIndex: =4
 
     Label7 As label:
+        BorderColor: =RGBA(32, 54, 71, 1)
         Color: =If(DarkMode, Color.White, Color.Black)
+        DisabledColor: =RGBA(166, 166, 166, 1)
         Height: =70
         Size: =21
         Text: ="Choose a product"
@@ -54,54 +68,81 @@
         ZIndex: =5
 
     Button7_4 As button:
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
         Fill: =RGBA(130, 95, 193, 1)
         Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
         Height: =85
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
         OnSelect: =Navigate(Viva_1)
         Size: =24
         Text: ="Microsoft Viva"
         Width: =269
-        X: =203
-        Y: =459
+        X: =212
+        Y: =463
         ZIndex: =6
 
     Button7_7 As button:
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
         Fill: =RGBA(2, 131, 135, 1)
         Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
         Height: =85
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
         OnSelect: =Navigate(Sharepoint_p_1)
         Size: =24
         Text: ="SharePoint"
         Width: =269
-        X: =200
-        Y: =571
+        X: =212
+        Y: =588
         ZIndex: =7
 
     Button7_8 As button:
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
         Fill: =RGBA(37, 172, 114, 1)
         Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
         Height: =85
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
         OnSelect: =Navigate(PowerApps_1)
         Size: =24
         Text: ="Power Platform"
         Width: =269
-        X: =202
-        Y: =815
+        X: =212
+        Y: =829
         ZIndex: =8
 
     Button7_10 As button:
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
         Fill: =RGBA(8, 199, 119, 1)
         Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
         Height: =85
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
         OnSelect: =Navigate(Yammer_1)
         Size: =24
         Text: ="Copilot"
         Width: =269
-        X: =200
+        X: =212
         Y: =220
         ZIndex: =10
 
     Image1 As image:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
         Height: =70
         Image: ='Teams logo'
         Width: =66
@@ -110,6 +151,9 @@
         ZIndex: =11
 
     Image1_2 As image:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
         Height: =78
         Image: ='Copilot logo'
         Width: =90
@@ -118,14 +162,21 @@
         ZIndex: =13
 
     Image1_5 As image:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
         Height: =70
         Image: =Sharepoint
         Width: =66
         X: =97
-        Y: =585
+        Y: =597
         ZIndex: =15
 
     Icon4 As icon.Hamburger:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        Color: =RGBA(0, 18, 107, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
         Height: =55
         Icon: =Icon.Hamburger
         OnSelect: |-
@@ -138,10 +189,15 @@
     Container1 As groupContainer.verticalAutoLayoutContainer:
         BorderColor: =RGBA(0, 18, 107, 1)
         BorderThickness: =2
+        DropShadow: =DropShadow.Light
         Fill: =RGBA(0, 134, 208, 1)
         Height: =237
         LayoutDirection: =LayoutDirection.Vertical
         LayoutMode: =LayoutMode.Auto
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
         Visible: =ctxWaffle1open
         Width: =640
         Y: =104
@@ -150,9 +206,15 @@
         Button6_7 As button:
             AlignInContainer: =AlignInContainer.Center
             BorderThickness: =0
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
             Fill: =RGBA(0, 18, 107, 1)
             Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
             Height: =60
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
             LayoutMinHeight: =70
             LayoutMinWidth: =280
             OnSelect: =Navigate(Settings)
@@ -172,9 +234,15 @@
         Button6_8 As button:
             AlignInContainer: =AlignInContainer.Center
             BorderThickness: =0
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
             Fill: =RGBA(0, 18, 107, 1)
             Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
             Height: =60
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
             LayoutMinHeight: =70
             LayoutMinWidth: =280
             OnSelect: =Navigate(Share)
@@ -194,9 +262,15 @@
         Button6_9 As button:
             AlignInContainer: =AlignInContainer.Center
             BorderThickness: =0
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
             Fill: =RGBA(0, 18, 107, 1)
             Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
             Height: =60
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
             LayoutMinHeight: =70
             LayoutMinWidth: =280
             OnSelect: =Navigate(Rating)
@@ -216,9 +290,15 @@
         Button6_10 As button:
             AlignInContainer: =AlignInContainer.Center
             BorderThickness: =0
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
             Fill: =RGBA(0, 18, 107, 1)
             Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
             Height: =60
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
             LayoutMinHeight: =70
             LayoutMinWidth: =280
             OnSelect: =Navigate(About)
@@ -236,29 +316,37 @@
             ZIndex: =11
 
     Button7_18 As button:
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
         Fill: =RGBA(255, 185, 0, 1)
         Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
         Height: =85
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
         OnSelect: |-
             =Launch("https://www.microsoft.com/nl-nl/microsoft-365/roadmap")
         Size: =24
         Text: ="Other products"
         Width: =269
-        X: =203
-        Y: =937
+        X: =212
+        Y: =942
         ZIndex: =20
 
     Image6_5 As image:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
         Height: =130
         Image: ='Microsoft logo'
         Width: =238
         X: =12
-        Y: =914
+        Y: =920
         ZIndex: =21
 
     HtmlText1 As htmlViewer:
         Color: =If(DarkMode, Color.White, Color.Black)
-        DisabledBorderColor: =RGBA(56, 56, 56, 1)
         Font: =Font.'Segoe UI'
         Height: =86
         HtmlText: ="<i>The Microsoft 365 roadmap provides estimated release dates & descriptions for commercial features. All information is subject to change.</i>"
@@ -271,6 +359,8 @@
     Icon2 As icon.Help:
         BorderColor: =RGBA(0, 134, 208, 1)
         Color: =RGBA(0, 134, 208, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
         Fill: =If(DarkMode, Color.Black, Color.White)
         Height: =40
         Icon: =Icon.Help
@@ -281,14 +371,20 @@
         ZIndex: =23
 
     Image3 As image:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
         Height: =74
         Image: =PowerPlatform_scalable
         Width: =103
         X: =79
-        Y: =826
+        Y: =837
         ZIndex: =24
 
     Image4 As image:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
         Height: =70
         Image: =VivaTopics_CLR_Small_2x
         Width: =66
@@ -297,22 +393,31 @@
         ZIndex: =25
 
     Button7_30 As button:
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
         Fill: =RGBA(220, 62, 21, 1)
         Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
         Height: =85
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
         OnSelect: =Navigate(M365)
         Size: =24
         Text: ="Microsoft 365"
         Width: =269
-        X: =203
-        Y: =693
+        X: =210
+        Y: =709
         ZIndex: =26
 
     Image1_3 As image:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
         Height: =70
         Image: ='office logo'
         Width: =66
         X: =98
-        Y: =701
+        Y: =717
         ZIndex: =27
 

@@ -11,7 +11,7 @@ Screens:
   About:
     Properties:
       Fill: =If(DarkMode, Color.Black, Color.White)
-      LoadingSpinnerColor: =RGBA(56, 96, 178, 1)
+      LoadingSpinnerColor: =RGBA(100, 118, 132, 1)
     Children:
       - Rectangle2_1:
           Control: Rectangle@2.3.0
@@ -23,7 +23,7 @@ Screens:
       - Image6_12:
           Control: Image@2.2.3
           Properties:
-            BorderColor: =RGBA(0, 18, 107, 1)
+            BorderColor: =RGBA(32, 54, 71, 1)
             Height: =74
             Image: ='Microsoft logo'
             Width: =133
@@ -33,7 +33,7 @@ Screens:
           Control: Label@2.5.1
           Properties:
             Align: =Align.Right
-            BorderColor: =RGBA(0, 18, 107, 1)
+            BorderColor: =RGBA(32, 54, 71, 1)
             Color: =RGBA(255, 255, 255, 1)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
@@ -46,7 +46,7 @@ Screens:
       - Label4:
           Control: Label@2.5.1
           Properties:
-            BorderColor: =RGBA(0, 18, 107, 1)
+            BorderColor: =RGBA(32, 54, 71, 1)
             Color: =If(DarkMode, Color.White, Color.Black)
             Font: =Font.'Open Sans'
             Height: =394
@@ -74,7 +74,7 @@ Screens:
       - Image6_13:
           Control: Image@2.2.3
           Properties:
-            BorderColor: =RGBA(0, 18, 107, 1)
+            BorderColor: =RGBA(32, 54, 71, 1)
             Height: =258
             Image: ='Microsoft logo'
             Width: =523
@@ -83,8 +83,8 @@ Screens:
       - Icon2_12:
           Control: Classic/Icon@2.5.0
           Properties:
-            BorderColor: =RGBA(0, 18, 107, 1)
-            Color: =RGBA(0, 18, 107, 1)
+            BorderColor: =RGBA(32, 54, 71, 1)
+            Color: =RGBA(32, 54, 71, 1)
             Height: =35
             Icon: =Icon.ChevronLeft
             OnSelect: =Back()
@@ -102,7 +102,7 @@ Screens:
             Height: =77
             HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
             HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+            HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
             OnSelect: =Navigate(Share)
             PressedBorderColor: =Self.Fill
             PressedColor: =Self.Fill
@@ -123,7 +123,7 @@ Screens:
             Height: =77
             HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
             HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+            HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
             OnSelect: =Navigate(Rating)
             PressedBorderColor: =Self.Fill
             PressedColor: =Self.Fill
@@ -136,7 +136,7 @@ Screens:
       - Label10:
           Control: Label@2.5.1
           Properties:
-            BorderColor: =RGBA(0, 18, 107, 1)
+            BorderColor: =RGBA(32, 54, 71, 1)
             Font: =Font.'Open Sans'
             Height: =47
             Size: =14

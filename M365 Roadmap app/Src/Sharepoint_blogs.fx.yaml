@@ -1,8 +1,8 @@
 Sharepoint_blogs As screen:
-    Fill: =
+    LoadingSpinnerColor: =RGBA(100, 118, 132, 1)
     OnVisible: |-
         =Set(ShowLoader, true);
-        ClearCollect(HeedCollection, RSS.ListFeedItems("https://techcommunity.microsoft.com/plugins/custom/microsoft/o365/custom-blog-rss?tid=8846757002319583340&board=SPBlog&size=25"));
+        ClearCollect(HeedCollection, RSS.ListFeedItems("https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/board?board.id=SharePoint_Premium_Blog&size=25"));
         Set(ShowLoader, false);
 
     "Gallery1_13 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
@@ -11,7 +11,7 @@ Sharepoint_blogs As screen:
         Fill: =RGBA(2, 131, 135, 1)
         Height: =837
         Items: |-
-            =Search(RSS.ListFeedItems("https://techcommunity.microsoft.com/plugins/custom/microsoft/o365/custom-blog-rss?tid=8846757002319583340&board=SPBlog&size=25"), TextInput3_9.Text, title)
+            =Search(RSS.ListFeedItems("https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/board?board.id=SharePoint_Premium_Blog&size=25"), TextInput3_9.Text, title)
         Layout: =Layout.Vertical
         ShowNavigation: =true
         ShowScrollbar: =false
@@ -22,8 +22,11 @@ Sharepoint_blogs As screen:
         ZIndex: =1
 
         Title2_13 As label:
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
             DisplayMode: =DisplayMode.View
             Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
             Height: =112
             OnSelect: =Select(Parent)
             PaddingBottom: =0
@@ -39,6 +42,8 @@ Sharepoint_blogs As screen:
             ZIndex: =1
 
         Separator2_13 As rectangle:
+            BorderColor: =RGBA(32, 54, 71, 1)
+            Fill: =RGBA(32, 54, 71, 1)
             Height: =1
             OnSelect: =Select(Parent)
             Width: =Parent.TemplateWidth
@@ -46,9 +51,15 @@ Sharepoint_blogs As screen:
             ZIndex: =3
 
         Button1_13 As button:
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
             Fill: =RGBA(70, 78, 184, 1)
             Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
             Height: =49
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
             OnSelect: =Launch(ThisItem.primaryLink)
             Size: =16
             Text: ="Read blog"
@@ -58,11 +69,17 @@ Sharepoint_blogs As screen:
             ZIndex: =5
 
     Button7_29 As button:
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
         Fill: =RGBA(102, 113, 166, 1)
         Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
         Height: =51
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
         OnSelect: |-
-            =ClearCollect(HeedCollection, RSS.ListFeedItems("https://techcommunity.microsoft.com/plugins/custom/microsoft/o365/custom-blog-rss?tid=4977418726937613481&board=SPBlog&size=25"))
+            =ClearCollect(HeedCollection, RSS.ListFeedItems("https://techcommunity.microsoft.com/category/Content_Management/blog/SharePoint_Premium_Blogsize=25"))
         Size: =18
         Text: |-
             ="All blogs
@@ -73,6 +90,9 @@ Sharepoint_blogs As screen:
         ZIndex: =5
 
     Label6_19 As label:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
         Height: =70
@@ -86,6 +106,9 @@ Sharepoint_blogs As screen:
         ZIndex: =6
 
     Image6_11 As image:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
         Height: =74
         Image: ='Microsoft logo'
         Width: =133
@@ -94,6 +117,10 @@ Sharepoint_blogs As screen:
         ZIndex: =7
 
     Icon2_10 As icon.ChevronLeft:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        Color: =RGBA(32, 54, 71, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
         Height: =35
         Icon: =Icon.ChevronLeft
         OnSelect: =Back()
@@ -104,11 +131,20 @@ Sharepoint_blogs As screen:
 
     TextInput3_9 As text:
         BorderColor: =RGBA(2, 131, 135, 1)
+        BorderThickness: =2
         Clear: =true
+        Color: =RGBA(0, 0, 0, 1)
         Default: =""
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         Height: =70
         HintText: ="Search"
+        HoverBorderColor: =RGBA(32, 54, 71, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(205, 209, 213, 1)
         OnSelect: =Filter(HeedCollection,TextInput3_9.Text = title)
         Size: =21
         Width: =410
@@ -117,7 +153,10 @@ Sharepoint_blogs As screen:
         ZIndex: =10
 
     Icon1_9 As icon.Search:
+        BorderColor: =RGBA(32, 54, 71, 1)
         Color: =RGBA(2, 131, 135, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
         Height: =37
         Icon: =Icon.Search
         Visible: =IsBlank(TextInput3_9.Text)
@@ -128,6 +167,9 @@ Sharepoint_blogs As screen:
 
     Label6_20 As label:
         Align: =Align.Center
+        BorderColor: =RGBA(32, 54, 71, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Bold
         Height: =42
@@ -139,6 +181,9 @@ Sharepoint_blogs As screen:
         ZIndex: =12
 
     Image2_4 As image:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
         Height: =1136
         Image: =microsoft
         ImagePosition: =ImagePosition.Fill
