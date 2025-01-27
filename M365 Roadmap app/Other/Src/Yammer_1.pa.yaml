@@ -480,19 +480,19 @@ Screens:
             Items: =["DoD", "GCC", "GCC High", "Germany", "Worldwide"]
             OnChange: |-
               =If(Dropdown2_11.Selected.Value ="GCC",
-              ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "GCC" in categories And "Yammer" in categories), "updatedOn", SortOrder.Descending)));
+              ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "GCC" in categories And "Microsoft Copilot (Microsoft 365)" in categories), "updatedOn", SortOrder.Descending)));
 
               If(Dropdown2_11.Selected.Value ="GCC High",
-              ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "GCC High" in categories And "Yammer" in categories), "updatedOn", SortOrder.Descending)));
+              ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "GCC High" in categories And "Microsoft Copilot (Microsoft 365)" in categories), "updatedOn", SortOrder.Descending)));
 
               If(Dropdown2_11.Selected.Value ="DoD",
-              ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "DoD" in categories And "Yammer" in categories), "updatedOn", SortOrder.Descending)));
+              ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "DoD" in categories And "Microsoft Copilot (Microsoft 365)" in categories), "updatedOn", SortOrder.Descending)));
 
               If(Dropdown2_11.Selected.Value ="Germany",
-              ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Germany" in categories And "Yammer" in categories), "updatedOn", SortOrder.Descending)));
+              ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Germany" in categories And "Microsoft Copilot (Microsoft 365)" in categories), "updatedOn", SortOrder.Descending)));
 
               If(Dropdown2_11.Selected.Value ="Worldwide",
-              ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Worldwide (Standard Multi-Tenant)" in categories And "Yammer" in categories), "updatedOn", SortOrder.Descending)));
+              ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Worldwide (Standard Multi-Tenant)" in categories And "Microsoft Copilot (Microsoft 365)" in categories), "updatedOn", SortOrder.Descending)));
 
               UpdateContext(
                  {
@@ -540,28 +540,28 @@ Screens:
             Items: =["Desktop", "Android", "Education", "iOS", "Mac", "Mobile", "Devices", "Web"]
             OnChange: |-
               =If(Dropdown2_12.Selected.Value ="Desktop",
-              ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Desktop" in categories And "Yammer" in categories), "updatedOn", SortOrder.Descending)));
+              ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Desktop" in categories And "Microsoft Copilot (Microsoft 365)" in categories), "updatedOn", SortOrder.Descending)));
 
               If(Dropdown2_12.Selected.Value ="Android",
-              ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Android" in categories And "Yammer" in categories), "updatedOn", SortOrder.Descending)));
+              ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Android" in categories And "Microsoft Copilot (Microsoft 365)" in categories), "updatedOn", SortOrder.Descending)));
 
               If(Dropdown2_12.Selected.Value ="Education",
-              ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Education" in categories And "Yammer" in categories), "updatedOn", SortOrder.Descending)));
+              ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Education" in categories And "Microsoft Copilot (Microsoft 365)" in categories), "updatedOn", SortOrder.Descending)));
 
               If(Dropdown2_12.Selected.Value ="iOS",
-              ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "iOS" in categories And "Yammer" in categories), "updatedOn", SortOrder.Descending)));
+              ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "iOS" in categories And "Microsoft Copilot (Microsoft 365)" in categories), "updatedOn", SortOrder.Descending)));
 
               If(Dropdown2_12.Selected.Value ="Mac",
-              ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Mac" in categories And "Yammer" in categories), "updatedOn", SortOrder.Descending)));
+              ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Mac" in categories And "Microsoft Copilot (Microsoft 365)" in categories), "updatedOn", SortOrder.Descending)));
 
               If(Dropdown2_12.Selected.Value ="Mobile",
-              ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Mobile" in categories And "Yammer" in categories), "updatedOn", SortOrder.Descending)));
+              ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Mobile" in categories And "Microsoft Copilot (Microsoft 365)" in categories), "updatedOn", SortOrder.Descending)));
 
               If(Dropdown2_12.Selected.Value ="Devices",
-              ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Teams and Surface Devices" in categories And "Yammer" in categories), "updatedOn", SortOrder.Descending)));
+              ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Teams and Surface Devices" in categories And "Microsoft Copilot (Microsoft 365)" in categories), "updatedOn", SortOrder.Descending)));
 
               If(Dropdown2_12.Selected.Value ="Web",
-              ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Web" in categories And "Yammer" in categories), "updatedOn", SortOrder.Descending)));
+              ClearCollect(FeedCollection, SortByColumns(Filter(RSS.ListFeedItems("https://www.microsoft.com/nl-nl/microsoft-365/RoadmapFeatureRSS/"), "Web" in categories And "Microsoft Copilot (Microsoft 365)" in categories), "updatedOn", SortOrder.Descending)));
 
               UpdateContext(
                  {
