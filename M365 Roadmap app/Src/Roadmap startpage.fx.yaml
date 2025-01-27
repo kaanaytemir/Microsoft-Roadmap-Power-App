@@ -19,8 +19,8 @@
         Size: =24
         Text: ="Teams"
         Width: =269
-        X: =200
-        Y: =205
+        X: =203
+        Y: =343
         ZIndex: =2
 
     Image6_1 As image:
@@ -61,8 +61,8 @@
         Size: =24
         Text: ="Microsoft Viva"
         Width: =269
-        X: =200
-        Y: =327
+        X: =203
+        Y: =459
         ZIndex: =6
 
     Button7_7 As button:
@@ -90,15 +90,15 @@
         ZIndex: =8
 
     Button7_10 As button:
-        Fill: =RGBA(52, 146, 222, 1)
+        Fill: =RGBA(8, 199, 119, 1)
         Font: =Font.'Segoe UI'
         Height: =85
         OnSelect: =Navigate(Yammer_1)
         Size: =24
-        Text: ="Viva Engage"
+        Text: ="Copilot"
         Width: =269
-        X: =202
-        Y: =449
+        X: =200
+        Y: =220
         ZIndex: =10
 
     Image1 As image:
@@ -106,15 +106,15 @@
         Image: ='Teams logo'
         Width: =66
         X: =98
-        Y: =219
+        Y: =353
         ZIndex: =11
 
     Image1_2 As image:
-        Height: =70
-        Image: =VivaEngage_CLR_Small_2x
-        Width: =66
-        X: =98
-        Y: =466
+        Height: =78
+        Image: ='Copilot logo'
+        Width: =90
+        X: =86
+        Y: =227
         ZIndex: =13
 
     Image1_5 As image:
@@ -293,7 +293,7 @@
         Image: =VivaTopics_CLR_Small_2x
         Width: =66
         X: =98
-        Y: =340
+        Y: =468
         ZIndex: =25
 
     Button7_30 As button:

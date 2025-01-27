@@ -485,7 +485,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "01/27/2025 11:46:00",
+  "HeaderLastSavedDateTimeUTC": "01/27/2025 11:51:35",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "1ff7e106-c14d-4664-89f5-d1d79e32fb37": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/adde7cc5f04f41e4931fd642e81b97ad\"",
@@ -497,6 +497,7 @@
   },
   "LocalDatabaseReferencesAsEmpty": true,
   "LocalResourceFileNames": {
+    "Copilot logo": "ae9e1835-13c9-4538-ab78-067114cf9dd0.png",
     "Intune": "0002.png",
     "Intune logo": "0001.png",
     "microsoft": "0005.gif",
@@ -516,6 +517,7 @@
     "Yammer logo": "0011.png"
   },
   "LocalResourceRootPaths": {
+    "Copilot logo": "https://dsprdil301wus.blob.core.windows.net/8804ee1e-07ba-429f-a79e-9949abbc3263-1/resource/039a04be-8988-4c99-86eb-735e166d30d8.png?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2025-01-27T11%3A48%3A40Z&ske=2025-01-28T12%3A03%3A40Z&sks=b&skv=2023-01-03&sv=2023-01-03&spr=https&se=2025-01-28T12%3A03%3A40Z&sr=b&sp=r&sig=esng7vFM5DwKsTL0njJbjzpv7HfIqXR%2Bedj3NqywZ6E%3D",
     "Intune": "https://dsprdil301wus.blob.core.windows.net/8804ee1e-07ba-429f-a79e-9949abbc3263-1/resource/Assets0Images00002.png?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2025-01-27T11%3A45%3A45Z&ske=2025-01-28T12%3A00%3A45Z&sks=b&skv=2023-01-03&sv=2023-01-03&spr=https&se=2025-01-28T12%3A00%3A45Z&sr=b&sp=r&sig=XeZSBS10X%2BeQ6YBwkA8Cm65dzNh%2F54A6yRDg36uGy8U%3D",
     "Intune logo": "https://dsprdil301wus.blob.core.windows.net/8804ee1e-07ba-429f-a79e-9949abbc3263-1/resource/Assets0Images00001.png?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2025-01-27T11%3A45%3A45Z&ske=2025-01-28T12%3A00%3A45Z&sks=b&skv=2023-01-03&sv=2023-01-03&spr=https&se=2025-01-28T12%3A00%3A45Z&sr=b&sp=r&sig=1zmk1XjMt3fhySgg7uUJC7WS9EhvOqhNSYH64VqERAI%3D",
     "microsoft": "https://dsprdil301wus.blob.core.windows.net/8804ee1e-07ba-429f-a79e-9949abbc3263-1/resource/Assets0Images00005.gif?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2025-01-27T11%3A45%3A45Z&ske=2025-01-28T12%3A00%3A45Z&sks=b&skv=2023-01-03&sv=2023-01-03&spr=https&se=2025-01-28T12%3A00%3A45Z&sr=b&sp=r&sig=%2BOjeySNhmqKO0cjJWSjihGKfB39yC5%2FWBQksn7wUk6E%3D",
@@ -1542,6 +1544,7 @@
     "Yammer_blogs": 221
   },
   "ResourcesJsonIndices": {
+    "Image-Copilot logo": 18,
     "Image-Intune": 2,
     "Image-Intune logo": 1,
     "Image-microsoft": 5,

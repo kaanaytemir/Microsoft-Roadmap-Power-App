@@ -10,7 +10,7 @@
 Screens:
   Yammer_1:
     Properties:
-      Fill: =RGBA(52, 146, 222, 1)
+      Fill: =RGBA(8, 199, 119, 1)
       LoadingSpinnerColor: =RGBA(56, 96, 178, 1)
       OnVisible: |-
         =Set(ShowLoader, true);
@@ -84,7 +84,7 @@ Screens:
                   BorderColor: =ColorFade(Self.Fill, -15%)
                   Color: =RGBA(255, 255, 255, 1)
                   DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                  Fill: =RGBA(52, 146, 222, 1)
+                  Fill: =RGBA(8, 199, 119, 1)
                   Font: =Font.'Segoe UI'
                   Height: =51
                   HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
@@ -200,9 +200,9 @@ Screens:
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
             Size: =32
-            Text: ="Viva Engage"
+            Text: ="Copilot"
             Width: =255
-            X: =192
+            X: =242
             Y: =23
       - Image6_22:
           Control: Image@2.2.3
@@ -311,7 +311,7 @@ Screens:
             BorderColor: =ColorFade(Self.Fill, -15%)
             Color: =RGBA(255, 255, 255, 1)
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
-            Fill: =RGBA(2, 121, 212, 1)
+            Fill: =RGBA(8, 199, 119, 1)
             Font: =Font.'Open Sans'
             Height: =90
             HoverBorderColor: =ColorFade(Self.BorderColor, 20%)

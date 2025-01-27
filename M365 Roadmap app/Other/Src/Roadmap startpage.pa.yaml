@@ -40,8 +40,8 @@ Screens:
             PressedFill: =Self.Color
             Text: ="Teams"
             Width: =269
-            X: =200
-            Y: =205
+            X: =203
+            Y: =343
       - Image6_1:
           Control: Image@2.2.3
           Properties:
@@ -91,8 +91,8 @@ Screens:
             PressedFill: =Self.Color
             Text: ="Microsoft Viva"
             Width: =269
-            X: =200
-            Y: =327
+            X: =203
+            Y: =459
       - Button7_7:
           Control: Classic/Button@2.2.0
           Properties:
@@ -139,7 +139,7 @@ Screens:
             BorderColor: =ColorFade(Self.Fill, -15%)
             Color: =RGBA(255, 255, 255, 1)
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
-            Fill: =RGBA(52, 146, 222, 1)
+            Fill: =RGBA(8, 199, 119, 1)
             Font: =Font.'Segoe UI'
             Height: =85
             HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
@@ -149,10 +149,10 @@ Screens:
             PressedBorderColor: =Self.Fill
             PressedColor: =Self.Fill
             PressedFill: =Self.Color
-            Text: ="Viva Engage"
+            Text: ="Copilot"
             Width: =269
-            X: =202
-            Y: =449
+            X: =200
+            Y: =220
       - Image1:
           Control: Image@2.2.3
           Properties:
@@ -161,16 +161,16 @@ Screens:
             Image: ='Teams logo'
             Width: =66
             X: =98
-            Y: =219
+            Y: =353
       - Image1_2:
           Control: Image@2.2.3
           Properties:
             BorderColor: =RGBA(0, 18, 107, 1)
-            Height: =70
-            Image: =VivaEngage_CLR_Small_2x
-            Width: =66
-            X: =98
-            Y: =466
+            Height: =78
+            Image: ='Copilot logo'
+            Width: =90
+            X: =86
+            Y: =227
       - Image1_5:
           Control: Image@2.2.3
           Properties:
@@ -396,7 +396,7 @@ Screens:
             Image: =VivaTopics_CLR_Small_2x
             Width: =66
             X: =98
-            Y: =340
+            Y: =468
       - Button7_30:
           Control: Classic/Button@2.2.0
           Properties:

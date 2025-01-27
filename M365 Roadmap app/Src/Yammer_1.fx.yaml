@@ -1,5 +1,5 @@
 Yammer_1 As screen:
-    Fill: =RGBA(52, 146, 222, 1)
+    Fill: =RGBA(8, 199, 119, 1)
     OnVisible: |-
         =Set(ShowLoader, true);
         Set(VarShowField, false);
@@ -65,7 +65,7 @@ Yammer_1 As screen:
             ZIndex: =3
 
         Button1_16 As button:
-            Fill: =RGBA(52, 146, 222, 1)
+            Fill: =RGBA(8, 199, 119, 1)
             Font: =Font.'Segoe UI'
             Height: =51
             OnSelect: =Set(HashtagTitle, Label6_29); Set(Summary, ThisItem.summary); Set(Title, ThisItem.title); Set(PrimaryLink, ThisItem.primaryLink);Navigate(Details)
@@ -174,9 +174,9 @@ Yammer_1 As screen:
         FontWeight: =FontWeight.Semibold
         Height: =70
         Size: =32
-        Text: ="Viva Engage"
+        Text: ="Copilot"
         Width: =255
-        X: =192
+        X: =242
         Y: =23
         ZIndex: =6
 
@@ -273,7 +273,7 @@ Yammer_1 As screen:
         ZIndex: =16
 
     Button3_7 As button:
-        Fill: =RGBA(2, 121, 212, 1)
+        Fill: =RGBA(8, 199, 119, 1)
         Height: =90
         OnSelect: |-
             =Launch("https://feedbackportal.microsoft.com/feedback/forum/bd6e5ec2-3f1c-ec11-b6e7-0022481f8472")
