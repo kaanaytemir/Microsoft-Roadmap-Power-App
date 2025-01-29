@@ -65,7 +65,7 @@ Screens:
                   BorderColor: =ColorFade(Self.Fill, -15%)
                   Color: =RGBA(255, 255, 255, 1)
                   DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                  Fill: =RGBA(8, 199, 119, 1)
+                  Fill: =RGBA(99, 139, 44, 1)
                   Font: =Font.'Segoe UI'
                   Height: =51
                   HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
